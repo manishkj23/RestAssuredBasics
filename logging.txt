@@ -1,0 +1,3907 @@
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=StartTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=StartTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ChannelCode": "DGX",
+    "ProductType": "WASHING MACHINE",
+    "PlanNumber": "C1Z9064674",
+    "Manufacturer": "ELECTROLUX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:15 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=37iqhc848h2fj0q33rn0s6au11; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 2e7fe6a9-0662-4761-8645-a7b7974cb0df
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "ST001",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=GetMandatoryData
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetMandatoryData
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:18 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=ueet576hqu3a5rkbomghqvrb34; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: a22feae7-a4e3-443c-93be-bcd16668b5a0
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GM000",
+    "StatusDebugging": [
+        
+    ],
+    "BookingOEM": "Electrolux",
+    "ProductType": "WASHING MACHINE",
+    "PlanInWarrantyPeriod": false,
+    "PlanInWaitPeriod": false,
+    "InWarrantyContactName": null,
+    "InWarrantyContactTel": null,
+    "OEMModelDataRequired": true,
+    "UniqueApplianceID": "1406",
+    "ModelNumber": "EWG147540W",
+    "SerialNumber": "",
+    "FaultData": [
+        {
+            "FaultCategoryID": 447,
+            "FaultCategoryName": "ALARM / ERROR CODES",
+            "FaultCategoryLabel": "Alarm or error code",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "33953",
+                    "FaultCode": "EH Supply issue",
+                    "FaultName": "EH Supply issue - EH Supply issue",
+                    "FaultLabel": "EH Supply issue",
+                    "Priority": "44"
+                },
+                {
+                    "FaultID": "29848",
+                    "FaultCode": "E10 Filling Error",
+                    "FaultName": "E10 Filling Error - E10 Filling Error",
+                    "FaultLabel": "E10 Filling error",
+                    "Priority": "18"
+                },
+                {
+                    "FaultID": "33989",
+                    "FaultCode": "No control panel lights are lit",
+                    "FaultName": "No control panel lights are lit - No control panel lights are lit",
+                    "FaultLabel": "No control panel lights",
+                    "Priority": "85"
+                },
+                {
+                    "FaultID": "33955",
+                    "FaultCode": "Empty water light displayed but container is empty",
+                    "FaultName": "Empty water light displayed but container is empty - Empty water light displayed but container is empty",
+                    "FaultLabel": "Empty water light faulty",
+                    "Priority": "47"
+                },
+                {
+                    "FaultID": "29854",
+                    "FaultCode": "EA DSP System Failure",
+                    "FaultName": "EA DSP System Failure - EA DSP System Failure",
+                    "FaultLabel": "EA DSP System failure",
+                    "Priority": "32"
+                },
+                {
+                    "FaultID": "33920",
+                    "FaultCode": "Appliance will not start , no indicator lights displayed / display blank / dead",
+                    "FaultName": "Appliance will not start , no indicator lights displayed / display blank / dead - Appliance will not start , no indicator lights displayed / display blank / dead",
+                    "FaultLabel": "Appliance will not start",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "33127",
+                    "FaultCode": "Spin cycle indicator blinking",
+                    "FaultName": "Spin cycle indicator blinking - Spin cycle indicator blinking",
+                    "FaultLabel": "Spin cycle indicator blinking",
+                    "Priority": "89"
+                },
+                {
+                    "FaultID": "29830",
+                    "FaultCode": "All LEDs / lights flashing and child lock active",
+                    "FaultName": "All LEDs / lights flashing and child lock active - All LEDs / lights flashing and child lock active",
+                    "FaultLabel": "LEDs flashing and child lock on",
+                    "Priority": "81"
+                },
+                {
+                    "FaultID": "29860",
+                    "FaultCode": "EF5 Unbalanced load",
+                    "FaultName": "EF5 Unbalanced load - EF5 Unbalanced load",
+                    "FaultLabel": "EF5 Unbalanced Load",
+                    "Priority": "42"
+                },
+                {
+                    "FaultID": "33925",
+                    "FaultCode": "Control panel dim or has not display",
+                    "FaultName": "Control panel dim or has not display - Control panel dim or has not display",
+                    "FaultLabel": "Control panel not displaying",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "33988",
+                    "FaultCode": "Multiple lights flashing on the appliance",
+                    "FaultName": "Multiple lights flashing on the appliance - Multiple lights flashing on the appliance",
+                    "FaultLabel": "Multiple lights flashing",
+                    "Priority": "84"
+                },
+                {
+                    "FaultID": "33954",
+                    "FaultCode": "EH1 Power supply alarm",
+                    "FaultName": "EH1 Power supply alarm - EH1 Power supply alarm",
+                    "FaultLabel": "EH1 Power Supply alarm",
+                    "Priority": "45"
+                },
+                {
+                    "FaultID": "29834",
+                    "FaultCode": "E50 Motor Error",
+                    "FaultName": "E50 Motor Error - E50 Motor Error",
+                    "FaultLabel": "E50 Motor error",
+                    "Priority": "24"
+                },
+                {
+                    "FaultID": "33919",
+                    "FaultCode": "Appliance stops and starts , pause is displayed",
+                    "FaultName": "Appliance stops and starts , pause is displayed - Appliance stops and starts , pause is displayed",
+                    "FaultLabel": "Appliance stops and starts",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "33990",
+                    "FaultCode": "Other Fault code displayed on the control panel - Added Other , assume this is for those not listed?",
+                    "FaultName": "Other Fault code displayed on the control panel - Added Other , assume this is for those not listed? - Other Fault code displayed on the control panel - Added Other , assume this is for those not listed?",
+                    "FaultLabel": "Other",
+                    "Priority": "86"
+                },
+                {
+                    "FaultID": "33986",
+                    "FaultCode": "LED lights flashing/staying on",
+                    "FaultName": "LED lights flashing/staying on - LED lights flashing/staying on",
+                    "FaultLabel": "LED lights flashing/staying on",
+                    "Priority": "80"
+                },
+                {
+                    "FaultID": "29856",
+                    "FaultCode": "EC Electrical Component Error",
+                    "FaultName": "EC Electrical Component Error - EC Electrical Component Error",
+                    "FaultLabel": "EC Electrical Component error",
+                    "Priority": "35"
+                },
+                {
+                    "FaultID": "33922",
+                    "FaultCode": "Empty water and clean filter lights continuously displayed",
+                    "FaultName": "Empty water and clean filter lights continuously displayed - Empty water and clean filter lights continuously displayed",
+                    "FaultLabel": "Clean filter light faulty",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "33987",
+                    "FaultCode": "Multiple LEDs flashing",
+                    "FaultName": "Multiple LEDs flashing - Multiple LEDs flashing",
+                    "FaultLabel": "Multiple LEDs flashing",
+                    "Priority": "83"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 453,
+            "FaultCategoryName": "ALARM / ERROR CODES AND INDICATOR LIGHTS",
+            "FaultCategoryLabel": "Errors and indicator lights",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "30040",
+                    "FaultCode": "Salt indicator on continuously / always on",
+                    "FaultName": "Salt indicator on continuously / always on - Salt indicator on continuously / always on",
+                    "FaultLabel": "Salt indicator always on",
+                    "Priority": "23"
+                },
+                {
+                    "FaultID": "30029",
+                    "FaultCode": "i80 Auto Door Opening Error",
+                    "FaultName": "i80 Auto Door Opening Error - i80 Auto Door Opening Error",
+                    "FaultLabel": "i80 Auto Door Opening Error",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "30031",
+                    "FaultCode": "iB0 Sensor Error",
+                    "FaultName": "iB0 Sensor Error - iB0 Sensor Error",
+                    "FaultLabel": "iB0 Sensor Error",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "30023",
+                    "FaultCode": "i20 Draining Error",
+                    "FaultName": "i20 Draining Error - i20 Draining Error",
+                    "FaultLabel": "i20 Draining Error",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "30034",
+                    "FaultCode": "iE0 Flow Controller Error",
+                    "FaultName": "iE0 Flow Controller Error - iE0 Flow Controller Error",
+                    "FaultLabel": "iE0 Flow Controller Error",
+                    "Priority": "17"
+                },
+                {
+                    "FaultID": "30027",
+                    "FaultCode": "i60 Heater Error",
+                    "FaultName": "i60 Heater Error - i60 Heater Error",
+                    "FaultLabel": "i60 Heater Error",
+                    "Priority": "10"
+                },
+                {
+                    "FaultID": "30030",
+                    "FaultCode": "i90 Configuration Error",
+                    "FaultName": "i90 Configuration Error - i90 Configuration Error",
+                    "FaultLabel": "i90 Configuration Error",
+                    "Priority": "13"
+                },
+                {
+                    "FaultID": "30022",
+                    "FaultCode": "i10 Water Tap Closed Error",
+                    "FaultName": "i10 Water Tap Closed Error - i10 Water Tap Closed Error",
+                    "FaultLabel": "i10 Water Tap Closed Error",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "30032",
+                    "FaultCode": "iC0 Communication Error",
+                    "FaultName": "iC0 Communication Error - iC0 Communication Error",
+                    "FaultLabel": "iC0 Communication Error",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "30025",
+                    "FaultCode": "i40 Pressure Sensor Error",
+                    "FaultName": "i40 Pressure Sensor Error - i40 Pressure Sensor Error",
+                    "FaultLabel": "i40 Pressure Sensor Error",
+                    "Priority": "8"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 448,
+            "FaultCategoryName": "APPEARANCE / DAMAGE / DIRTY",
+            "FaultCategoryLabel": "Appearance",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34025",
+                    "FaultCode": "Door dropped",
+                    "FaultName": "Door dropped - Door dropped",
+                    "FaultLabel": "Door dropped",
+                    "Priority": "38"
+                },
+                {
+                    "FaultID": "34018",
+                    "FaultCode": "Dented cabinet/top",
+                    "FaultName": "Dented cabinet/top - Dented cabinet/top",
+                    "FaultLabel": "Dented cabinet",
+                    "Priority": "30"
+                },
+                {
+                    "FaultID": "34007",
+                    "FaultCode": "Appliance cabinet is twisted",
+                    "FaultName": "Appliance cabinet is twisted - Appliance cabinet is twisted",
+                    "FaultLabel": "Cabinet twisted",
+                    "Priority": "16"
+                },
+                {
+                    "FaultID": "34001",
+                    "FaultCode": "Button/s jammed in",
+                    "FaultName": "Button/s jammed in - Button/s jammed in",
+                    "FaultLabel": "Buttons jammed",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "33996",
+                    "FaultCode": "The door lock is broken",
+                    "FaultName": "The door lock is broken - The door lock is broken",
+                    "FaultLabel": "Broken door lock",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "33174",
+                    "FaultCode": "Fluff filter draw jammed/perforated/misaligned/defective",
+                    "FaultName": "Fluff filter draw jammed/perforated/misaligned/defective - Fluff filter draw jammed/perforated/misaligned/defective",
+                    "FaultLabel": "Fluff filter draw broken",
+                    "Priority": "52"
+                },
+                {
+                    "FaultID": "34032",
+                    "FaultCode": "Door lock/catch broken",
+                    "FaultName": "Door lock/catch broken - Door lock/catch broken",
+                    "FaultLabel": "Door lock or catch broken",
+                    "Priority": "46"
+                },
+                {
+                    "FaultID": "34027",
+                    "FaultCode": "Door surround/frame broken",
+                    "FaultName": "Door surround/frame broken - Door surround/frame broken",
+                    "FaultLabel": "Door frame broken",
+                    "Priority": "40"
+                },
+                {
+                    "FaultID": "34020",
+                    "FaultCode": "Detergent dispenser contains residues",
+                    "FaultName": "Detergent dispenser contains residues - Detergent dispenser contains residues",
+                    "FaultLabel": "Detergent dispenser residue",
+                    "Priority": "32"
+                },
+                {
+                    "FaultID": "34011",
+                    "FaultCode": "Control panel/console is broken/damaged",
+                    "FaultName": "Control panel/console is broken/damaged - Control panel/console is broken/damaged",
+                    "FaultLabel": "Control panel damaged",
+                    "Priority": "20"
+                },
+                {
+                    "FaultID": "34003",
+                    "FaultCode": "Button/s not functioning",
+                    "FaultName": "Button/s not functioning - Button/s not functioning",
+                    "FaultLabel": "Buttons not working",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "33998",
+                    "FaultCode": "The built in door panel is stained",
+                    "FaultName": "The built in door panel is stained - The built in door panel is stained",
+                    "FaultLabel": "Built-in door panel stained",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "29908",
+                    "FaultCode": "Rust inside the cabinet",
+                    "FaultName": "Rust inside the cabinet - Rust inside the cabinet",
+                    "FaultLabel": "Rust inside cabinet",
+                    "Priority": "82"
+                },
+                {
+                    "FaultID": "34034",
+                    "FaultCode": "Door seal has come adrift",
+                    "FaultName": "Door seal has come adrift - Door seal has come adrift",
+                    "FaultLabel": "Door seal damaged",
+                    "Priority": "48"
+                },
+                {
+                    "FaultID": "34029",
+                    "FaultCode": "Door glass scratched",
+                    "FaultName": "Door glass scratched - Door glass scratched",
+                    "FaultLabel": "Door glass scratched",
+                    "Priority": "42"
+                },
+                {
+                    "FaultID": "34024",
+                    "FaultCode": "Door damaged",
+                    "FaultName": "Door damaged - Door damaged",
+                    "FaultLabel": "Door damaged",
+                    "Priority": "37"
+                },
+                {
+                    "FaultID": "29905",
+                    "FaultCode": "Door seal is damaged / loose",
+                    "FaultName": "Door seal is damaged / loose - Door seal is damaged / loose",
+                    "FaultLabel": "Damaged or loose door seal",
+                    "Priority": "29"
+                },
+                {
+                    "FaultID": "34006",
+                    "FaultCode": "Appliance cabinet is rusting",
+                    "FaultName": "Appliance cabinet is rusting - Appliance cabinet is rusting",
+                    "FaultLabel": "Cabinet rusty",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "34000",
+                    "FaultCode": "Button/s cracked/damaged/loose",
+                    "FaultName": "Button/s cracked/damaged/loose - Button/s cracked/damaged/loose",
+                    "FaultLabel": "Buttons damaged or loose",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "29913",
+                    "FaultCode": "Rust on the internal door",
+                    "FaultName": "Rust on the internal door - Rust on the internal door",
+                    "FaultLabel": "Rust on internal door",
+                    "Priority": "87"
+                },
+                {
+                    "FaultID": "29904",
+                    "FaultCode": "Door hinge/hinges are broken",
+                    "FaultName": "Door hinge/hinges are broken - Door hinge/hinges are broken",
+                    "FaultLabel": "Broken door hinge",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "34036",
+                    "FaultCode": "Door seal stained/black/mouldy",
+                    "FaultName": "Door seal stained/black/mouldy - Door seal stained/black/mouldy",
+                    "FaultLabel": "Door seal stained or mouldy",
+                    "Priority": "50"
+                },
+                {
+                    "FaultID": "34031",
+                    "FaultCode": "Door hinge broken",
+                    "FaultName": "Door hinge broken - Door hinge broken",
+                    "FaultLabel": "Door hinge broken",
+                    "Priority": "45"
+                },
+                {
+                    "FaultID": "34026",
+                    "FaultCode": "Door dropped/loose",
+                    "FaultName": "Door dropped/loose - Door dropped/loose",
+                    "FaultLabel": "Door dropped or loose",
+                    "Priority": "39"
+                },
+                {
+                    "FaultID": "34019",
+                    "FaultCode": "Door dented",
+                    "FaultName": "Door dented - Door dented",
+                    "FaultLabel": "Dented door",
+                    "Priority": "31"
+                },
+                {
+                    "FaultID": "34008",
+                    "FaultCode": "Cabinet twisted",
+                    "FaultName": "Cabinet twisted - Cabinet twisted",
+                    "FaultLabel": "Cabinet twisted",
+                    "Priority": "17"
+                },
+                {
+                    "FaultID": "34002",
+                    "FaultCode": "Button/s missing",
+                    "FaultName": "Button/s missing - Button/s missing",
+                    "FaultLabel": "Buttons missing",
+                    "Priority": "10"
+                },
+                {
+                    "FaultID": "33997",
+                    "FaultCode": "The built in door panel has come adrift",
+                    "FaultName": "The built in door panel has come adrift - The built in door panel has come adrift",
+                    "FaultLabel": "Built-in door panel broken",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "34038",
+                    "FaultCode": "Appliance foot/feet missing",
+                    "FaultName": "Appliance foot/feet missing - Appliance foot/feet missing",
+                    "FaultLabel": "Foot or feet missing",
+                    "Priority": "54"
+                },
+                {
+                    "FaultID": "34033",
+                    "FaultCode": "Door seal broken",
+                    "FaultName": "Door seal broken - Door seal broken",
+                    "FaultLabel": "Door seal broken",
+                    "Priority": "47"
+                },
+                {
+                    "FaultID": "34028",
+                    "FaultCode": "Door glass broken",
+                    "FaultName": "Door glass broken - Door glass broken",
+                    "FaultLabel": "Door glass broken",
+                    "Priority": "41"
+                },
+                {
+                    "FaultID": "34022",
+                    "FaultCode": "Display is broken/damaged",
+                    "FaultName": "Display is broken/damaged - Display is broken/damaged",
+                    "FaultLabel": "Display broken",
+                    "Priority": "35"
+                },
+                {
+                    "FaultID": "34017",
+                    "FaultCode": "Lower spray arm is damaged / broken",
+                    "FaultName": "Lower spray arm is damaged / broken - Lower spray arm is damaged / broken",
+                    "FaultLabel": "Damaged lower spray arm",
+                    "Priority": "27"
+                },
+                {
+                    "FaultID": "34004",
+                    "FaultCode": "Appliance cabinet is damaged",
+                    "FaultName": "Appliance cabinet is damaged - Appliance cabinet is damaged",
+                    "FaultLabel": "Cabinet damaged",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "33999",
+                    "FaultCode": "Control panel button is broken/damaged",
+                    "FaultName": "Control panel button is broken/damaged - Control panel button is broken/damaged",
+                    "FaultLabel": "Buttons broken",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "29911",
+                    "FaultCode": "Rust on the external door",
+                    "FaultName": "Rust on the external door - Rust on the external door",
+                    "FaultLabel": "Rust on external door",
+                    "Priority": "85"
+                },
+                {
+                    "FaultID": "33995",
+                    "FaultCode": "Detergent dispenser is broken",
+                    "FaultName": "Detergent dispenser is broken - Detergent dispenser is broken",
+                    "FaultLabel": "Broken detergent dispenser",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "34035",
+                    "FaultCode": "Door seal detached",
+                    "FaultName": "Door seal detached - Door seal detached",
+                    "FaultLabel": "Door seal detatched",
+                    "Priority": "49"
+                },
+                {
+                    "FaultID": "34030",
+                    "FaultCode": "Door handle broken",
+                    "FaultName": "Door handle broken - Door handle broken",
+                    "FaultLabel": "Door handle broken",
+                    "Priority": "43"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 246,
+            "FaultCategoryName": "BAD SMELLS",
+            "FaultCategoryLabel": "Smell",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "4478",
+                    "FaultCode": "Burning smell from the appliance",
+                    "FaultName": "Burning smell from the appliance - Burning smell from the appliance",
+                    "FaultLabel": "Burning smell",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29412",
+                    "FaultCode": "Unpleasant / Bad Smells -  Ozone not working",
+                    "FaultName": "Unpleasant / Bad Smells -  Ozone not working - Unpleasant / Bad Smells -  Ozone not working",
+                    "FaultLabel": "Bad smells",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29413",
+                    "FaultCode": "iF0 Water Level Error",
+                    "FaultName": "iF0 Water Level Error - iF0 Water Level Error",
+                    "FaultLabel": "iF0 Water Level Error",
+                    "Priority": "4"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 214,
+            "FaultCategoryName": "BUTTONS/KNOBS",
+            "FaultCategoryLabel": "Buttons or knobs",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "4559",
+                    "FaultCode": "Knob broken/damaged",
+                    "FaultName": "Knob broken/damaged - Knob broken/damaged",
+                    "FaultLabel": "Knob damaged",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "4094",
+                    "FaultCode": "Buttons not responding",
+                    "FaultName": "Buttons not responding - Buttons not responding",
+                    "FaultLabel": "Buttons non-responsive",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "29129",
+                    "FaultCode": "Button / Knob broken",
+                    "FaultName": "Button / Knob broken - Button / Knob broken",
+                    "FaultLabel": "Button broken",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29123",
+                    "FaultCode": "Buttons stuck in",
+                    "FaultName": "Buttons stuck in - Buttons stuck in",
+                    "FaultLabel": "Buttons stuck",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "4036",
+                    "FaultCode": "Button/s cracked/damaged/loose",
+                    "FaultName": "Button/s cracked/damaged/loose - Button/s cracked/damaged/loose",
+                    "FaultLabel": "Buttons damaged or loose",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "33218",
+                    "FaultCode": "Sensor dry/eco setting cannot be selected",
+                    "FaultName": "Sensor dry/eco setting cannot be selected - Sensor dry/eco setting cannot be selected",
+                    "FaultLabel": "Dry or eco settings faulty",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "33215",
+                    "FaultCode": "Button/s missing",
+                    "FaultName": "Button/s missing - Button/s missing",
+                    "FaultLabel": "Buttons missing",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "29131",
+                    "FaultCode": "Program control knob sticks on program",
+                    "FaultName": "Program control knob sticks on program - Program control knob sticks on program",
+                    "FaultLabel": "Program control knob sticking",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "4039",
+                    "FaultCode": "Button/s not functioning",
+                    "FaultName": "Button/s not functioning - Button/s not functioning",
+                    "FaultLabel": "Buttons not working",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "33220",
+                    "FaultCode": "Button / Knob jammed",
+                    "FaultName": "Button / Knob jammed - Button / Knob jammed",
+                    "FaultLabel": "Button jammed",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "33216",
+                    "FaultCode": "Dryness levels on Timed Dry cannot be selected",
+                    "FaultName": "Dryness levels on Timed Dry cannot be selected - Dryness levels on Timed Dry cannot be selected",
+                    "FaultLabel": "Cannot select dryness level",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "4037",
+                    "FaultCode": "Button/s jammed in",
+                    "FaultName": "Button/s jammed in - Button/s jammed in",
+                    "FaultLabel": "Buttons jammed",
+                    "Priority": "4"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 449,
+            "FaultCategoryName": "BUTTONS/KNOBS/DISPLAY/ CONTROL PANEL",
+            "FaultCategoryLabel": "Display or controls",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29974",
+                    "FaultCode": "Drying indicator flashing / flashes continuously",
+                    "FaultName": "Drying indicator flashing / flashes continuously - Drying indicator flashing / flashes continuously",
+                    "FaultLabel": "Indicators flashing",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "29978",
+                    "FaultCode": "Programme can be selected but appliance will not start",
+                    "FaultName": "Programme can be selected but appliance will not start - Programme can be selected but appliance will not start",
+                    "FaultLabel": "Appliance not running programs",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29975",
+                    "FaultCode": "Half load indicator lamp does not work",
+                    "FaultName": "Half load indicator lamp does not work - Half load indicator lamp does not work",
+                    "FaultLabel": "Indicators not working",
+                    "Priority": "13"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 261,
+            "FaultCategoryName": "CABINET",
+            "FaultCategoryLabel": "Cabinet",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "4357",
+                    "FaultCode": "Painting defect",
+                    "FaultName": "Painting defect - Painting defect",
+                    "FaultLabel": "Painting issue",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29463",
+                    "FaultCode": "Appliance cabinet is damaged",
+                    "FaultName": "Appliance cabinet is damaged - Appliance cabinet is damaged",
+                    "FaultLabel": "Damaged cabinet",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29462",
+                    "FaultCode": "Appliance foot/feet missing",
+                    "FaultName": "Appliance foot/feet missing - Appliance foot/feet missing",
+                    "FaultLabel": "Feet missing",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "4355",
+                    "FaultCode": "Dented cabinet/top",
+                    "FaultName": "Dented cabinet/top - Dented cabinet/top",
+                    "FaultLabel": "Dented cabinet",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 230,
+            "FaultCategoryName": "COVER",
+            "FaultCategoryLabel": "Cover",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "4430",
+                    "FaultCode": "Top cover damaged",
+                    "FaultName": "Top cover damaged - Top cover damaged",
+                    "FaultLabel": "Top cover damaged",
+                    "Priority": "1"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 224,
+            "FaultCategoryName": "CYCLE TIMES",
+            "FaultCategoryLabel": "Cycle times",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "4099",
+                    "FaultCode": "Wash times do not appear to match appliance display times",
+                    "FaultName": "Wash times do not appear to match appliance display times - Wash times do not appear to match appliance display times",
+                    "FaultLabel": "Wash times incorrect",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "4359",
+                    "FaultCode": "Appliance continues to operate and won't stop",
+                    "FaultName": "Appliance continues to operate and won't stop - Appliance continues to operate and won't stop",
+                    "FaultLabel": "Appliance doesn't stop",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "4098",
+                    "FaultCode": "Cycle time appears to be too short",
+                    "FaultName": "Cycle time appears to be too short - Cycle time appears to be too short",
+                    "FaultLabel": "Cycles too short",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29238",
+                    "FaultCode": "Cycle times do not appear to match display times",
+                    "FaultName": "Cycle times do not appear to match display times - Cycle times do not appear to match display times",
+                    "FaultLabel": "Incorrect cycle times",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "29243",
+                    "FaultCode": "Appliance cuts out after a short time",
+                    "FaultName": "Appliance cuts out after a short time - Appliance cuts out after a short time",
+                    "FaultLabel": "Cuts out",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29240",
+                    "FaultCode": "Appliance appears to take a long time to dry contents",
+                    "FaultName": "Appliance appears to take a long time to dry contents - Appliance appears to take a long time to dry contents",
+                    "FaultLabel": "Dry time too long",
+                    "Priority": "5"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 215,
+            "FaultCategoryName": "DETERGENT CONTAINER",
+            "FaultCategoryLabel": "Detergent container",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29137",
+                    "FaultCode": "Tablet not dissolving",
+                    "FaultName": "Tablet not dissolving - Tablet not dissolving",
+                    "FaultLabel": "Tablet doesn't dissolve",
+                    "Priority": "20"
+                },
+                {
+                    "FaultID": "29142",
+                    "FaultCode": "Excessive / too much foam at the end of the wash cycle",
+                    "FaultName": "Excessive / too much foam at the end of the wash cycle - Excessive / too much foam at the end of the wash cycle",
+                    "FaultLabel": "Foam at end of cycle",
+                    "Priority": "13"
+                },
+                {
+                    "FaultID": "29139",
+                    "FaultCode": "Detergent Dispenser/ Draw flap will not open / does not open fully",
+                    "FaultName": "Detergent Dispenser/ Draw flap will not open / does not open fully - Detergent Dispenser/ Draw flap will not open / does not open fully",
+                    "FaultLabel": "Dispenser draw not opening",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "4047",
+                    "FaultCode": "Does not take softener on long fill cycle",
+                    "FaultName": "Does not take softener on long fill cycle - Does not take softener on long fill cycle",
+                    "FaultLabel": "No softener on long cycle",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "4489",
+                    "FaultCode": "Lid/door stiff and hard to open",
+                    "FaultName": "Lid/door stiff and hard to open - Lid/door stiff and hard to open",
+                    "FaultLabel": "Door doesn't open",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "4051",
+                    "FaultCode": "Detergent dispenser cannot be fully opened",
+                    "FaultName": "Detergent dispenser cannot be fully opened - Detergent dispenser cannot be fully opened",
+                    "FaultLabel": "Dispenser can't be opened",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "33295",
+                    "FaultCode": "Salt never depletes",
+                    "FaultName": "Salt never depletes - Salt never depletes",
+                    "FaultLabel": "Salt build-up",
+                    "Priority": "18"
+                },
+                {
+                    "FaultID": "29135",
+                    "FaultCode": "Washing powder will not dispense into the appliance",
+                    "FaultName": "Washing powder will not dispense into the appliance - Washing powder will not dispense into the appliance",
+                    "FaultLabel": "Faulty washing powder dispenser",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "29140",
+                    "FaultCode": "Detergent Dispenser/ Draw is leaking",
+                    "FaultName": "Detergent Dispenser/ Draw is leaking - Detergent Dispenser/ Draw is leaking",
+                    "FaultLabel": "Dispenser draw leaking",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "4043",
+                    "FaultCode": "Does not take detergent on long fill cycle",
+                    "FaultName": "Does not take detergent on long fill cycle - Does not take detergent on long fill cycle",
+                    "FaultLabel": "No detergent on long cycle",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "4045",
+                    "FaultCode": "Detergent dispenser leaks",
+                    "FaultName": "Detergent dispenser leaks - Detergent dispenser leaks",
+                    "FaultLabel": "Dispenser leaks",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "4046",
+                    "FaultCode": "Detergent dispenser is broken",
+                    "FaultName": "Detergent dispenser is broken - Detergent dispenser is broken",
+                    "FaultLabel": "Dispenser broken",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "4044",
+                    "FaultCode": "Detergent dispenser contains residues",
+                    "FaultName": "Detergent dispenser contains residues - Detergent dispenser contains residues",
+                    "FaultLabel": "Residue in dispenser",
+                    "Priority": "17"
+                },
+                {
+                    "FaultID": "4587",
+                    "FaultCode": "Fluff filter draw jammed/perforated/misaligned/defective",
+                    "FaultName": "Fluff filter draw jammed/perforated/misaligned/defective - Fluff filter draw jammed/perforated/misaligned/defective",
+                    "FaultLabel": "Faulty filter draw",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "29133",
+                    "FaultCode": "Detergent dispenser pulls out of the cabinet easily",
+                    "FaultName": "Detergent dispenser pulls out of the cabinet easily - Detergent dispenser pulls out of the cabinet easily",
+                    "FaultLabel": "Dispenser dislodged",
+                    "Priority": "4"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 218,
+            "FaultCategoryName": "DOOR",
+            "FaultCategoryLabel": "Door",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "33328",
+                    "FaultCode": "Door surround/frame broken",
+                    "FaultName": "Door surround/frame broken - Door surround/frame broken",
+                    "FaultLabel": "Door frame broken",
+                    "Priority": "10"
+                },
+                {
+                    "FaultID": "28434",
+                    "FaultCode": "The built in door panel is stained",
+                    "FaultName": "The built in door panel is stained - The built in door panel is stained",
+                    "FaultLabel": "Built-in door panel stained",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29178",
+                    "FaultCode": "Water leakage / leaking from the door",
+                    "FaultName": "Water leakage / leaking from the door - Water leakage / leaking from the door",
+                    "FaultLabel": "Water leaking",
+                    "Priority": "57"
+                },
+                {
+                    "FaultID": "29146",
+                    "FaultCode": "Door handle broken",
+                    "FaultName": "Door handle broken - Door handle broken",
+                    "FaultLabel": "Handle broken",
+                    "Priority": "40"
+                },
+                {
+                    "FaultID": "33334",
+                    "FaultCode": "Door won't close",
+                    "FaultName": "Door won't close - Door won't close",
+                    "FaultLabel": "Door won't close",
+                    "Priority": "24"
+                },
+                {
+                    "FaultID": "4058",
+                    "FaultCode": "Door dropped/loose",
+                    "FaultName": "Door dropped/loose - Door dropped/loose",
+                    "FaultLabel": "Door loose or dropped",
+                    "Priority": "18"
+                },
+                {
+                    "FaultID": "29185",
+                    "FaultCode": "Door glass scratched",
+                    "FaultName": "Door glass scratched - Door glass scratched",
+                    "FaultLabel": "Door glass scratched",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "33335",
+                    "FaultCode": "Door damaged",
+                    "FaultName": "Door damaged - Door damaged",
+                    "FaultLabel": "Door damaged",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "29175",
+                    "FaultCode": "Rust on the external door",
+                    "FaultName": "Rust on the external door - Rust on the external door",
+                    "FaultLabel": "Rust on external door",
+                    "Priority": "49"
+                },
+                {
+                    "FaultID": "29170",
+                    "FaultCode": "Door not opening",
+                    "FaultName": "Door not opening - Door not opening",
+                    "FaultLabel": "Door won't open",
+                    "Priority": "26"
+                },
+                {
+                    "FaultID": "29172",
+                    "FaultCode": "Door seal is damaged / loose",
+                    "FaultName": "Door seal is damaged / loose - Door seal is damaged / loose",
+                    "FaultLabel": "Door seal damaged",
+                    "Priority": "21"
+                },
+                {
+                    "FaultID": "29165",
+                    "FaultCode": "Door stuck",
+                    "FaultName": "Door stuck - Door stuck",
+                    "FaultLabel": "Door jammed",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "4436",
+                    "FaultCode": "Door dropped",
+                    "FaultName": "Door dropped - Door dropped",
+                    "FaultLabel": "Door dropped",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "29168",
+                    "FaultCode": "The built in door panel has come adrift",
+                    "FaultName": "The built in door panel has come adrift - The built in door panel has come adrift",
+                    "FaultLabel": "Built-in door panel damaged",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29177",
+                    "FaultCode": "Rust on the internal door",
+                    "FaultName": "Rust on the internal door - Rust on the internal door",
+                    "FaultLabel": "Rust on internal door",
+                    "Priority": "51"
+                },
+                {
+                    "FaultID": "29174",
+                    "FaultCode": "Foam leakage / leaking from the door",
+                    "FaultName": "Foam leakage / leaking from the door - Foam leakage / leaking from the door",
+                    "FaultLabel": "Foam leaking",
+                    "Priority": "28"
+                },
+                {
+                    "FaultID": "29153",
+                    "FaultCode": "Door will not close",
+                    "FaultName": "Door will not close - Door will not close",
+                    "FaultLabel": "Door won't close",
+                    "Priority": "23"
+                },
+                {
+                    "FaultID": "4491",
+                    "FaultCode": "The door lock is broken",
+                    "FaultName": "The door lock is broken - The door lock is broken",
+                    "FaultLabel": "Door lock broken",
+                    "Priority": "17"
+                },
+                {
+                    "FaultID": "29148",
+                    "FaultCode": "Door glass broken",
+                    "FaultName": "Door glass broken - Door glass broken",
+                    "FaultLabel": "Door glass broken",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "4059",
+                    "FaultCode": "Door will open with child lock selected",
+                    "FaultName": "Door will open with child lock selected - Door will open with child lock selected",
+                    "FaultLabel": "Child lock not working",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29169",
+                    "FaultCode": "Door hinge/hinges are broken",
+                    "FaultName": "Door hinge/hinges are broken - Door hinge/hinges are broken",
+                    "FaultLabel": "Hinge broken",
+                    "Priority": "41"
+                },
+                {
+                    "FaultID": "29154",
+                    "FaultCode": "Door will not open",
+                    "FaultName": "Door will not open - Door will not open",
+                    "FaultLabel": "Door won't open",
+                    "Priority": "25"
+                },
+                {
+                    "FaultID": "29155",
+                    "FaultCode": "Door opens mid-cycle",
+                    "FaultName": "Door opens mid-cycle - Door opens mid-cycle",
+                    "FaultLabel": "Door opens mid-cycle",
+                    "Priority": "19"
+                },
+                {
+                    "FaultID": "29151",
+                    "FaultCode": "Door hinge broken",
+                    "FaultName": "Door hinge broken - Door hinge broken",
+                    "FaultLabel": "Door hinge broken",
+                    "Priority": "13"
+                },
+                {
+                    "FaultID": "33327",
+                    "FaultCode": "Door dented",
+                    "FaultName": "Door dented - Door dented",
+                    "FaultLabel": "Door dented",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "33337",
+                    "FaultCode": "Rust on the hinges",
+                    "FaultName": "Rust on the hinges - Rust on the hinges",
+                    "FaultLabel": "Rust on hinges",
+                    "Priority": "50"
+                },
+                {
+                    "FaultID": "29152",
+                    "FaultCode": "Door still locked at the end of the wash cycle",
+                    "FaultName": "Door still locked at the end of the wash cycle - Door still locked at the end of the wash cycle",
+                    "FaultLabel": "Door won't unlock when wash ends",
+                    "Priority": "27"
+                },
+                {
+                    "FaultID": "29167",
+                    "FaultCode": "Door will not shut/catch",
+                    "FaultName": "Door will not shut/catch - Door will not shut/catch",
+                    "FaultLabel": "Door will not shut",
+                    "Priority": "22"
+                },
+                {
+                    "FaultID": "29150",
+                    "FaultCode": "Door lock/catch broken",
+                    "FaultName": "Door lock/catch broken - Door lock/catch broken",
+                    "FaultLabel": "Door lock broken",
+                    "Priority": "16"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 219,
+            "FaultCategoryName": "DOOR SEAL",
+            "FaultCategoryLabel": "Door seal",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "28977",
+                    "FaultCode": "Door seal touching drum",
+                    "FaultName": "Door seal touching drum - Door seal touching drum",
+                    "FaultLabel": "Door seal touches drum",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "4067",
+                    "FaultCode": "Water evident on the door seal",
+                    "FaultName": "Water evident on the door seal - Water evident on the door seal",
+                    "FaultLabel": "Water on door seal",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "29188",
+                    "FaultCode": "Door seal broken",
+                    "FaultName": "Door seal broken - Door seal broken",
+                    "FaultLabel": "Door seal broken",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29187",
+                    "FaultCode": "Door seal stained/black/mouldy",
+                    "FaultName": "Door seal stained/black/mouldy - Door seal stained/black/mouldy",
+                    "FaultLabel": "Door seal stained or mouldy",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29186",
+                    "FaultCode": "Hole/split in door seal",
+                    "FaultName": "Hole/split in door seal - Hole/split in door seal",
+                    "FaultLabel": "Split in door seal",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "4438",
+                    "FaultCode": "Door seal has come adrift",
+                    "FaultName": "Door seal has come adrift - Door seal has come adrift",
+                    "FaultLabel": "Door seal adrift",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29189",
+                    "FaultCode": "Door seal detached",
+                    "FaultName": "Door seal detached - Door seal detached",
+                    "FaultLabel": "Door seal detatched",
+                    "Priority": "3"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 220,
+            "FaultCategoryName": "DRUM",
+            "FaultCategoryLabel": "Machine drum",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "33467",
+                    "FaultCode": "Drum only rotates in one direction",
+                    "FaultName": "Drum only rotates in one direction - Drum only rotates in one direction",
+                    "FaultLabel": "Drum only spins one way",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "4071",
+                    "FaultCode": "Water level in the appliance appears to be very low",
+                    "FaultName": "Water level in the appliance appears to be very low - Water level in the appliance appears to be very low",
+                    "FaultLabel": "Low water level",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "29193",
+                    "FaultCode": "Appliance is tearing clothes",
+                    "FaultName": "Appliance is tearing clothes - Appliance is tearing clothes",
+                    "FaultLabel": "Clothes torn by wash",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29197",
+                    "FaultCode": "Dryer continues to run / keeps rotating / does not stop after the end of the programme",
+                    "FaultName": "Dryer continues to run / keeps rotating / does not stop after the end of the programme - Dryer continues to run / keeps rotating / does not stop after the end of the programme",
+                    "FaultLabel": "Spins after program finishes",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "29195",
+                    "FaultCode": "Drum not rotating / not spinning / not turning  - cannot turn by hand",
+                    "FaultName": "Drum not rotating / not spinning / not turning  - cannot turn by hand - Drum not rotating / not spinning / not turning  - cannot turn by hand",
+                    "FaultLabel": "Drum not turning",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29191",
+                    "FaultCode": "Lifter/paddles loose/broken/adrift",
+                    "FaultName": "Lifter/paddles loose/broken/adrift - Lifter/paddles loose/broken/adrift",
+                    "FaultLabel": "Lifter or paddles loose",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "29194",
+                    "FaultCode": "Drum noisy",
+                    "FaultName": "Drum noisy - Drum noisy",
+                    "FaultLabel": "Noisy drum",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "4068",
+                    "FaultCode": "Appliance will not spin",
+                    "FaultName": "Appliance will not spin - Appliance will not spin",
+                    "FaultLabel": "Doesn't spin",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 266,
+            "FaultCategoryName": "DRYING",
+            "FaultCategoryLabel": "Drying",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29502",
+                    "FaultCode": "Clothes are cold when the drying cycle finishes",
+                    "FaultName": "Clothes are cold when the drying cycle finishes - Clothes are cold when the drying cycle finishes",
+                    "FaultLabel": "Clothes cold after dry cycle",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "33346",
+                    "FaultCode": "Appliance will not heat",
+                    "FaultName": "Appliance will not heat - Appliance will not heat",
+                    "FaultLabel": "Won't heat up",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "29500",
+                    "FaultCode": "Clothes still wet at the end of an auto cycle",
+                    "FaultName": "Clothes still wet at the end of an auto cycle - Clothes still wet at the end of an auto cycle",
+                    "FaultLabel": "Clothes wet after auto cycle",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "29501",
+                    "FaultCode": "Appliance appears to take a long time to dry contents",
+                    "FaultName": "Appliance appears to take a long time to dry contents - Appliance appears to take a long time to dry contents",
+                    "FaultLabel": "Drying takes too long",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "29498",
+                    "FaultCode": "Leaking on drying cycle",
+                    "FaultName": "Leaking on drying cycle - Leaking on drying cycle",
+                    "FaultLabel": "Leaking on dry cycle",
+                    "Priority": "10"
+                },
+                {
+                    "FaultID": "29496",
+                    "FaultCode": "Washing/clothes are damaged upon completion of drying cycle",
+                    "FaultName": "Washing/clothes are damaged upon completion of drying cycle - Washing/clothes are damaged upon completion of drying cycle",
+                    "FaultLabel": "Clothes damaged after dry cycle",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29499",
+                    "FaultCode": "Clothes still wet at the end of a timed cycle",
+                    "FaultName": "Clothes still wet at the end of a timed cycle - Clothes still wet at the end of a timed cycle",
+                    "FaultLabel": "Clothes wet after timed cycle",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "29497",
+                    "FaultCode": "Appliance not drying clothes when the ECO option is selected",
+                    "FaultName": "Appliance not drying clothes when the ECO option is selected - Appliance not drying clothes when the ECO option is selected",
+                    "FaultLabel": "Eco setting not drying clothes",
+                    "Priority": "9"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 225,
+            "FaultCategoryName": "ELECTRICAL ISSUES",
+            "FaultCategoryLabel": "Electrical issues",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29271",
+                    "FaultCode": "Tripped house electrics when in use / tripping electrics / power cuts out when in use",
+                    "FaultName": "Tripped house electrics when in use / tripping electrics / power cuts out when in use - Tripped house electrics when in use / tripping electrics / power cuts out when in use",
+                    "FaultLabel": "Trips home electrics",
+                    "Priority": "31"
+                },
+                {
+                    "FaultID": "4444",
+                    "FaultCode": "Dryer has no power",
+                    "FaultName": "Dryer has no power - Dryer has no power",
+                    "FaultLabel": "Dryer has no power",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "29258",
+                    "FaultCode": "Appliance appears to be tripping home electrics / tripped house electrics / power cut out",
+                    "FaultName": "Appliance appears to be tripping home electrics / tripped house electrics / power cut out - Appliance appears to be tripping home electrics / tripped house electrics / power cut out",
+                    "FaultLabel": "Appliance trips home electrics",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "29274",
+                    "FaultCode": "Temperature LEDs / lights permanently on",
+                    "FaultName": "Temperature LEDs / lights permanently on - Temperature LEDs / lights permanently on",
+                    "FaultLabel": "LEDs on permanently",
+                    "Priority": "21"
+                },
+                {
+                    "FaultID": "29248",
+                    "FaultCode": "Control panel dim or has not display",
+                    "FaultName": "Control panel dim or has not display - Control panel dim or has not display",
+                    "FaultLabel": "Control panel faulty",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "29249",
+                    "FaultCode": "Appliance sparking underneath/crackling noise",
+                    "FaultName": "Appliance sparking underneath/crackling noise - Appliance sparking underneath/crackling noise",
+                    "FaultLabel": "Appliance sparking or cracking",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29265",
+                    "FaultCode": "Using too much power / energy consumption too high",
+                    "FaultName": "Using too much power / energy consumption too high - Using too much power / energy consumption too high",
+                    "FaultLabel": "Too much energy used",
+                    "Priority": "28"
+                },
+                {
+                    "FaultID": "29262",
+                    "FaultCode": "Appliance will not switch on",
+                    "FaultName": "Appliance will not switch on - Appliance will not switch on",
+                    "FaultLabel": "Doesn't switch on",
+                    "Priority": "13"
+                },
+                {
+                    "FaultID": "29261",
+                    "FaultCode": "Appliance switches itself off",
+                    "FaultName": "Appliance switches itself off - Appliance switches itself off",
+                    "FaultLabel": "Appliance suddenly turns off",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "4101",
+                    "FaultCode": "Appliance gives a static shock",
+                    "FaultName": "Appliance gives a static shock - Appliance gives a static shock",
+                    "FaultLabel": "Electric shock from appliance",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "29246",
+                    "FaultCode": "Burning smell coming from the appliance",
+                    "FaultName": "Burning smell coming from the appliance - Burning smell coming from the appliance",
+                    "FaultLabel": "Burning smell",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "29264",
+                    "FaultCode": "The appliance is dead/not working",
+                    "FaultName": "The appliance is dead/not working - The appliance is dead/not working",
+                    "FaultLabel": "Appliance is dead",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29247",
+                    "FaultCode": "Multiple lights flashing on the appliance",
+                    "FaultName": "Multiple lights flashing on the appliance - Multiple lights flashing on the appliance",
+                    "FaultLabel": "Lights flashing",
+                    "Priority": "23"
+                },
+                {
+                    "FaultID": "29272",
+                    "FaultCode": "Emergency cut-out / stop triggers during machine cycle (no power)",
+                    "FaultName": "Emergency cut-out / stop triggers during machine cycle (no power) - Emergency cut-out / stop triggers during machine cycle (no power)",
+                    "FaultLabel": "Cuts out suddenly",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "29260",
+                    "FaultCode": "Appliance starts itself when switched off",
+                    "FaultName": "Appliance starts itself when switched off - Appliance starts itself when switched off",
+                    "FaultLabel": "Appliance starts itself",
+                    "Priority": "3"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 268,
+            "FaultCategoryName": "FOAM",
+            "FaultCategoryLabel": "Foam or residue",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29512",
+                    "FaultCode": "Foam leakage / leaking from the door",
+                    "FaultName": "Foam leakage / leaking from the door - Foam leakage / leaking from the door",
+                    "FaultLabel": "Foam leaking from door",
+                    "Priority": "3"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 221,
+            "FaultCategoryName": "LEAKAGE",
+            "FaultCategoryLabel": "Leak",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29209",
+                    "FaultCode": "Leaking on drying cycle",
+                    "FaultName": "Leaking on drying cycle - Leaking on drying cycle",
+                    "FaultLabel": "Leaking on dry cycle",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "29198",
+                    "FaultCode": "Leak from door",
+                    "FaultName": "Leak from door - Leak from door",
+                    "FaultLabel": "Leak from door",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "29202",
+                    "FaultCode": "Detergent Dispenser/ Draw is leaking",
+                    "FaultName": "Detergent Dispenser/ Draw is leaking - Detergent Dispenser/ Draw is leaking",
+                    "FaultLabel": "Dispenser drawer leaking",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "4077",
+                    "FaultCode": "Appliance overfilling with water",
+                    "FaultName": "Appliance overfilling with water - Appliance overfilling with water",
+                    "FaultLabel": "Overfilling with water",
+                    "Priority": "16"
+                },
+                {
+                    "FaultID": "29199",
+                    "FaultCode": "Leak from supply tap",
+                    "FaultName": "Leak from supply tap - Leak from supply tap",
+                    "FaultLabel": "Leak from supply tap",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "4082",
+                    "FaultCode": "Foam coming out of appliance top/lid",
+                    "FaultName": "Foam coming out of appliance top/lid - Foam coming out of appliance top/lid",
+                    "FaultLabel": "Foam from top or lid",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29204",
+                    "FaultCode": "Water leakage / leaking from the door",
+                    "FaultName": "Water leakage / leaking from the door - Water leakage / leaking from the door",
+                    "FaultLabel": "Water leaking from door",
+                    "Priority": "19"
+                },
+                {
+                    "FaultID": "29201",
+                    "FaultCode": "Water leakage below or behind the dryer",
+                    "FaultName": "Water leakage below or behind the dryer - Water leakage below or behind the dryer",
+                    "FaultLabel": "Leaking from below or behind",
+                    "Priority": "13"
+                },
+                {
+                    "FaultID": "4078",
+                    "FaultCode": "Leak from dispenser",
+                    "FaultName": "Leak from dispenser - Leak from dispenser",
+                    "FaultLabel": "Leak from dispenser",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "4083",
+                    "FaultCode": "Appliance has flooded the floor",
+                    "FaultName": "Appliance has flooded the floor - Appliance has flooded the floor",
+                    "FaultLabel": "Leaking onto the floor",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "4076",
+                    "FaultCode": "Leak from drain filter",
+                    "FaultName": "Leak from drain filter - Leak from drain filter",
+                    "FaultLabel": "Leak from drain filter",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "29207",
+                    "FaultCode": "Detergent dispenser is leaking",
+                    "FaultName": "Detergent dispenser is leaking - Detergent dispenser is leaking",
+                    "FaultLabel": "Dispenser leaking",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29205",
+                    "FaultCode": "Water leakage / leaking from the rear/water on the floor",
+                    "FaultName": "Water leakage / leaking from the rear/water on the floor - Water leakage / leaking from the rear/water on the floor",
+                    "FaultLabel": "Water leaking from behind",
+                    "Priority": "18"
+                },
+                {
+                    "FaultID": "29200",
+                    "FaultCode": "Appliance leaking from underneath",
+                    "FaultName": "Appliance leaking from underneath - Appliance leaking from underneath",
+                    "FaultLabel": "Leak from underneath",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "29203",
+                    "FaultCode": "Foam leakage / leaking from the door",
+                    "FaultName": "Foam leakage / leaking from the door - Foam leakage / leaking from the door",
+                    "FaultLabel": "Foam leaking from door",
+                    "Priority": "5"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 222,
+            "FaultCategoryName": "LOAD/DRAIN",
+            "FaultCategoryLabel": "Loading or draining",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29212",
+                    "FaultCode": "Appliance will not fill with water",
+                    "FaultName": "Appliance will not fill with water - Appliance will not fill with water",
+                    "FaultLabel": "Doesn't fill with water",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29215",
+                    "FaultCode": "Appliance fills with water on drying cycle",
+                    "FaultName": "Appliance fills with water on drying cycle - Appliance fills with water on drying cycle",
+                    "FaultLabel": "Fills with water on dry cycle",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "4087",
+                    "FaultCode": "Appliance continuously fills and drains water",
+                    "FaultName": "Appliance continuously fills and drains water - Appliance continuously fills and drains water",
+                    "FaultLabel": "Constantly fills and drains",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29214",
+                    "FaultCode": "Appliance will not drain water",
+                    "FaultName": "Appliance will not drain water - Appliance will not drain water",
+                    "FaultLabel": "Doesn't drain water",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "4086",
+                    "FaultCode": "Fills with water when drying",
+                    "FaultName": "Fills with water when drying - Fills with water when drying",
+                    "FaultLabel": "Fills with water when drying",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "29213",
+                    "FaultCode": "Appliance continuously fills with water",
+                    "FaultName": "Appliance continuously fills with water - Appliance continuously fills with water",
+                    "FaultLabel": "Constantly fills with water",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 223,
+            "FaultCategoryName": "NOISE",
+            "FaultCategoryLabel": "Noise",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29227",
+                    "FaultCode": "Noisy / noise during emptying cycle",
+                    "FaultName": "Noisy / noise during emptying cycle - Noisy / noise during emptying cycle",
+                    "FaultLabel": "Noise during emptying cycle",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "29229",
+                    "FaultCode": "Noisy / noise during washing cycle",
+                    "FaultName": "Noisy / noise during washing cycle - Noisy / noise during washing cycle",
+                    "FaultLabel": "Noise during washing cycle",
+                    "Priority": "16"
+                },
+                {
+                    "FaultID": "29225",
+                    "FaultCode": "Appliance vibrating excessively during wash cycle",
+                    "FaultName": "Appliance vibrating excessively during wash cycle - Appliance vibrating excessively during wash cycle",
+                    "FaultLabel": "Too much vibration",
+                    "Priority": "27"
+                },
+                {
+                    "FaultID": "29224",
+                    "FaultCode": "Appliance is beeping during operation",
+                    "FaultName": "Appliance is beeping during operation - Appliance is beeping during operation",
+                    "FaultLabel": "Beeping while on",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29228",
+                    "FaultCode": "Noisy / noise during filling cycle",
+                    "FaultName": "Noisy / noise during filling cycle - Noisy / noise during filling cycle",
+                    "FaultLabel": "Noise during filling cycle",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "33535",
+                    "FaultCode": "Door very noisy when opening and closing / noisy hinges",
+                    "FaultName": "Door very noisy when opening and closing / noisy hinges - Door very noisy when opening and closing / noisy hinges",
+                    "FaultLabel": "Noisy door hinges",
+                    "Priority": "19"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 275,
+            "FaultCategoryName": "OPERATION",
+            "FaultCategoryLabel": "Operational",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34464",
+                    "FaultCode": "Appliance randomly starts by itself",
+                    "FaultName": "Appliance randomly starts by itself - Appliance randomly starts by itself",
+                    "FaultLabel": "Randomly starts",
+                    "Priority": "113"
+                },
+                {
+                    "FaultID": "34457",
+                    "FaultCode": "On indicator does not work",
+                    "FaultName": "On indicator does not work - On indicator does not work",
+                    "FaultLabel": "ON indicator faulty",
+                    "Priority": "102"
+                },
+                {
+                    "FaultID": "34439",
+                    "FaultCode": "Lower spray arm becomes detached / loose / falls off during washing",
+                    "FaultName": "Lower spray arm becomes detached / loose / falls off during washing - Lower spray arm becomes detached / loose / falls off during washing",
+                    "FaultLabel": "Lower spray arm loose",
+                    "Priority": "83"
+                },
+                {
+                    "FaultID": "29587",
+                    "FaultCode": "Appliance is beeping during operation",
+                    "FaultName": "Appliance is beeping during operation - Appliance is beeping during operation",
+                    "FaultLabel": "Beeps when on",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "34488",
+                    "FaultCode": "Wash times do not appear to match appliance display times",
+                    "FaultName": "Wash times do not appear to match appliance display times - Wash times do not appear to match appliance display times",
+                    "FaultLabel": "Wash times incorrect",
+                    "Priority": "144"
+                },
+                {
+                    "FaultID": "27608",
+                    "FaultCode": "Spray arm jets blocked / water not spraying",
+                    "FaultName": "Spray arm jets blocked / water not spraying - Spray arm jets blocked / water not spraying",
+                    "FaultLabel": "Spray arm jets blocked",
+                    "Priority": "125"
+                },
+                {
+                    "FaultID": "27604",
+                    "FaultCode": "Rinse aid indicator never displays / always off",
+                    "FaultName": "Rinse aid indicator never displays / always off - Rinse aid indicator never displays / always off",
+                    "FaultLabel": "Rinse aid always off",
+                    "Priority": "115"
+                },
+                {
+                    "FaultID": "27619",
+                    "FaultCode": "Washing /cleaning performance is poor",
+                    "FaultName": "Washing /cleaning performance is poor - Washing /cleaning performance is poor",
+                    "FaultLabel": "Poor cleaning performance",
+                    "Priority": "110"
+                },
+                {
+                    "FaultID": "34449",
+                    "FaultCode": "Noisy / noise during emptying cycle",
+                    "FaultName": "Noisy / noise during emptying cycle - Noisy / noise during emptying cycle",
+                    "FaultLabel": "Noisy during emptying cycle",
+                    "Priority": "94"
+                },
+                {
+                    "FaultID": "34423",
+                    "FaultCode": "Half load indicator lamp does not work",
+                    "FaultName": "Half load indicator lamp does not work - Half load indicator lamp does not work",
+                    "FaultLabel": "Half-load lamp broken",
+                    "Priority": "66"
+                },
+                {
+                    "FaultID": "34491",
+                    "FaultCode": "White residue in the tub / on the inside of appliance and on dishes /contents",
+                    "FaultName": "White residue in the tub / on the inside of appliance and on dishes /contents - White residue in the tub / on the inside of appliance and on dishes /contents",
+                    "FaultLabel": "White residue on contents",
+                    "Priority": "147"
+                },
+                {
+                    "FaultID": "34473",
+                    "FaultCode": "Tablet not dissolving",
+                    "FaultName": "Tablet not dissolving - Tablet not dissolving",
+                    "FaultLabel": "Tablet won't dissolve",
+                    "Priority": "128"
+                },
+                {
+                    "FaultID": "34466",
+                    "FaultCode": "Red/rust residue on dishes/contents",
+                    "FaultName": "Red/rust residue on dishes/contents - Red/rust residue on dishes/contents",
+                    "FaultLabel": "Rust or residue on contents",
+                    "Priority": "118"
+                },
+                {
+                    "FaultID": "34463",
+                    "FaultCode": "Programmes stick during cycles",
+                    "FaultName": "Programmes stick during cycles - Programmes stick during cycles",
+                    "FaultLabel": "Programs sticking during cycle",
+                    "Priority": "112"
+                },
+                {
+                    "FaultID": "34451",
+                    "FaultCode": "Noisy / noise during washing cycle",
+                    "FaultName": "Noisy / noise during washing cycle - Noisy / noise during washing cycle",
+                    "FaultLabel": "Noisy during washing cycle",
+                    "Priority": "96"
+                },
+                {
+                    "FaultID": "34434",
+                    "FaultCode": "Inside of appliance / tub still very wet after the drying cycle",
+                    "FaultName": "Inside of appliance / tub still very wet after the drying cycle - Inside of appliance / tub still very wet after the drying cycle",
+                    "FaultLabel": "Inside wet after dry cycle",
+                    "Priority": "78"
+                },
+                {
+                    "FaultID": "34492",
+                    "FaultCode": "Appliance will not switch on",
+                    "FaultName": "Appliance will not switch on - Appliance will not switch on",
+                    "FaultLabel": "Will not switch on",
+                    "Priority": "149"
+                },
+                {
+                    "FaultID": "27611",
+                    "FaultCode": "The appliance stops during the wash cycle",
+                    "FaultName": "The appliance stops during the wash cycle - The appliance stops during the wash cycle",
+                    "FaultLabel": "Appliance stops suddenly",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "34485",
+                    "FaultCode": "Using too much power / energy consumption too high",
+                    "FaultName": "Using too much power / energy consumption too high - Using too much power / energy consumption too high",
+                    "FaultLabel": "Uses too much power",
+                    "Priority": "141"
+                },
+                {
+                    "FaultID": "27607",
+                    "FaultCode": "Salt indicator on continuously / always on",
+                    "FaultName": "Salt indicator on continuously / always on - Salt indicator on continuously / always on",
+                    "FaultLabel": "Salt indicator always on",
+                    "Priority": "120"
+                },
+                {
+                    "FaultID": "34465",
+                    "FaultCode": "Detergent residue on dishes /contents at end of cycle",
+                    "FaultName": "Detergent residue on dishes /contents at end of cycle - Detergent residue on dishes /contents at end of cycle",
+                    "FaultLabel": "Residue on dishes after cycle",
+                    "Priority": "114"
+                },
+                {
+                    "FaultID": "34460",
+                    "FaultCode": "Option functions do not work",
+                    "FaultName": "Option functions do not work - Option functions do not work",
+                    "FaultLabel": "Options functions faulty",
+                    "Priority": "107"
+                },
+                {
+                    "FaultID": "34448",
+                    "FaultCode": "Door very noisy when opening and closing / noisy hinges",
+                    "FaultName": "Door very noisy when opening and closing / noisy hinges - Door very noisy when opening and closing / noisy hinges",
+                    "FaultLabel": "Noisy door hinges",
+                    "Priority": "93"
+                },
+                {
+                    "FaultID": "29628",
+                    "FaultCode": "There is a delay when the appliance is turned on",
+                    "FaultName": "There is a delay when the appliance is turned on - There is a delay when the appliance is turned on",
+                    "FaultLabel": "Delay when turning on",
+                    "Priority": "26"
+                },
+                {
+                    "FaultID": "34490",
+                    "FaultCode": "Water left in the appliance at the end of the cycle",
+                    "FaultName": "Water left in the appliance at the end of the cycle - Water left in the appliance at the end of the cycle",
+                    "FaultLabel": "Water left at end of cycle",
+                    "Priority": "146"
+                },
+                {
+                    "FaultID": "29591",
+                    "FaultCode": "Appliance switches itself off",
+                    "FaultName": "Appliance switches itself off - Appliance switches itself off",
+                    "FaultLabel": "Switches itself off",
+                    "Priority": "126"
+                },
+                {
+                    "FaultID": "27605",
+                    "FaultCode": "Rinse aid indicator on continuously / always on",
+                    "FaultName": "Rinse aid indicator on continuously / always on - Rinse aid indicator on continuously / always on",
+                    "FaultLabel": "Rinse aid always on",
+                    "Priority": "116"
+                },
+                {
+                    "FaultID": "34462",
+                    "FaultCode": "Appliance is on, but will not programme",
+                    "FaultName": "Appliance is on, but will not programme - Appliance is on, but will not programme",
+                    "FaultLabel": "Programs not starting",
+                    "Priority": "111"
+                },
+                {
+                    "FaultID": "34450",
+                    "FaultCode": "Noisy / noise during filling cycle",
+                    "FaultName": "Noisy / noise during filling cycle - Noisy / noise during filling cycle",
+                    "FaultLabel": "Noisy during filling cycle",
+                    "Priority": "95"
+                },
+                {
+                    "FaultID": "34433",
+                    "FaultCode": "Drying indicator flashing / flashes continuously",
+                    "FaultName": "Drying indicator flashing / flashes continuously - Drying indicator flashing / flashes continuously",
+                    "FaultLabel": "Indicators flashing",
+                    "Priority": "77"
+                },
+                {
+                    "FaultID": "29626",
+                    "FaultCode": "The appliance will not start",
+                    "FaultName": "The appliance will not start - The appliance will not start",
+                    "FaultLabel": "Will not start",
+                    "Priority": "148"
+                },
+                {
+                    "FaultID": "34484",
+                    "FaultCode": "Upper spray arm becomes detached / loose / falls off during washing",
+                    "FaultName": "Upper spray arm becomes detached / loose / falls off during washing - Upper spray arm becomes detached / loose / falls off during washing",
+                    "FaultLabel": "Upper spray arm loose",
+                    "Priority": "140"
+                },
+                {
+                    "FaultID": "34467",
+                    "FaultCode": "Salt indicator never displays / always off",
+                    "FaultName": "Salt indicator never displays / always off - Salt indicator never displays / always off",
+                    "FaultLabel": "Salt indicator always off",
+                    "Priority": "119"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 276,
+            "FaultCategoryName": "PERFORMANCE",
+            "FaultCategoryLabel": "Performance",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34538",
+                    "FaultCode": "Lower spray arm becomes detached / loose / falls off during washing",
+                    "FaultName": "Lower spray arm becomes detached / loose / falls off during washing - Lower spray arm becomes detached / loose / falls off during washing",
+                    "FaultLabel": "Lower spray arm loose",
+                    "Priority": "43"
+                },
+                {
+                    "FaultID": "34522",
+                    "FaultCode": "Cutlery wet / not dried properly at the end of the drying cycle",
+                    "FaultName": "Cutlery wet / not dried properly at the end of the drying cycle - Cutlery wet / not dried properly at the end of the drying cycle",
+                    "FaultLabel": "Cutlery wet after dry cycle",
+                    "Priority": "21"
+                },
+                {
+                    "FaultID": "27633",
+                    "FaultCode": "Light blue residue on dishes/contents",
+                    "FaultName": "Light blue residue on dishes/contents - Light blue residue on dishes/contents",
+                    "FaultLabel": "Blue residue on contents",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "34512",
+                    "FaultCode": "The appliance stops during the wash cycle",
+                    "FaultName": "The appliance stops during the wash cycle - The appliance stops during the wash cycle",
+                    "FaultLabel": "Appliance stops suddenly",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "34550",
+                    "FaultCode": "Upper spray arm becomes detached / loose / falls off during washing",
+                    "FaultName": "Upper spray arm becomes detached / loose / falls off during washing - Upper spray arm becomes detached / loose / falls off during washing",
+                    "FaultLabel": "Upper spray arm loose",
+                    "Priority": "58"
+                },
+                {
+                    "FaultID": "34544",
+                    "FaultCode": "Programme can be selected but appliance will not start",
+                    "FaultName": "Programme can be selected but appliance will not start - Programme can be selected but appliance will not start",
+                    "FaultLabel": "Programs not starting",
+                    "Priority": "52"
+                },
+                {
+                    "FaultID": "29691",
+                    "FaultCode": "Excessive / too much foam at the end of the wash cycle",
+                    "FaultName": "Excessive / too much foam at the end of the wash cycle - Excessive / too much foam at the end of the wash cycle",
+                    "FaultLabel": "Excess foam at end of cycle",
+                    "Priority": "25"
+                },
+                {
+                    "FaultID": "27627",
+                    "FaultCode": "Dishes /contents / cutlery are still dirty at the end of the cycle",
+                    "FaultName": "Dishes /contents / cutlery are still dirty at the end of the cycle - Dishes /contents / cutlery are still dirty at the end of the cycle",
+                    "FaultLabel": "Contents dirty after cycle",
+                    "Priority": "18"
+                },
+                {
+                    "FaultID": "29702",
+                    "FaultCode": "Unpleasant / Bad Smells -  Ozone not working",
+                    "FaultName": "Unpleasant / Bad Smells -  Ozone not working - Unpleasant / Bad Smells -  Ozone not working",
+                    "FaultLabel": "Bad smell",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "34553",
+                    "FaultCode": "Water left in the appliance at the end of the cycle",
+                    "FaultName": "Water left in the appliance at the end of the cycle - Water left in the appliance at the end of the cycle",
+                    "FaultLabel": "Water left at end of cycle",
+                    "Priority": "61"
+                },
+                {
+                    "FaultID": "34546",
+                    "FaultCode": "Detergent residue on dishes /contents at end of cycle",
+                    "FaultName": "Detergent residue on dishes /contents at end of cycle - Detergent residue on dishes /contents at end of cycle",
+                    "FaultLabel": "Residue on dishes after cycle",
+                    "Priority": "54"
+                },
+                {
+                    "FaultID": "29693",
+                    "FaultCode": "Inside of appliance / tub still very wet after the drying cycle",
+                    "FaultName": "Inside of appliance / tub still very wet after the drying cycle - Inside of appliance / tub still very wet after the drying cycle",
+                    "FaultLabel": "Inside wet after dry cycle",
+                    "Priority": "42"
+                },
+                {
+                    "FaultID": "27628",
+                    "FaultCode": "Dishes wet /not dried properly at the end of the drying cycle",
+                    "FaultName": "Dishes wet /not dried properly at the end of the drying cycle - Dishes wet /not dried properly at the end of the drying cycle",
+                    "FaultLabel": "Contents wet after dry cycle",
+                    "Priority": "20"
+                },
+                {
+                    "FaultID": "34516",
+                    "FaultCode": "Appliance is beeping during operation",
+                    "FaultName": "Appliance is beeping during operation - Appliance is beeping during operation",
+                    "FaultLabel": "Beeping when on",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "34548",
+                    "FaultCode": "Tablet not dissolving",
+                    "FaultName": "Tablet not dissolving - Tablet not dissolving",
+                    "FaultLabel": "Tablet not dissolving",
+                    "Priority": "56"
+                },
+                {
+                    "FaultID": "34542",
+                    "FaultCode": "Washing /cleaning performance is poor",
+                    "FaultName": "Washing /cleaning performance is poor - Washing /cleaning performance is poor",
+                    "FaultLabel": "Poor cleaning performance",
+                    "Priority": "50"
+                },
+                {
+                    "FaultID": "34523",
+                    "FaultCode": "There is a delay when the appliance is turned on",
+                    "FaultName": "There is a delay when the appliance is turned on - There is a delay when the appliance is turned on",
+                    "FaultLabel": "Delay when turning on",
+                    "Priority": "22"
+                },
+                {
+                    "FaultID": "27624",
+                    "FaultCode": "Burning smell from the appliance",
+                    "FaultName": "Burning smell from the appliance - Burning smell from the appliance",
+                    "FaultLabel": "Burning smell",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "34513",
+                    "FaultCode": "The appliance will not start",
+                    "FaultName": "The appliance will not start - The appliance will not start",
+                    "FaultLabel": "Appliance won't start",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "34551",
+                    "FaultCode": "Using too much power / energy consumption too high",
+                    "FaultName": "Using too much power / energy consumption too high - Using too much power / energy consumption too high",
+                    "FaultLabel": "Uses too much power",
+                    "Priority": "59"
+                },
+                {
+                    "FaultID": "34545",
+                    "FaultCode": "Programmes stick during cycles",
+                    "FaultName": "Programmes stick during cycles - Programmes stick during cycles",
+                    "FaultLabel": "Programs sticking during cycle",
+                    "Priority": "53"
+                },
+                {
+                    "FaultID": "34530",
+                    "FaultCode": "Glasses are smeared/marked at the end of the cycle",
+                    "FaultName": "Glasses are smeared/marked at the end of the cycle - Glasses are smeared/marked at the end of the cycle",
+                    "FaultLabel": "Glasses marked after cycle",
+                    "Priority": "33"
+                },
+                {
+                    "FaultID": "27629",
+                    "FaultCode": "Dishes/contents greasy at end of cycle",
+                    "FaultName": "Dishes/contents greasy at end of cycle - Dishes/contents greasy at end of cycle",
+                    "FaultLabel": "Contents greasy after cycle",
+                    "Priority": "19"
+                },
+                {
+                    "FaultID": "34515",
+                    "FaultCode": "Baskets remain wet / still wet after the drying cycle",
+                    "FaultName": "Baskets remain wet / still wet after the drying cycle - Baskets remain wet / still wet after the drying cycle",
+                    "FaultLabel": "Baskets wet after dry cycle",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "34554",
+                    "FaultCode": "White residue in the tub / on the inside of appliance and on dishes /contents",
+                    "FaultName": "White residue in the tub / on the inside of appliance and on dishes /contents - White residue in the tub / on the inside of appliance and on dishes /contents",
+                    "FaultLabel": "White residue on contents",
+                    "Priority": "62"
+                },
+                {
+                    "FaultID": "34547",
+                    "FaultCode": "Red/rust residue on dishes/contents",
+                    "FaultName": "Red/rust residue on dishes/contents - Red/rust residue on dishes/contents",
+                    "FaultLabel": "Rust or residue on contents",
+                    "Priority": "55"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 238,
+            "FaultCategoryName": "PROGRAMMING",
+            "FaultCategoryLabel": "Programs or functions",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "4511",
+                    "FaultCode": "Option functions do not work",
+                    "FaultName": "Option functions do not work - Option functions do not work",
+                    "FaultLabel": "Options functions faulty",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "33762",
+                    "FaultCode": "The appliance stops during the wash cycle",
+                    "FaultName": "The appliance stops during the wash cycle - The appliance stops during the wash cycle",
+                    "FaultLabel": "Appliance stops suddenly",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29304",
+                    "FaultCode": "Appliance randomly starts by itself",
+                    "FaultName": "Appliance randomly starts by itself - Appliance randomly starts by itself",
+                    "FaultLabel": "Starts by itself",
+                    "Priority": "19"
+                },
+                {
+                    "FaultID": "29306",
+                    "FaultCode": "The appliance is dead/not working",
+                    "FaultName": "The appliance is dead/not working - The appliance is dead/not working",
+                    "FaultLabel": "Appliance won't start",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "29309",
+                    "FaultCode": "There is a delay when the appliance is turned on",
+                    "FaultName": "There is a delay when the appliance is turned on - There is a delay when the appliance is turned on",
+                    "FaultLabel": "Delay when turning on",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "29313",
+                    "FaultCode": "Appliance starts itself when switched off",
+                    "FaultName": "Appliance starts itself when switched off - Appliance starts itself when switched off",
+                    "FaultLabel": "Appliance starts itself",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29307",
+                    "FaultCode": "Programmes stick during cycles",
+                    "FaultName": "Programmes stick during cycles - Programmes stick during cycles",
+                    "FaultLabel": "Programs sticking during cycle",
+                    "Priority": "17"
+                },
+                {
+                    "FaultID": "29314",
+                    "FaultCode": "Appliance switches itself off",
+                    "FaultName": "Appliance switches itself off - Appliance switches itself off",
+                    "FaultLabel": "Appliance turns itself off",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29305",
+                    "FaultCode": "Appliance is on, but will not programme",
+                    "FaultName": "Appliance is on, but will not programme - Appliance is on, but will not programme",
+                    "FaultLabel": "Won't accept programs",
+                    "Priority": "22"
+                },
+                {
+                    "FaultID": "34557",
+                    "FaultCode": "Appliance is beeping during operation",
+                    "FaultName": "Appliance is beeping during operation - Appliance is beeping during operation",
+                    "FaultLabel": "Beeping when on",
+                    "Priority": "6"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 461,
+            "FaultCategoryName": "PROGRAMMING / OPERATION",
+            "FaultCategoryLabel": "Machine programs",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "30100",
+                    "FaultCode": "Appliance is on, but will not accept programmes",
+                    "FaultName": "Appliance is on, but will not accept programmes - Appliance is on, but will not accept programmes",
+                    "FaultLabel": "Doesn't accept programs",
+                    "Priority": "29"
+                },
+                {
+                    "FaultID": "27906",
+                    "FaultCode": "Tripped house electrics when in use / tripping electrics / power cuts out when in use",
+                    "FaultName": "Tripped house electrics when in use / tripping electrics / power cuts out when in use - Tripped house electrics when in use / tripping electrics / power cuts out when in use",
+                    "FaultLabel": "Appliance trips home electrics",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "27901",
+                    "FaultCode": "Option functions don't work",
+                    "FaultName": "Option functions don't work - Option functions don't work",
+                    "FaultLabel": "Options functions faulty",
+                    "Priority": "48"
+                },
+                {
+                    "FaultID": "27902",
+                    "FaultCode": "Sensor dry/eco setting cannot be selected",
+                    "FaultName": "Sensor dry/eco setting cannot be selected - Sensor dry/eco setting cannot be selected",
+                    "FaultLabel": "Cannot select dry or eco",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "33493",
+                    "FaultCode": "Appliance will not spin",
+                    "FaultName": "Appliance will not spin - Appliance will not spin",
+                    "FaultLabel": "Will not spin",
+                    "Priority": "55"
+                },
+                {
+                    "FaultID": "30101",
+                    "FaultCode": "Appliance is switched on, but will not start cycle",
+                    "FaultName": "Appliance is switched on, but will not start cycle - Appliance is switched on, but will not start cycle",
+                    "FaultLabel": "Cycle won't start",
+                    "Priority": "26"
+                },
+                {
+                    "FaultID": "30093",
+                    "FaultCode": "No control panel lights are lit",
+                    "FaultName": "No control panel lights are lit - No control panel lights are lit",
+                    "FaultLabel": "No control panel lights",
+                    "Priority": "45"
+                },
+                {
+                    "FaultID": "30129",
+                    "FaultCode": "Appliance will not start , no indicator lights displayed / display blank / dead",
+                    "FaultName": "Appliance will not start , no indicator lights displayed / display blank / dead - Appliance will not start , no indicator lights displayed / display blank / dead",
+                    "FaultLabel": "Appliance won't start",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "30110",
+                    "FaultCode": "Can select programme, but appliance will not start",
+                    "FaultName": "Can select programme, but appliance will not start - Can select programme, but appliance will not start",
+                    "FaultLabel": "Programs not starting",
+                    "Priority": "50"
+                },
+                {
+                    "FaultID": "27905",
+                    "FaultCode": "Timed dry cycle cannot be selected",
+                    "FaultName": "Timed dry cycle cannot be selected - Timed dry cycle cannot be selected",
+                    "FaultLabel": "Cannot select Timed Dry",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "30108",
+                    "FaultCode": "Appliance will not switch on",
+                    "FaultName": "Appliance will not switch on - Appliance will not switch on",
+                    "FaultLabel": "Won't switch on",
+                    "Priority": "57"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 239,
+            "FaultCategoryName": "RUST",
+            "FaultCategoryLabel": "Rust",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29327",
+                    "FaultCode": "Rust on the internal door",
+                    "FaultName": "Rust on the internal door - Rust on the internal door",
+                    "FaultLabel": "Rust on internal door",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "34568",
+                    "FaultCode": "Rust inside the cabinet",
+                    "FaultName": "Rust inside the cabinet - Rust inside the cabinet",
+                    "FaultLabel": "Rust inside cabinet",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "34569",
+                    "FaultCode": "Rust on dishes/cutlery",
+                    "FaultName": "Rust on dishes/cutlery - Rust on dishes/cutlery",
+                    "FaultLabel": "Rust on dishes or cutlery",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29326",
+                    "FaultCode": "Rust on the hinges",
+                    "FaultName": "Rust on the hinges - Rust on the hinges",
+                    "FaultLabel": "Rust on hinges",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "34567",
+                    "FaultCode": "Red/rust residue on dishes/contents",
+                    "FaultName": "Red/rust residue on dishes/contents - Red/rust residue on dishes/contents",
+                    "FaultLabel": "Residue on contents",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "4521",
+                    "FaultCode": "Rust on the baskets",
+                    "FaultName": "Rust on the baskets - Rust on the baskets",
+                    "FaultLabel": "Rust on baskets",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29325",
+                    "FaultCode": "Rust on the external door",
+                    "FaultName": "Rust on the external door - Rust on the external door",
+                    "FaultLabel": "Rust on external door",
+                    "Priority": "5"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 263,
+            "FaultCategoryName": "SPINNING",
+            "FaultCategoryLabel": "Spinning",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34577",
+                    "FaultCode": "Clothes are wet at the end of the spin cycle",
+                    "FaultName": "Clothes are wet at the end of the spin cycle - Clothes are wet at the end of the spin cycle",
+                    "FaultLabel": "Clothes wet after spin cycle",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "34578",
+                    "FaultCode": "Appliance very loud on spin cycle",
+                    "FaultName": "Appliance very loud on spin cycle - Appliance very loud on spin cycle",
+                    "FaultLabel": "Spin cycles too loud",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "4386",
+                    "FaultCode": "Appliance will not spin",
+                    "FaultName": "Appliance will not spin - Appliance will not spin",
+                    "FaultLabel": "Appliance won't spin",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "4384",
+                    "FaultCode": "Spin cycle indicator blinking",
+                    "FaultName": "Spin cycle indicator blinking - Spin cycle indicator blinking",
+                    "FaultLabel": "Cycle indicator blinking",
+                    "Priority": "3"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 270,
+            "FaultCategoryName": "SPRAY ARMS",
+            "FaultCategoryLabel": "Spray arms",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29513",
+                    "FaultCode": "Lower spray arm becomes detached / loose / falls off during washing",
+                    "FaultName": "Lower spray arm becomes detached / loose / falls off during washing - Lower spray arm becomes detached / loose / falls off during washing",
+                    "FaultLabel": "Lower spray arm loose",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "29516",
+                    "FaultCode": "Upper spray arm becomes detached / loose / falls off during washing",
+                    "FaultName": "Upper spray arm becomes detached / loose / falls off during washing - Upper spray arm becomes detached / loose / falls off during washing",
+                    "FaultLabel": "Upper spray arm loose",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "29514",
+                    "FaultCode": "Lower spray arm is damaged / broken",
+                    "FaultName": "Lower spray arm is damaged / broken - Lower spray arm is damaged / broken",
+                    "FaultLabel": "Lower spray arm damaged",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29515",
+                    "FaultCode": "Spray arm jets blocked / water not spraying",
+                    "FaultName": "Spray arm jets blocked / water not spraying - Spray arm jets blocked / water not spraying",
+                    "FaultLabel": "Spray arm jets blocked",
+                    "Priority": "3"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 264,
+            "FaultCategoryName": "STABILITY",
+            "FaultCategoryLabel": "Stability",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29469",
+                    "FaultCode": "Appliance is jumping about",
+                    "FaultName": "Appliance is jumping about - Appliance is jumping about",
+                    "FaultLabel": "Appliance jumping when on",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "34579",
+                    "FaultCode": "Appliance is moving",
+                    "FaultName": "Appliance is moving - Appliance is moving",
+                    "FaultLabel": "Appliance moving when on",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 241,
+            "FaultCategoryName": "TEMPERATURE",
+            "FaultCategoryLabel": "Temperature",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34601",
+                    "FaultCode": "Appliance lid/worktop is very hot",
+                    "FaultName": "Appliance lid/worktop is very hot - Appliance lid/worktop is very hot",
+                    "FaultLabel": "Worktop too hot",
+                    "Priority": "41"
+                },
+                {
+                    "FaultID": "34587",
+                    "FaultCode": "Very hot inside the drum",
+                    "FaultName": "Very hot inside the drum - Very hot inside the drum",
+                    "FaultLabel": "Drum too hot",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "29337",
+                    "FaultCode": "Won't heat",
+                    "FaultName": "Won't heat - Won't heat",
+                    "FaultLabel": "Won't heat",
+                    "Priority": "38"
+                },
+                {
+                    "FaultID": "34581",
+                    "FaultCode": "Burning smell coming from the appliance",
+                    "FaultName": "Burning smell coming from the appliance - Burning smell coming from the appliance",
+                    "FaultLabel": "Burning smell",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "4418",
+                    "FaultCode": "Appliance will not heat on wash cycle",
+                    "FaultName": "Appliance will not heat on wash cycle - Appliance will not heat on wash cycle",
+                    "FaultLabel": "Won't heat on wash cycle",
+                    "Priority": "40"
+                },
+                {
+                    "FaultID": "29332",
+                    "FaultCode": "Clothes very hot at the end of the spin cycle",
+                    "FaultName": "Clothes very hot at the end of the spin cycle - Clothes very hot at the end of the spin cycle",
+                    "FaultLabel": "Clothes hot after spin cycle",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "29368",
+                    "FaultCode": "Appliance getting too hot on low temperature programmes",
+                    "FaultName": "Appliance getting too hot on low temperature programmes - Appliance getting too hot on low temperature programmes",
+                    "FaultLabel": "Exceeding set temperature",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "34600",
+                    "FaultCode": "Appliance will not heat on drying cycle",
+                    "FaultName": "Appliance will not heat on drying cycle - Appliance will not heat on drying cycle",
+                    "FaultLabel": "Won't heat on drying cycle",
+                    "Priority": "39"
+                },
+                {
+                    "FaultID": "34582",
+                    "FaultCode": "Appliance cabinet is very hot",
+                    "FaultName": "Appliance cabinet is very hot - Appliance cabinet is very hot",
+                    "FaultLabel": "Cabinet too hot",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 271,
+            "FaultCategoryName": "UNSATISFACTORY DRYING",
+            "FaultCategoryLabel": "Leftover water",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29520",
+                    "FaultCode": "Inside of appliance / tub still very wet after the drying cycle",
+                    "FaultName": "Inside of appliance / tub still very wet after the drying cycle - Inside of appliance / tub still very wet after the drying cycle",
+                    "FaultLabel": "Appliance wet after dry cycle",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "29517",
+                    "FaultCode": "Baskets remain wet / still wet after the drying cycle",
+                    "FaultName": "Baskets remain wet / still wet after the drying cycle - Baskets remain wet / still wet after the drying cycle",
+                    "FaultLabel": "Baskets wet after dry cycle",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 265,
+            "FaultCategoryName": "UNSATISFACTORY WASHING",
+            "FaultCategoryLabel": "Washing",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34613",
+                    "FaultCode": "Appears to be rubber residue on washing/clothes",
+                    "FaultName": "Appears to be rubber residue on washing/clothes - Appears to be rubber residue on washing/clothes",
+                    "FaultLabel": "Rubber residue on clothes",
+                    "Priority": "15"
+                },
+                {
+                    "FaultID": "33814",
+                    "FaultCode": "Too much foam is formed on the wash cycle",
+                    "FaultName": "Too much foam is formed on the wash cycle - Too much foam is formed on the wash cycle",
+                    "FaultLabel": "Excess foam on wash cycle",
+                    "Priority": "10"
+                },
+                {
+                    "FaultID": "34604",
+                    "FaultCode": "Washing/clothes still wet at the end of the steam cycle",
+                    "FaultName": "Washing/clothes still wet at the end of the steam cycle - Washing/clothes still wet at the end of the steam cycle",
+                    "FaultLabel": "Clothes wet after steam cycle",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "34619",
+                    "FaultCode": "Appliance will not spin",
+                    "FaultName": "Appliance will not spin - Appliance will not spin",
+                    "FaultLabel": "Will not spin",
+                    "Priority": "22"
+                },
+                {
+                    "FaultID": "4539",
+                    "FaultCode": "Red/rust residue on dishes/contents",
+                    "FaultName": "Red/rust residue on dishes/contents - Red/rust residue on dishes/contents",
+                    "FaultLabel": "Rust residue on dishes",
+                    "Priority": "17"
+                },
+                {
+                    "FaultID": "34610",
+                    "FaultCode": "Glasses are smeared/marked at the end of the cycle",
+                    "FaultName": "Glasses are smeared/marked at the end of the cycle - Glasses are smeared/marked at the end of the cycle",
+                    "FaultLabel": "Glasses marked after cycle",
+                    "Priority": "12"
+                },
+                {
+                    "FaultID": "34606",
+                    "FaultCode": "Dishes /contents / cutlery are still dirty at the end of the cycle",
+                    "FaultName": "Dishes /contents / cutlery are still dirty at the end of the cycle - Dishes /contents / cutlery are still dirty at the end of the cycle",
+                    "FaultLabel": "Cutlery dirty after cycle",
+                    "Priority": "7"
+                },
+                {
+                    "FaultID": "34603",
+                    "FaultCode": "Clothes / washing  discoloured",
+                    "FaultName": "Clothes / washing  discoloured - Clothes / washing  discoloured",
+                    "FaultLabel": "Clothes discoloured",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "34616",
+                    "FaultCode": "Laundry has an unpleasant smell at the end of the drying cycle",
+                    "FaultName": "Laundry has an unpleasant smell at the end of the drying cycle - Laundry has an unpleasant smell at the end of the drying cycle",
+                    "FaultLabel": "Unpleasant smell after dry cycle",
+                    "Priority": "19"
+                },
+                {
+                    "FaultID": "34612",
+                    "FaultCode": "Washing /cleaning performance is poor",
+                    "FaultName": "Washing /cleaning performance is poor - Washing /cleaning performance is poor",
+                    "FaultLabel": "Poor cleaning performance",
+                    "Priority": "14"
+                },
+                {
+                    "FaultID": "34608",
+                    "FaultCode": "Excessive / too much foam at the end of the wash cycle",
+                    "FaultName": "Excessive / too much foam at the end of the wash cycle - Excessive / too much foam at the end of the wash cycle",
+                    "FaultLabel": "Excess foam after wash cycle",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "29491",
+                    "FaultCode": "Clothes are wet at the end of the spin cycle",
+                    "FaultName": "Clothes are wet at the end of the spin cycle - Clothes are wet at the end of the spin cycle",
+                    "FaultLabel": "Clothes wet after spin cycle",
+                    "Priority": "4"
+                },
+                {
+                    "FaultID": "34618",
+                    "FaultCode": "White residue in the tub / on the inside of appliance and on dishes /contents",
+                    "FaultName": "White residue in the tub / on the inside of appliance and on dishes /contents - White residue in the tub / on the inside of appliance and on dishes /contents",
+                    "FaultLabel": "White residue on contents",
+                    "Priority": "21"
+                },
+                {
+                    "FaultID": "34614",
+                    "FaultCode": "Appears to be rust residue on washing/clothes",
+                    "FaultName": "Appears to be rust residue on washing/clothes - Appears to be rust residue on washing/clothes",
+                    "FaultLabel": "Rust residue on clothes",
+                    "Priority": "16"
+                },
+                {
+                    "FaultID": "34609",
+                    "FaultCode": "Foam coming out of appliance top/lid",
+                    "FaultName": "Foam coming out of appliance top/lid - Foam coming out of appliance top/lid",
+                    "FaultLabel": "Foam spilling from lid",
+                    "Priority": "11"
+                },
+                {
+                    "FaultID": "34605",
+                    "FaultCode": "Dishes/contents greasy at end of cycle",
+                    "FaultName": "Dishes/contents greasy at end of cycle - Dishes/contents greasy at end of cycle",
+                    "FaultLabel": "Contents greasy after cycle",
+                    "Priority": "6"
+                },
+                {
+                    "FaultID": "34602",
+                    "FaultCode": "Light blue residue on dishes/contents",
+                    "FaultName": "Light blue residue on dishes/contents - Light blue residue on dishes/contents",
+                    "FaultLabel": "Blue residue on contents",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "34620",
+                    "FaultCode": "Woolen clothes appear matted",
+                    "FaultName": "Woolen clothes appear matted - Woolen clothes appear matted",
+                    "FaultLabel": "Woollen clothes matted",
+                    "Priority": "23"
+                },
+                {
+                    "FaultID": "34615",
+                    "FaultCode": "Stains/marks left on washing/clothes",
+                    "FaultName": "Stains/marks left on washing/clothes - Stains/marks left on washing/clothes",
+                    "FaultLabel": "Stains on clothes after wash",
+                    "Priority": "18"
+                },
+                {
+                    "FaultID": "34611",
+                    "FaultCode": "Appears to be sludge/grey residue on washing/clothes",
+                    "FaultName": "Appears to be sludge/grey residue on washing/clothes - Appears to be sludge/grey residue on washing/clothes",
+                    "FaultLabel": "Grey residue on clothes",
+                    "Priority": "13"
+                },
+                {
+                    "FaultID": "34607",
+                    "FaultCode": "Appliance does not rinse well",
+                    "FaultName": "Appliance does not rinse well - Appliance does not rinse well",
+                    "FaultLabel": "Doesn't rinse properly",
+                    "Priority": "8"
+                },
+                {
+                    "FaultID": "29489",
+                    "FaultCode": "Appliance is tearing clothes",
+                    "FaultName": "Appliance is tearing clothes - Appliance is tearing clothes",
+                    "FaultLabel": "Clothes torn by wash",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "34617",
+                    "FaultCode": "Appliance appears to fill with too little water",
+                    "FaultName": "Appliance appears to fill with too little water - Appliance appears to fill with too little water",
+                    "FaultLabel": "Water level too low",
+                    "Priority": "20"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 462,
+            "FaultCategoryName": "VIBRATION / NOISE",
+            "FaultCategoryLabel": "Noise or vibration",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "30144",
+                    "FaultCode": "Appliance is jumping about",
+                    "FaultName": "Appliance is jumping about - Appliance is jumping about",
+                    "FaultLabel": "Appliance moves around when on",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "27908",
+                    "FaultCode": "Door hinge noisy",
+                    "FaultName": "Door hinge noisy - Door hinge noisy",
+                    "FaultLabel": "Noisy door hinges",
+                    "Priority": "9"
+                },
+                {
+                    "FaultID": "33551",
+                    "FaultCode": "The drum appears to be hitting the cabinet",
+                    "FaultName": "The drum appears to be hitting the cabinet - The drum appears to be hitting the cabinet",
+                    "FaultLabel": "Drum banging inner cabinet",
+                    "Priority": "5"
+                },
+                {
+                    "FaultID": "30150",
+                    "FaultCode": "Noisy on spin cycle",
+                    "FaultName": "Noisy on spin cycle - Noisy on spin cycle",
+                    "FaultLabel": "Noisy spin cycle",
+                    "Priority": "11"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 267,
+            "FaultCategoryName": "WATER CONTAINER",
+            "FaultCategoryLabel": "Water container",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "34625",
+                    "FaultCode": "Slow pour cap split / broken",
+                    "FaultName": "Slow pour cap split / broken - Slow pour cap split / broken",
+                    "FaultLabel": "Slow pour cap broken",
+                    "Priority": "1"
+                },
+                {
+                    "FaultID": "34627",
+                    "FaultCode": "Water leak from underneath the appliance",
+                    "FaultName": "Water leak from underneath the appliance - Water leak from underneath the appliance",
+                    "FaultLabel": "Water leak from underneath",
+                    "Priority": "3"
+                },
+                {
+                    "FaultID": "34626",
+                    "FaultCode": "Water leak from container slow pour cap",
+                    "FaultName": "Water leak from container slow pour cap - Water leak from container slow pour cap",
+                    "FaultLabel": "Water leak from slow pour cap",
+                    "Priority": "2"
+                }
+            ]
+        },
+        {
+            "FaultCategoryID": 273,
+            "FaultCategoryName": "WATER DRAIN",
+            "FaultCategoryLabel": "Draining",
+            "FaultCategoryPriority": 0,
+            "PossibleAnswers": [
+                {
+                    "FaultID": "29521",
+                    "FaultCode": "Appliance does not empty water",
+                    "FaultName": "Appliance does not empty water - Appliance does not empty water",
+                    "FaultLabel": "Water not emptying",
+                    "Priority": "2"
+                },
+                {
+                    "FaultID": "28567",
+                    "FaultCode": "Water left in the appliance at the end of the cycle",
+                    "FaultName": "Water left in the appliance at the end of the cycle - Water left in the appliance at the end of the cycle",
+                    "FaultLabel": "Water left at end of cycle",
+                    "Priority": "1"
+                }
+            ]
+        }
+    ],
+    "OEMApplianceData": [
+        {
+            "FieldIdentifier": "UniqueApplianceID",
+            "FieldLabel": "PNC Number",
+            "FieldType": "String",
+            "FieldRegex": "^[0-9]*$",
+            "FieldLookupRegex": null,
+            "FieldValues": [
+                
+            ],
+            "DataCategory": "OEMAppliances",
+            "DataType": "PNCNumber",
+            "UseGetData": true,
+            "DisplayPriority": 0
+        },
+        {
+            "FieldIdentifier": "MLCode",
+            "FieldLabel": "ML Code",
+            "FieldType": "String",
+            "FieldRegex": "^[0][0-9]$",
+            "FieldLookupRegex": null,
+            "FieldValues": [
+                
+            ],
+            "DataCategory": null,
+            "DataType": null,
+            "UseGetData": false,
+            "DisplayPriority": 0
+        },
+        {
+            "FieldIdentifier": "UniqueApplianceID",
+            "FieldLabel": "Model",
+            "FieldType": "String",
+            "FieldRegex": null,
+            "FieldLookupRegex": null,
+            "FieldValues": [
+                
+            ],
+            "DataCategory": "OEMAppliances",
+            "DataType": "ModelNumber",
+            "UseGetData": true,
+            "DisplayPriority": 1
+        },
+        {
+            "FieldIdentifier": "SerialNumber",
+            "FieldLabel": "Serial Number",
+            "FieldType": "String",
+            "FieldRegex": "^([A-Za-z]{3})([0-9]{2})([0-9]{2})([0-9]{5}[A-Za-z]{2})$",
+            "FieldLookupRegex": null,
+            "FieldValues": [
+                
+            ],
+            "DataCategory": null,
+            "DataType": null,
+            "UseGetData": false,
+            "DisplayPriority": 2
+        }
+    ],
+    "ClaimTypes": [
+        {
+            "ClaimTypeID": "3",
+            "ClaimTypeName": "Breakdown",
+            "ClaimTypeLabel": "Breakdown",
+            "ClaimTypeCode": "BD",
+            "ClaimTypeAvailable": true,
+            "IWEnabled": false,
+            "PaymentRequired": true,
+            "PaymentData": {
+                "Type": "CALLOUT",
+                "Label": "Call out charge",
+                "Amount": "30.99"
+            }
+        },
+        {
+            "ClaimTypeID": "4",
+            "ClaimTypeName": "Damage Caused by Accident",
+            "ClaimTypeLabel": "Damage Caused by Accident",
+            "ClaimTypeCode": "AD",
+            "ClaimTypeAvailable": true,
+            "IWEnabled": false,
+            "PaymentRequired": true,
+            "PaymentData": {
+                "Type": "CALLOUT",
+                "Label": "Call out charge",
+                "Amount": "30.00"
+            }
+        }
+    ],
+    "IWCallbackRequired": false,
+    "DisplayApplianceUseable": true
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=UpdateTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=UpdateTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "UniqueApplianceID": "1406"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:20 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=odt1td632fbtr1a0uou8lger11; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: d7362b80-c979-461d-af5d-499ace57dffd
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "UT000",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "CreatedDate": "2024-05-10 18:52:00",
+    "UpdatedDate": "2024-05-10 18:52:20",
+    "PlanNumber": "C1Z9064674",
+    "BookingOEM": "Electrolux",
+    "Manufacturer": "Electrolux",
+    "ProductType": "WASHING MACHINE",
+    "UniqueApplianceID": "1406",
+    "ModelNumber": "EWG147540W",
+    "SerialNumber": "",
+    "ClaimTypeID": null,
+    "FaultCategoryID": null,
+    "FaultID": null,
+    "PostalCode": "LE3 5FD",
+    "AppointmentSlotIdentifier": null,
+    "AppointmentNotes": null,
+    "ReportedFault": null,
+    "CustomOEMModelCode": null,
+    "ApplianceUseable": null
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=UpdateTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=UpdateTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "ClaimTypeID": "3",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "ApplianceUseable": "Yes"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=qbks6fdbl57ra631ab1p96oo97; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 05c077bf-98b7-4eb2-a84f-635dd4f9feaf
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "UT000",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "CreatedDate": "2024-05-10 18:52:00",
+    "UpdatedDate": "2024-05-10 18:52:22",
+    "PlanNumber": "C1Z9064674",
+    "BookingOEM": "Electrolux",
+    "Manufacturer": "Electrolux",
+    "ProductType": "WASHING MACHINE",
+    "UniqueApplianceID": "1406",
+    "ModelNumber": "EWG147540W",
+    "SerialNumber": "",
+    "ClaimTypeID": "3",
+    "FaultCategoryID": null,
+    "FaultID": null,
+    "PostalCode": "LE3 5FD",
+    "AppointmentSlotIdentifier": null,
+    "AppointmentNotes": null,
+    "ReportedFault": null,
+    "CustomOEMModelCode": null,
+    "ApplianceUseable": "Yes"
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=UpdateTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=UpdateTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "FaultCategoryID": "447",
+    "FaultID": "33953",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "ApplianceUseable": "Yes"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:24 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=belbi9fll7dv6tlrjmc32ia876; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: f16ceb78-04a7-4ee1-ae26-5b8aaf5afa70
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "UT000",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "CreatedDate": "2024-05-10 18:52:00",
+    "UpdatedDate": "2024-05-10 18:52:23",
+    "PlanNumber": "C1Z9064674",
+    "BookingOEM": "Electrolux",
+    "Manufacturer": "Electrolux",
+    "ProductType": "WASHING MACHINE",
+    "UniqueApplianceID": "1406",
+    "ModelNumber": "EWG147540W",
+    "SerialNumber": "",
+    "ClaimTypeID": "3",
+    "FaultCategoryID": "447",
+    "FaultID": "33953",
+    "PostalCode": "LE3 5FD",
+    "AppointmentSlotIdentifier": null,
+    "AppointmentNotes": null,
+    "ReportedFault": null,
+    "CustomOEMModelCode": null,
+    "ApplianceUseable": "Yes"
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=PutNewClaim
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutNewClaim
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "CustomerFirstName": "DGXAPIAUTO",
+    "CustomersHouseStreetName": "164 REPTON STREET",
+    "CustomerLastName": "MATIONTEST",
+    "CustomersPostCode": "LE3 5FD",
+    "CustomersTownCity": "LEICESTER",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "ClaimLandline": "01200002546",
+    "ClaimMobile": "07802299909",
+    "CustomerTitle": "MR",
+    "ClaimEmail": "manish.kumarjain@domesticandgeneral.com",
+    "GUID": "88CE0FE0-7873-4A38-A0A6-C32BA454CD60",
+    "CustomersLocalArea": null
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:29 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=mu95c1ntqf3mh9q0v2241r84l2; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: d655a826-cf7c-425f-9461-5fa9323cf0dd
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "NC000",
+    "StatusDebugging": [
+        
+    ],
+    "ClaimID": "130056"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=GetQuestion
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetQuestion
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "QuestionID": null
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:31 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=1orlcqdqqreed1jgiecgudqto3; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 728eef32-4cbf-4110-a74a-bac30d857e4d
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GQ000",
+    "StatusDebugging": [
+        
+    ],
+    "QuestionID": "343",
+    "QuestionLabel": "Can you think of any reason to reject this claim?",
+    "QuestionHelp": "",
+    "AnswerType": "RADIO_BUTTONS",
+    "AnswerData": [
+        {
+            "AnswerID": "908",
+            "AnswerLabel": "Yes",
+            "AnswerHelp": "",
+            "AnswerType": "DROPDOWN",
+            "AnswerValues": [
+                "Test Answer"
+            ]
+        },
+        {
+            "AnswerID": "909",
+            "AnswerLabel": "No",
+            "AnswerHelp": ""
+        },
+        {
+            "AnswerID": "4268",
+            "AnswerLabel": "Accessory Only Repair",
+            "AnswerHelp": ""
+        }
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=PutAnswer
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutAnswer
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "QuestionID": "343",
+    "AnswerID": "909",
+    "AnswerValue": "Test",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:32 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=fno8mpp8rrqigmardr31o3l186; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 98a5edeb-4e35-44df-882f-debbd7a8a7a2
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PA000",
+    "StatusDebugging": [
+        
+    ],
+    "NextQuestionID": "179",
+    "ClaimState": "In Progress"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=GetQuestion
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetQuestion
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "QuestionID": "179"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:33 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=36ak4gvcakc59dpbomrfo9v326; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 0fc8ed58-e73a-40f3-a536-ff0212cfa517
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GQ000",
+    "StatusDebugging": [
+        
+    ],
+    "QuestionID": "179",
+    "QuestionLabel": "When did the fault happen?",
+    "QuestionHelp": "If you're not sure, you can choose an approximate date.",
+    "AnswerType": "DATE",
+    "AnswerData": [
+        {
+            "AnswerID": "535",
+            "AnswerHelp": "",
+            "StartDate": null,
+            "EndDate": null
+        }
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=PutAnswer
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutAnswer
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "QuestionID": "179",
+    "AnswerID": "535",
+    "AnswerValue": "2024-05-10T23:22:33.301965800",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:35 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=j52fir70vc3bira53u0nqs8mi0; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 61fb57c8-cb77-476f-bd1c-5fce855b1f2f
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PA000",
+    "StatusDebugging": [
+        
+    ],
+    "NextQuestionID": "43",
+    "ClaimState": "In Progress"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=GetQuestion
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetQuestion
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "QuestionID": "43"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=25lt81hfrudimbkmndj8i95ij3; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 9d7c8f41-636a-46d4-8eb3-c6d244633810
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GQ000",
+    "StatusDebugging": [
+        
+    ],
+    "QuestionID": "43",
+    "QuestionLabel": "Comments Box",
+    "QuestionHelp": "Tell us anything else an engineer should know before visiting you.",
+    "AnswerType": "RESPONSE_FIELD",
+    "AnswerData": [
+        {
+            "AnswerID": "100",
+            "AnswerLabel": "Display Response Field Only",
+            "AnswerHelp": "",
+            "AnswerHint": "Please enter as much detail about the problem being reported.",
+            "AnswerMinimumCharacters": "3",
+            "AnswerMaximumCharacters": null
+        }
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=PutAnswer
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutAnswer
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "QuestionID": "43",
+    "AnswerID": "100",
+    "AnswerValue": "Test",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:39 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=sev6vn84muh4t4o38asr9omvv0; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 40178501-d383-4b6c-90e3-adfe9250d379
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PA002",
+    "StatusDebugging": [
+        
+    ],
+    "NextQuestionID": null,
+    "ClaimState": "Accepted",
+    "ClaimStateMessage": "ACCEPTED"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=GetServiceOption
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetServiceOption
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "CustomerFirstName": "DGXAPIAUTO",
+    "CustomersHouseStreetName": "164 REPTON STREET",
+    "CustomerLastName": "MATIONTEST",
+    "CustomersPostCode": "LE3 5FD",
+    "CustomersTownCity": "LEICESTER",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "ClaimLandline": "01200002546",
+    "ClaimMobile": "07802299909",
+    "ClaimID": "130056",
+    "CustomerTitle": "MR",
+    "ClaimEmail": "manish.kumarjain@domesticandgeneral.com",
+    "CustomersLocalArea": null
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:40 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=c2vm65u6g1vqm7m8q0m878fks6; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 048518f4-f47c-480b-bb25-ea2814f78c5c
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GS000",
+    "StatusDebugging": [
+        
+    ],
+    "ServiceOptions": [
+        {
+            "ServiceOptionID": "6",
+            "ServiceOptionLabel": "Home Visit (Normal Working Hours)",
+            "ServiceOptionMessage": "If the Service Provider has exposed their booking diary an option will be displayed to allow you to create an appointment. If no diary is displayed the Service Provider will contact the customer to arrange the appointment.",
+            "ServiceOptionType": "Home Repair",
+            "ServiceOptionCost": "0.00",
+            "ServiceOptionRequiredFields": [
+                
+            ],
+            "DisplayCalendar": true,
+            "BlockBookingWithoutAppt": false,
+            "RestrictBookingWithoutAppt": false,
+            "CurrentlySelected": false
+        }
+    ],
+    "PaymentRequired": true,
+    "PaymentData": [
+        {
+            "Type": "CALLOUT",
+            "Label": "Call out charge",
+            "Amount": "30.99"
+        }
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=PutServiceOption
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutServiceOption
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "ServiceOptionID": "6",
+    "ServiceOptionRequiredFields": [
+        
+    ],
+    "AvailabilityStartDate": "",
+    "AvailabilityEndDate": "",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:45 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=govabrnqj4vqorjc9kj1bv7730; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 56c7f3f3-6034-4dbf-8ba0-e4c68df94aaa
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PS000",
+    "StatusDebugging": [
+        
+    ],
+    "PaymentRequired": true,
+    "PaymentData": [
+        {
+            "Type": "CALLOUT",
+            "Label": "Call out charge",
+            "Amount": "30.99"
+        }
+    ],
+    "ExtraAvailability": false,
+    "AvailabilityRequestDays": 14,
+    "AvailabilityMaximumDays": 14,
+    "AvailabilityStartDate": "2024-05-10",
+    "AvailabilityEndDate": "2024-05-23",
+    "AvailabilityData": [
+        {
+            "Date": "2024-05-13",
+            "Slots": {
+                "Identifier": "1393_20240513",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-14",
+            "Slots": {
+                "Identifier": "1393_20240514",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-15",
+            "Slots": {
+                "Identifier": "1393_20240515",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-16",
+            "Slots": {
+                "Identifier": "1393_20240516",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-17",
+            "Slots": {
+                "Identifier": "1393_20240517",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-20",
+            "Slots": {
+                "Identifier": "1393_20240520",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-21",
+            "Slots": {
+                "Identifier": "1393_20240521",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-22",
+            "Slots": {
+                "Identifier": "1393_20240522",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        },
+        {
+            "Date": "2024-05-23",
+            "Slots": {
+                "Identifier": "1393_20240523",
+                "SlotType": "AllDay",
+                "StartTime": "",
+                "EndTime": "",
+                "Available": true
+            }
+        }
+    ],
+    "ServiceProviders": [
+        
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/BookClaim/?m=PutRepairData
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutRepairData
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "130056",
+    "PlanNo": "PlanNo",
+    "AppointmentDate": "2024-05-23",
+    "AppointmentSlotIdentifier": "1393_20240523",
+    "CollectionData": null,
+    "ExtraInformation": "",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Fri, 10 May 2024 17:52:48 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgenprelive=vt3vu3o8tm3np2rgn25onqotb7; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: b99afb77-fb2f-436b-9212-fb0afc444411
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "RD000",
+    "StatusDebugging": [
+        
+    ],
+    "ClaimID": "130056",
+    "ClaimReference": "",
+    "PlanNumber": "C1Z9064674",
+    "ManufacturerName": "Electrolux",
+    "ProductGroup": "Washing Machine",
+    "ProductType": "WASHING MACHINE",
+    "ModelNumber": "EWG147540W",
+    "SerialNumber": null,
+    "FaultCategorySelected": "Alarm or error code",
+    "FaultSelected": "EH Supply issue",
+    "ClaimQuestionsArray": [
+        {
+            "QuestionID": "343",
+            "QuestionLabel": "Can you think of any reason to reject this claim?",
+            "AnswerID": "909",
+            "AnswerLabel": "No",
+            "AnswerType": "RADIO_BUTTONS",
+            "AnswerHelp": "",
+            "AnswerValue": "Test"
+        },
+        {
+            "QuestionID": "179",
+            "QuestionLabel": "When did the fault happen?",
+            "AnswerID": "535",
+            "AnswerLabel": null,
+            "AnswerType": "DATE",
+            "AnswerHelp": null,
+            "AnswerValue": "2024-05-10T23:22:33.301965800"
+        },
+        {
+            "QuestionID": "43",
+            "QuestionLabel": "Comments Box",
+            "AnswerID": "100",
+            "AnswerLabel": null,
+            "AnswerType": "RESPONSE_FIELD",
+            "AnswerHelp": null,
+            "AnswerValue": "Test"
+        }
+    ],
+    "ServiceOption": "Home Repair",
+    "AppointmentDate": "2024-05-23",
+    "AppointmentSlot": "ANY",
+    "AuthorityLimit": "150",
+    "ServiceProviderID": "1393",
+    "ServiceProviderCompanyName": "Pacifica Appliance Services",
+    "ServiceProviderBuildingName": "Pacifica House",
+    "ServiceProviderHouseStreetName": "The Venter Building, Rainton Business Pa",
+    "ServiceProviderLocalArea": "Houghton Le Spring",
+    "ServiceProviderTownCity": "Durham",
+    "ServiceProviderPostCode": "DH4 5QY",
+    "ServiceProviderTelephone": "01422 263233",
+    "ServiceProviderEmail": "serviceforce@0800repair.com",
+    "ServiceProviderWebsite": "www.pacificagroup.co.uk",
+    "ServiceProviderHours": {
+        "Monday": {
+            "OpeningTime": "09:00:00",
+            "ClosingTime": "17:00:00"
+        },
+        "Tuesday": {
+            "OpeningTime": "09:00:00",
+            "ClosingTime": "17:00:00"
+        },
+        "Wednesday": {
+            "OpeningTime": "09:00:00",
+            "ClosingTime": "17:00:00"
+        },
+        "Thursday": {
+            "OpeningTime": "09:00:00",
+            "ClosingTime": "17:00:00"
+        },
+        "Friday": {
+            "OpeningTime": "09:00:00",
+            "ClosingTime": "17:00:00"
+        },
+        "Saturday": {
+            "OpeningTime": "00:00:00",
+            "ClosingTime": "00:00:00"
+        },
+        "Sunday": {
+            "OpeningTime": "00:00:00",
+            "ClosingTime": "00:00:00"
+        }
+    },
+    "ContactName": "",
+    "ContactAddressType": "",
+    "ContactBuilding": "",
+    "ContactHouseStreetName": "",
+    "ContactLocalArea": "",
+    "ContactTownCity": "",
+    "ContactPostCode": "",
+    "ContactMobile": "",
+    "ContactEmail": "",
+    "ProblemOccurredDate": null,
+    "PaymentRequired": true,
+    "PaymentData": [
+        {
+            "Type": "CALLOUT",
+            "Label": "Call out charge",
+            "Amount": "30.99"
+        }
+    ]
+}

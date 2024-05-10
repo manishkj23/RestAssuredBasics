@@ -1,0 +1,11 @@
+Serialization concept:
+Serialization in Rest Assured context is a process of converting a Java object into JSON or Request body ( payload )
+with the help of getter and setter method.
+
+De-Serialization concept:
+Rest Assured also support De-Serialization by converting Response body back to java object
+
+Useful link:
+https://mkyong.com/java/convert-java-objects-to-json-with-jackson/
+https://www.baeldung.com/jackson-annotations
+
