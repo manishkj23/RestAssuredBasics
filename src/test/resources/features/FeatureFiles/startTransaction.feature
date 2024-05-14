@@ -2,12 +2,26 @@ Feature: Claim creation via DGX API for different OEM's
 
   Scenario Outline: Verify claim created and appointment booked for Electrolux plan via DGX API
 
+    #GetAllClaims
+    Given GetAllClaim Payload with "<PlanNo>"
+    When User calls "GetAllClaims" API with "GET" method
+    Then I verify API call is success with status code 200
+    And "Response.ResponseCode" in response body is "SC0001"
+    Then I verify the Open claim is present for "<PlanNo>"
+
+    #Cancellation
+    Given Cancellation Payload with "<PlanNo>" and Open "ClaimNo"
+    When User calls "Cancellation" API with "POST" method
+    Then I verify API call is success with status code 200
+    And "Status" in response body is "OK"
+    And "StatusCode" in response body is "PC000"
+
     #StartTransaction
     Given StartTransaction Payload with "<PlanNo>" "<OEM>" "<ProductType>"
     When User calls "StartTransaction" API with "PUT" method
     Then I verify API call is success with status code 200
     And "Status" in response body is "OK"
-    And "StatusCode" in response body is "ST001"
+    And "StatusCode" in response body is "ST000"
     Then I verify "GUID" created after triggered the Start Transaction API
 
     #GetMandatoryData
@@ -93,10 +107,18 @@ Feature: Claim creation via DGX API for different OEM's
     Examples:
       | PlanNo     | OEM        | ProductType     | searchModel |
       | C1Z9064674 | ELECTROLUX | WASHING MACHINE | EWG14       |
+#      | C1Z9064992 | ELECTROLUX | WASHING MACHINE | EWG14       |
+
 
 #============================================
 
   Scenario Outline: Verify claim created and appointment booked for WHIRPOOL plan via DGX API
+    #GetAllClaims
+    Given GetAllClaim Payload with "<PlanNo>"
+    When User calls "GetAllClaims" API with "GET" method
+    Then I verify API call is success with status code 200
+    And "Response.ResponseCode" in response body is "SC0001"
+    Then I verify the Open claim is present for "<PlanNo>"
 
     #StartTransaction
     Given StartTransaction Payload with "<PlanNo>" "<OEM>" "<ProductType>"
@@ -187,5 +209,26 @@ Feature: Claim creation via DGX API for different OEM's
 
 
     Examples:
+      | PlanNo     | OEM       | ProductType     | searchModel |
+      | 3BA9042296 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |
+
+#=========================================================
+
+Scenario Outline: Verify open claim gets cancelled for a particular plan
+
+    #StartTransaction
+  Given GetAllClaim Payload with "<PlanNo>"
+  When User calls "GetAllClaims" API with "GET" method
+  Then I verify API call is success with status code 200
+  And "Response.ResponseCode" in response body is "SC0001"
+  Then I verify the Open claim is present for "<PlanNo>"
+
+  Given Cancellation Payload with "<PlanNo>" and Open "ClaimNo"
+  When User calls "Cancellation" API with "POST" method
+  Then I verify API call is success with status code 200
+  And "Status" in response body is "OK"
+  And "StatusCode" in response body is "PC000"
+
+  Examples:
       | PlanNo     | OEM       | ProductType     | searchModel |
       | 3BA9042296 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |

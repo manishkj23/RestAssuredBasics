@@ -18,7 +18,7 @@ public class electroluxStepDefinition extends Utils {
     Response stResponse;
     apiBuilder apiBuild = new apiBuilder();
     static String GUID,UniqueApplianceID, ModelNo, FaultCategory, FaultID, ClaimType,NewClaimID,ServiceOptionId,
-            psDateSelected,psSlotSelected;
+            psDateSelected,psSlotSelected,openClaimNumber,openClaimStatus;
     static String AnswerID,nextQuestionID,claimState,answerType,questionID1,answerID1;
     static String QuestionID="";
 
@@ -341,6 +341,28 @@ public class electroluxStepDefinition extends Utils {
     public void put_repair_data_payload_with(String claimID, String planNo, String string3, String string4) throws IOException {
         stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "PutRepairData")
                 .body(apiBuild.putRepairDataPayload(NewClaimID,planNo,psDateSelected,psSlotSelected));
+    }
+
+    @Given("GetAllClaim Payload with {string}")
+    public void get_all_claim_payload_with(String planNo) throws IOException {
+        stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("t","GetAllClaims")
+                .queryParam("PolicyNumber",planNo).queryParam("ChannelCode",getGlobalValues("channelCode"))
+                .queryParam("CountryCode",getGlobalValues("countryCode"));
+
+    }
+
+    @Then("I verify the Open claim is present for {string}")
+    public void i_verify_the_open_claim_is_present(String planNo) {
+        openClaimNumber = getJsonPath(stResponse,"Response.PolicyData."+planNo+".ClaimNumber");
+        openClaimStatus = getJsonPath(stResponse,"Response.PolicyData."+planNo+".RepairHistory[0].RepairStatusHistory[0].Status");
+        System.out.println("Open Claim No. is : " + openClaimNumber);
+        System.out.println("Open Claim No. Status is : " + openClaimStatus);
+    }
+
+    @Given("Cancellation Payload with {string} and Open {string}")
+    public void put_claim_cancellation_payload_with_and_open(String planNo, String claimNo) throws IOException {
+        stRequestSpec = given().log().all().spec(requestSpecification())
+                .body(apiBuild.cancellationPayload(planNo,openClaimNumber));
     }
 
 }

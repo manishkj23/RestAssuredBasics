@@ -1,5 +1,6 @@
 package com.test.API;
 
+import PojoConcept.PojoClasses.CancellationRequest;
 import PojoConcept.PojoClasses.GetServiceOptionRequest;
 import PojoConcept.PojoClasses.putNewClaimRequest;
 import PojoConcept.PojoClasses.startTransactionRequest;
@@ -210,6 +211,15 @@ public class apiBuilder {
                 "    \"ChannelCode\": \""+Utils.getGlobalValues("channelCode")+"\",\n" +
                 "    \"CountryCode\": \""+Utils.getGlobalValues("countryCode")+"\"\n" +
                 "}";
+    }
+
+    public CancellationRequest cancellationPayload(String planNo, String claimNo) throws IOException {
+        CancellationRequest canReq = new CancellationRequest();
+        canReq.setPlanNumber(planNo);
+        canReq.setClaimID(claimNo);
+        canReq.setChannelCode(Utils.getGlobalValues("channelCode"));
+        canReq.setCountryCode(Utils.getGlobalValues("countryCode"));
+        return canReq;
     }
 
 }
