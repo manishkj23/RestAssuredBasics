@@ -17,9 +17,10 @@ public class BekoDGXAPI {
 
     String nextQuestionID, claimState, answerType, answerID, newClaimID,questionID1,
             answerID1, statusCode, ServiceOptionId;
-    String PlanNo = "WRN0001053", modelNumber = "BEKO", questionID = "", env = "domgensit",
+    String PlanNo = "WRN0001574", modelNumber = "BEKO", questionID = "", env = "domgensit",
             productType="Washing Machine", channelCode="DGX", oem="BEKO";
 
+    //"WRN0001053"
     //Another way to pass the request payload body from another class or package to the given()
     @Test
     void startTransactionAPINewGuid()

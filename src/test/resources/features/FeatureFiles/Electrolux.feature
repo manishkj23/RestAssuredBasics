@@ -1,5 +1,6 @@
 Feature: Claim creation via DGX API for different OEM's
 
+  @DGXAPI
   Scenario Outline: Verify claim created and appointment booked for Electrolux plan via DGX API
 
     #GetAllClaims
@@ -8,13 +9,6 @@ Feature: Claim creation via DGX API for different OEM's
     Then I verify API call is success with status code 200
     And "Response.ResponseCode" in response body is "SC0001"
     Then I verify the Open claim is present for "<PlanNo>"
-
-    #Cancellation
-    Given Cancellation Payload with "<PlanNo>" and Open "ClaimNo"
-    When User calls "Cancellation" API with "POST" method
-    Then I verify API call is success with status code 200
-    And "Status" in response body is "OK"
-    And "StatusCode" in response body is "PC000"
 
     #StartTransaction
     Given StartTransaction Payload with "<PlanNo>" "<OEM>" "<ProductType>"
@@ -106,13 +100,14 @@ Feature: Claim creation via DGX API for different OEM's
 
     Examples:
       | PlanNo     | OEM        | ProductType     | searchModel |
-      | C1Z9064674 | ELECTROLUX | WASHING MACHINE | EWG14       |
-#      | C1Z9064992 | ELECTROLUX | WASHING MACHINE | EWG14       |
+      | C1Z9065321 | ELECTROLUX | WASHING MACHINE | EWG14       |
+#      | C1Z9064674 | ELECTROLUX | WASHING MACHINE | EWG14       |
 
+#=========================================================
 
-#============================================
+  @DGXAPI
+  Scenario Outline: Verify User can able to rebook an appointment after claim created successfully.
 
-  Scenario Outline: Verify claim created and appointment booked for WHIRPOOL plan via DGX API
     #GetAllClaims
     Given GetAllClaim Payload with "<PlanNo>"
     When User calls "GetAllClaims" API with "GET" method
@@ -125,7 +120,7 @@ Feature: Claim creation via DGX API for different OEM's
     When User calls "StartTransaction" API with "PUT" method
     Then I verify API call is success with status code 200
     And "Status" in response body is "OK"
-    And "StatusCode" in response body is "ST001"
+    And "StatusCode" in response body is "ST000"
     Then I verify "GUID" created after triggered the Start Transaction API
 
     #GetMandatoryData
@@ -207,28 +202,43 @@ Feature: Claim creation via DGX API for different OEM's
     And "Status" in response body is "OK"
     And "StatusCode" in response body is "RD000"
 
+   #GetNewAppointments
+    Given GetNewAppointments Payload with "<ClaimNo>"
+    When User calls "GetNewAppointments" API with "GET" method
+    Then I verify API call is success with status code 200
+    And "StatusCode" in response body is "GN000"
+    And I verify the current appointment date and get new date and slot
+
+    #PutNewAppointment
+    Given PutNewAppointment Payload with ClaimNo & SlotIdentifier
+    When User calls "PutNewAppointment" API with "PUT" method
+    Then I verify API call is success with status code 200
+    And "StatusCode" in response body is "PN000"
+    Then I verify "<PlanNo>" ClaimNo is same after rebooked an appointment
+
 
     Examples:
-      | PlanNo     | OEM       | ProductType     | searchModel |
-      | 3BA9042296 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |
+      | PlanNo     | OEM        | ProductType     | searchModel |
+      | C1Z9065322 | ELECTROLUX | WASHING MACHINE | EWG14       |
 
 #=========================================================
 
-Scenario Outline: Verify open claim gets cancelled for a particular plan
+  Scenario Outline: Verify open claim gets cancelled for a particular plan
 
-    #StartTransaction
-  Given GetAllClaim Payload with "<PlanNo>"
-  When User calls "GetAllClaims" API with "GET" method
-  Then I verify API call is success with status code 200
-  And "Response.ResponseCode" in response body is "SC0001"
-  Then I verify the Open claim is present for "<PlanNo>"
+  #GetAllClaim
+    Given GetAllClaim Payload with "<PlanNo>"
+    When User calls "GetAllClaims" API with "GET" method
+    Then I verify API call is success with status code 200
+    And "Response.ResponseCode" in response body is "SC0001"
+    Then I verify the Open claim is present for "<PlanNo>"
 
-  Given Cancellation Payload with "<PlanNo>" and Open "ClaimNo"
-  When User calls "Cancellation" API with "POST" method
-  Then I verify API call is success with status code 200
-  And "Status" in response body is "OK"
-  And "StatusCode" in response body is "PC000"
+  #Cancellation
+    Given Cancellation Payload with "<PlanNo>" and Open "ClaimNo"
+    When User calls "Cancellation" API with "POST" method
+    Then I verify API call is success with status code 200
+    And "Status" in response body is "OK"
+    And "StatusCode" in response body is "PC000"
 
-  Examples:
+    Examples:
       | PlanNo     | OEM       | ProductType     | searchModel |
-      | 3BA9042296 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |
+#      | C1Z9064674 | ELECTROLUX | WASHING MACHINE | EWG14       |

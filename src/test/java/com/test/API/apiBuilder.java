@@ -222,4 +222,16 @@ public class apiBuilder {
         return canReq;
     }
 
+    public String putNewAppointmentPayload(String claimID, String slotIdentifier ) throws IOException {
+        return "{\n" +
+                "    \"ClaimID\": \""+claimID+"\",\n" +
+                "    \"AppointmentSlotIdentifier\": \""+slotIdentifier+"\",\n" +
+                "    \"AppointmentNotes\": \"Rebook an appointment-Notes updated\",\n" +
+                "    \"ChannelCode\": \""+Utils.getGlobalValues("channelCode")+"\",\n" +
+                "    \"CountryCode\": \""+Utils.getGlobalValues("countryCode")+"\"\n" +
+                "}";
+    }
+
+
+
 }

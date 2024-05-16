@@ -15,7 +15,9 @@ public enum Resources {
     PutServiceOption("/domgenprelive/RestAPI/BookClaim/"),
     PutRepairData("/domgenprelive/RestAPI/BookClaim/"),
     GetAllClaims("/domgenprelive/RestAPI/ClaimsAPI/"),
-    Cancellation("/domgenprelive/RestAPI/ClaimData/Cancellation");
+    Cancellation("/domgenprelive/RestAPI/ClaimData/Cancellation"),
+    GetNewAppointments("/domgenprelive/RestAPI/ClaimData/"),
+    PutNewAppointment("/domgenprelive/RestAPI/ClaimData/");
 
 
     private String resourcesURL;

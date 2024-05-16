@@ -3,11 +3,15 @@ import com.test.API.apiBuilder;
 import com.test.APIUtils.Resources;
 import com.test.APIUtils.Utils;
 import io.cucumber.java.en.*;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -18,21 +22,32 @@ public class electroluxStepDefinition extends Utils {
     Response stResponse;
     apiBuilder apiBuild = new apiBuilder();
     static String GUID,UniqueApplianceID, ModelNo, FaultCategory, FaultID, ClaimType,NewClaimID,ServiceOptionId,
-            psDateSelected,psSlotSelected,openClaimNumber,openClaimStatus;
+            psDateSelected,psSlotSelected,openClaimNumber,openClaimStatus,newDateToRebook,newSlotsIdentifier;
     static String AnswerID,nextQuestionID,claimState,answerType,questionID1,answerID1;
     static String QuestionID="";
 
     @Given("StartTransaction Payload with {string} {string} {string}")
     public void start_transaction_payload_with(String PlanNo, String OEM, String productType) throws IOException {
-//        stResponseSpec = new ResponseSpecBuilder().expectContentType(ContentType.JSON)
-//                .expectStatusCode(200).build();
-        stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
-                .body(apiBuild.startTransactionPayload(PlanNo, OEM, productType));
+        if(openClaimStatus.equalsIgnoreCase("Repair In Progress") && openClaimNumber != null)
+        {
+            cancellation_payload_with_and_open(PlanNo,openClaimNumber);
+            user_calls_api_with_put_method("Cancellation","POST");
+            i_api_call_is_success_with_status_code(200);
+
+            stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
+                    .body(apiBuild.startTransactionPayload(PlanNo, OEM, productType));
+        }
+        else {
+            stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
+                    .body(apiBuild.startTransactionPayload(PlanNo, OEM, productType));
+        }
     }
 
     @When("User calls {string} API with {string} method")
     public void user_calls_api_with_put_method(String resourcesURL, String apiMethod) {
-//constructor will be called with value of resource which you pass from Enum class
+
+
+        //constructor will be called with value of resource which you pass from Enum class
         if (apiMethod.equalsIgnoreCase("PUT")) {
             Resources endpointResources = Resources.valueOf(resourcesURL);
             System.out.println(endpointResources.getResourcesURL());
@@ -360,9 +375,61 @@ public class electroluxStepDefinition extends Utils {
     }
 
     @Given("Cancellation Payload with {string} and Open {string}")
-    public void put_claim_cancellation_payload_with_and_open(String planNo, String claimNo) throws IOException {
+    public void cancellation_payload_with_and_open(String planNo, String claimNo) throws IOException {
         stRequestSpec = given().log().all().spec(requestSpecification())
                 .body(apiBuild.cancellationPayload(planNo,openClaimNumber));
     }
+
+    @Given("GetNewAppointments Payload with {string}")
+    public void get_new_appointments_payload_with(String claimNo) throws IOException {
+        stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m","GetNewAppointments")
+                .queryParam("ClaimID",claimNo).queryParam("ChannelCode",getGlobalValues("channelCode"))
+                .queryParam("CountryCode",getGlobalValues("countryCode"))
+                .queryParam("AvailabilityStartDate","")
+                .queryParam("AvailabilityEndDate","");
+    }
+
+    @And("I verify the current appointment date and get new date and slot")
+    public void verifyTheCurrentAppointmentDateAndNewDateSlot() {
+        String currentAppointmentDate = getJsonPath(stResponse,"CurrentAppointment.Date");
+        JsonPath jsonPath = new JsonPath(stResponse.asString());
+        int numberOfAvailabilityDays = jsonPath.getList("AvailabilityData").size();
+        newDateToRebook = getJsonPath(stResponse,"AvailabilityData["+(numberOfAvailabilityDays-2)+"].Date");
+        newSlotsIdentifier = getJsonPath(stResponse,"AvailabilityData["+(numberOfAvailabilityDays-2)+"].Slots.Identifier");
+        if(currentAppointmentDate.equalsIgnoreCase(newDateToRebook))
+        {
+            System.out.println("New date and current date both are same ");
+            newDateToRebook = getJsonPath(stResponse,"AvailabilityData["+(numberOfAvailabilityDays-3)+"].Date");
+            newSlotsIdentifier = getJsonPath(stResponse,"AvailabilityData["+(numberOfAvailabilityDays-3)+"].Slots.Identifier");
+            System.out.println("New date is: " + newDateToRebook);
+            System.out.println("New Slot Identifier is: " + newSlotsIdentifier);
+        }
+        else
+        {
+            System.out.println("New date and current date both are different and can rebook an appointment ");
+        }
+
+        //To fetch & display all the dates in the response
+        for( int i=0;i<numberOfAvailabilityDays;i++)
+        {
+            String dataDate = getJsonPath(stResponse,"AvailabilityData["+i+"].Date");
+            System.out.println("Dates are: " + dataDate);
+        }
+    }
+
+    @Given("PutNewAppointment Payload with ClaimNo & SlotIdentifier")
+    public void putNewAppointmentPayloadClaimNoSlotIdentifier() throws IOException {
+        stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m","PutNewAppointment")
+                .body(apiBuild.putNewAppointmentPayload(NewClaimID,newSlotsIdentifier));
+    }
+
+    @Then("I verify {string} ClaimNo is same after rebooked an appointment")
+    public void i_verify_claim_no_is_same_after_rebooked_an_appointment(String planNo) {
+        String pnaPlanNo = getJsonPath(stResponse,"PlanNumber");
+        String pnaClaimNo = getJsonPath(stResponse,"ClaimID");
+        Assert.assertTrue("Rebook an appointment is not done for the correct plan",
+                pnaPlanNo.equalsIgnoreCase(planNo) && pnaClaimNo.equalsIgnoreCase(NewClaimID));
+    }
+
 
 }
