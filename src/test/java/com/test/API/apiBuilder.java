@@ -5,11 +5,14 @@ import PojoConcept.PojoClasses.GetServiceOptionRequest;
 import PojoConcept.PojoClasses.putNewClaimRequest;
 import PojoConcept.PojoClasses.startTransactionRequest;
 import com.test.APIUtils.Utils;
+import com.test.StepDefinition.electroluxStepDefinition;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class apiBuilder {
+
+//    electroluxStepDefinition stepDef = new electroluxStepDefinition();
 
     public startTransactionRequest startTransactionPayload(String PlanNo, String OEM, String productType) throws IOException {
         startTransactionRequest stReq = new startTransactionRequest();
@@ -83,6 +86,7 @@ public class apiBuilder {
         pnc.setCustomersHouseStreetName(Utils.getGlobalValues("customerAddr1"));
         pnc.setCustomersTownCity(Utils.getGlobalValues("customerAddr3"));
         pnc.setCustomersPostCode(Utils.getGlobalValues("customerPostCode"));
+//        pnc.setCustomersPostCode();
         pnc.setChannelCode(Utils.getGlobalValues("channelCode"));
         pnc.setCountryCode(Utils.getGlobalValues("countryCode"));
         return pnc;
@@ -183,8 +187,10 @@ public class apiBuilder {
         gso.setCustomersHouseStreetName(Utils.getGlobalValues("customerAddr1"));
         gso.setCustomersTownCity(Utils.getGlobalValues("customerAddr3"));
         gso.setCustomersPostCode(Utils.getGlobalValues("customerPostCode"));
+//        gso.setCustomersPostCode(stepDef.getPostCode());
         gso.setChannelCode(Utils.getGlobalValues("channelCode"));
         gso.setCountryCode(Utils.getGlobalValues("countryCode"));
+        gso.setCustomersLocalArea("");
         return gso;
     }
 

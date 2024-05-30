@@ -4,25 +4,26 @@ public enum Resources {
 
     //Enum is a special class in Java which has collections of constant or methods
 
-    StartTransaction("/domgenprelive/RestAPI/BookClaim/"),
-    GetMandatoryData("/domgenprelive/RestAPI/BookClaim/"),
-    GetData("/domgenprelive/RestAPI/BookClaim/"),
-    UpdateTransaction("/domgenprelive/RestAPI/BookClaim/"),
-    PutNewClaim("/domgenprelive/RestAPI/BookClaim/"),
-    GetQuestion("/domgenprelive/RestAPI/BookClaim/"),
-    PutAnswer("/domgenprelive/RestAPI/BookClaim/"),
-    GetServiceOption("/domgenprelive/RestAPI/BookClaim/"),
-    PutServiceOption("/domgenprelive/RestAPI/BookClaim/"),
-    PutRepairData("/domgenprelive/RestAPI/BookClaim/"),
-    GetAllClaims("/domgenprelive/RestAPI/ClaimsAPI/"),
-    Cancellation("/domgenprelive/RestAPI/ClaimData/Cancellation"),
-    GetNewAppointments("/domgenprelive/RestAPI/ClaimData/"),
-    PutNewAppointment("/domgenprelive/RestAPI/ClaimData/");
-
+    StartTransaction("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    GetMandatoryData("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    GetData("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    UpdateTransaction("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    PutNewClaim("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    GetQuestion("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    PutAnswer("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    GetServiceOption("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    PutServiceOption("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    PutRepairData("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/BookClaim/"),
+    GetAllClaims("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/ClaimsAPI/"),
+    Cancellation("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/ClaimData/Cancellation"),
+    GetNewAppointments("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/ClaimData/"),
+    PutNewAppointment("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/ClaimData/"),
+    GetRepairData("/domgen"+Utils.getGlobalValues("env")+"/RestAPI/ClaimData/");
 
     private String resourcesURL;
 
-    Resources(String resourcesURL) {
+    Resources(String resourcesURL)
+    {
         this.resourcesURL = resourcesURL;
     }
 
@@ -30,4 +31,14 @@ public enum Resources {
     {
         return resourcesURL;
     }
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,13 +1,11 @@
 Request method:	GET
-Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/ClaimData/?m=GetNewAppointments&ClaimID=130224&ChannelCode=DGX&CountryCode=GB&AvailabilityStartDate=&AvailabilityEndDate=
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/ClaimsAPI/?t=GetAllClaims&PolicyNumber=6QT9000784&ChannelCode=DGX&CountryCode=GB
 Proxy:			<none>
 Request params:	<none>
-Query params:	m=GetNewAppointments
-				ClaimID=130224
+Query params:	t=GetAllClaims
+				PolicyNumber=6QT9000784
 				ChannelCode=DGX
 				CountryCode=GB
-				AvailabilityStartDate=
-				AvailabilityEndDate=
 Form params:	<none>
 Path params:	<none>
 Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
@@ -18,11 +16,11 @@ Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
 Server: nginx
-Date: Thu, 16 May 2024 13:16:37 GMT
+Date: Wed, 29 May 2024 09:44:28 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
-Set-Cookie: domgenprelive=kiu51ck4hmt9dgbcbahr7blm84; path=/; secure; HttpOnly
+Set-Cookie: domgensit=hdn6384ukli4sl8ajoq20fa431; path=/; secure; HttpOnly
 Expires: Thu, 19 Nov 1981 08:52:00 GMT
 Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 Pragma: no-cache
@@ -38,120 +36,80 @@ Referrer-Policy: same-origin
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 {
-    "Status": "OK",
-    "StatusCode": "GN000",
-    "StatusDebugging": [
-        
-    ],
-    "CurrentAppointment": {
-        "Date": "2024-05-28",
-        "SlotType": "Any",
-        "StartTime": "",
-        "EndTime": ""
-    },
-    "ExtraAvailability": false,
-    "AvailabilityRequestDays": 14,
-    "AvailabilityMaximumDays": 14,
-    "AvailabilityStartDate": "2024-05-16",
-    "AvailabilityEndDate": "2024-05-29",
-    "AvailabilityData": [
-        {
-            "Date": "2024-05-17",
-            "Slots": {
-                "Identifier": "1373_20240517",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
+    "Response": {
+        "ResponseCode": "SC0001",
+        "ResponseDescription": "Success",
+        "PolicyData": {
+            "6QT9000784": {
+                "PolicyNumber": "6QT9000784",
+                "ResponseCode": "SC0001",
+                "ResponseDescription": "Success",
+                "ClaimNumber": null,
+                "ClaimStatus": null,
+                "ClaimSubsequentAction": null,
+                "RepairType": null,
+                "ExcessAmount": "0.00",
+                "ExcessPaid": "No",
+                "PRRef": "",
+                "RepairHistory": [
+                    {
+                        "ClaimBookedDate": "2024-05-29",
+                        "ClaimCompletionDate": "2024-05-29",
+                        "ClaimNumber": "11131783",
+                        "LinkedPRJobID": null,
+                        "RepairType": "Book an Engineer",
+                        "RepairStatusHistory": [
+                            {
+                                "Status": "Repair request cancelled",
+                                "StatusChangeDateTime": "2024-05-29 10:44:08"
+                            },
+                            {
+                                "Status": "Repair in progress",
+                                "StatusChangeDateTime": "2024-05-29 10:36:19"
+                            },
+                            {
+                                "Status": "Booking in progress",
+                                "StatusChangeDateTime": "2024-05-29 10:25:18"
+                            },
+                            {
+                                "Status": "Form incomplete",
+                                "StatusChangeDateTime": "2024-05-29 10:25:04"
+                            }
+                        ]
+                    },
+                    {
+                        "ClaimBookedDate": "2024-05-29",
+                        "ClaimCompletionDate": "2024-05-29",
+                        "ClaimNumber": "11131782",
+                        "LinkedPRJobID": null,
+                        "RepairType": "Book an Engineer",
+                        "RepairStatusHistory": [
+                            {
+                                "Status": "Repair request cancelled",
+                                "StatusChangeDateTime": "2024-05-29 10:24:33"
+                            },
+                            {
+                                "Status": "Booking in progress",
+                                "StatusChangeDateTime": "2024-05-29 09:51:59"
+                            },
+                            {
+                                "Status": "Form incomplete",
+                                "StatusChangeDateTime": "2024-05-29 09:51:46"
+                            }
+                        ]
+                    }
+                ]
             }
         },
-        {
-            "Date": "2024-05-20",
-            "Slots": {
-                "Identifier": "1373_20240520",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-21",
-            "Slots": {
-                "Identifier": "1373_20240521",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-22",
-            "Slots": {
-                "Identifier": "1373_20240522",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-23",
-            "Slots": {
-                "Identifier": "1373_20240523",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-24",
-            "Slots": {
-                "Identifier": "1373_20240524",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-27",
-            "Slots": {
-                "Identifier": "1373_20240527",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-28",
-            "Slots": {
-                "Identifier": "1373_20240528",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        },
-        {
-            "Date": "2024-05-29",
-            "Slots": {
-                "Identifier": "1373_20240529",
-                "SlotType": "AllDay",
-                "StartTime": "",
-                "EndTime": "",
-                "Available": true
-            }
-        }
-    ]
+        "PolicyNumber": "6QT9000784",
+        "APIName": "GetAllClaims"
+    }
 }
 Request method:	PUT
-Request URI:	https://www.skylinecms.co.uk/domgenprelive/RestAPI/ClaimData/?m=PutNewAppointment
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=StartTransaction
 Proxy:			<none>
 Request params:	<none>
-Query params:	m=PutNewAppointment
+Query params:	m=StartTransaction
 Form params:	<none>
 Path params:	<none>
 Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
@@ -161,22 +119,23 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "ClaimID": "130224",
-    "AppointmentSlotIdentifier": "1373_20240527",
-    "AppointmentNotes": "Rebook an appointment-Notes updated",
+    "ProductType": "WASHING MACHINE",
+    "PlanNumber": "6QT9000784",
+    "Manufacturer": "BEKO",
     "ChannelCode": "DGX",
     "CountryCode": "GB"
 }
 HTTP/1.1 200 OK
 Server: nginx
-Date: Thu, 16 May 2024 13:16:41 GMT
+Date: Wed, 29 May 2024 09:44:30 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
-Set-Cookie: domgenprelive=ej0cjfd1a4cp065hkdinb6odl3; path=/; secure; HttpOnly
+Set-Cookie: domgensit=rd4jae8td2nebuuc0rbol79im3; path=/; secure; HttpOnly
 Expires: Thu, 19 Nov 1981 08:52:00 GMT
 Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
 Pragma: no-cache
+X-ORB-TRANSACTIONID: b2195b33-d196-4619-bd0d-b1f2761307c6
 Content-Encoding: gzip
 Vary: Accept-Encoding
 Access-Control-Allow-Origin: *
@@ -190,24 +149,2154 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 {
     "Status": "OK",
-    "StatusCode": "PN000",
+    "StatusCode": "ST001",
     "StatusDebugging": [
         
     ],
-    "ClaimID": "130224",
-    "Manufacturer": "Electrolux",
-    "ItemType": "WASHING MACHINE",
-    "PlanNumber": "C1Z9064674",
-    "ServiceOption": "Home Visit (Normal Working Hours)",
-    "AppointmentDate": "2024-05-27",
-    "AppointmentSlot": "ANY",
-    "ExtraDetails": "Rebook an appointment-Notes updated",
-    "ServiceProviderCompanyName": "PC CONTROL SYSTEMS LTD",
-    "ServiceProviderBuilding": "Swan Court",
-    "ServiceProviderHouseStreetName": "11 Worple Road",
-    "ServiceProviderLocalArea": "London",
-    "ServiceProviderTownCity": "Wimbledon",
-    "ServiceProviderPostCode": "SW19 4JS",
-    "ServiceProviderPhone": "020 1234 1234",
-    "ServiceProviderPublicEmail": "ServiceProviderPublicEmail@flyingtoolboxrespond.com"
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=GetMandatoryData
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetMandatoryData
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:32 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=sm9vqhin3cac73gkt47724c265; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: e33d8062-d13b-460a-b65a-41dd9f002d31
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GM000",
+    "StatusDebugging": [
+        
+    ],
+    "BookingOEM": "Beko",
+    "ProductType": "WASHING MACHINE",
+    "PlanInWarrantyPeriod": false,
+    "PlanInWaitPeriod": false,
+    "InWarrantyContactName": null,
+    "InWarrantyContactTel": null,
+    "OEMModelDataRequired": true,
+    "UniqueApplianceID": "7794",
+    "ModelNumber": "BEKO DD WME8227B",
+    "SerialNumber": "",
+    "FaultData": {
+        "FaultCategoryID": 726,
+        "FaultCategoryName": "",
+        "FaultCategoryLabel": "",
+        "FaultCategoryPriority": 0,
+        "PossibleAnswers": [
+            {
+                "FaultID": "36719",
+                "FaultCode": "55588",
+                "FaultName": "55588 - DW-Display panel is broken",
+                "FaultLabel": "Display panel is broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37375",
+                "FaultCode": "54901",
+                "FaultName": "54901 - WM-Yellowing problem",
+                "FaultLabel": "Yellowing problem",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36751",
+                "FaultCode": "54982",
+                "FaultName": "54982 - DW-Quality / Performance is not good",
+                "FaultLabel": "Quality / Performance is not good",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37311",
+                "FaultCode": "55289",
+                "FaultName": "55289 - WM-Appliance walking/running with high vibration",
+                "FaultLabel": "Appliance walking/running with high vibration",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36686",
+                "FaultCode": "55556",
+                "FaultName": "55556 - Dryer-Reverse door direction",
+                "FaultLabel": "Reverse door direction",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37343",
+                "FaultCode": "55321",
+                "FaultName": "55321 - WM-Leaves stains on linen",
+                "FaultLabel": "Leaves stains on linen",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37370",
+                "FaultCode": "54896",
+                "FaultName": "54896 - WM-Uses the conditioner during the first rinse / Uses the conditioner immediately",
+                "FaultLabel": "Uses the conditioner during the first rinse / Uses the conditioner immediately",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36746",
+                "FaultCode": "54977",
+                "FaultName": "54977 - DW-On/Off button is faulty",
+                "FaultLabel": "On/Off button is faulty",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37306",
+                "FaultCode": "55285",
+                "FaultName": "55285 - WM - How to reset",
+                "FaultLabel": "How to reset",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36681",
+                "FaultCode": "55551",
+                "FaultName": "55551 - Dryer-Not opening door",
+                "FaultLabel": "Not opening door",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37338",
+                "FaultCode": "55316",
+                "FaultName": "55316 - WM-Foam coming from detergent dispenser",
+                "FaultLabel": "Foam coming from detergent dispenser",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36714",
+                "FaultCode": "55583",
+                "FaultName": "55583 - DW-Detergent dispenser lid is broken",
+                "FaultLabel": "Detergent dispenser lid is broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37365",
+                "FaultCode": "54891",
+                "FaultName": "54891 - WM-Store Display Request",
+                "FaultLabel": "Store Display Request",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36741",
+                "FaultCode": "54972",
+                "FaultName": "54972 - DW-Missing accessory",
+                "FaultLabel": "Missing accessory",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36773",
+                "FaultCode": "55004",
+                "FaultName": "55004 - DW-Water inlet valve keeps working when the appliance is off",
+                "FaultLabel": "Water inlet valve keeps working when the appliance is off",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36676",
+                "FaultCode": "55546",
+                "FaultName": "55546 - Dryer-New program selection / program does not change",
+                "FaultLabel": "New program selection / program does not change",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37333",
+                "FaultCode": "55311",
+                "FaultName": "55311 - WM-Drum not rotating",
+                "FaultLabel": "Drum not rotating",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36709",
+                "FaultCode": "55578",
+                "FaultName": "55578 - DW-Damage on door panel",
+                "FaultLabel": "Damage on door panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37360",
+                "FaultCode": "54886",
+                "FaultName": "54886 - WM-Pump filter is blocked",
+                "FaultLabel": "Pump filter is blocked",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36736",
+                "FaultCode": "55605",
+                "FaultName": "55605 - DW-Loosen impeller/Spray arm",
+                "FaultLabel": "Loosen impeller/Spray arm",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36768",
+                "FaultCode": "54999",
+                "FaultName": "54999 - DW-Tablet not dissolve",
+                "FaultLabel": "Tablet not dissolve",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36671",
+                "FaultCode": "55541",
+                "FaultName": "55541 - Dryer-Hinge broken",
+                "FaultLabel": "Hinge broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37328",
+                "FaultCode": "55306",
+                "FaultName": "55306 - WM-Does not take the conditioner from dispenser",
+                "FaultLabel": "Does not take the conditioner from dispenser",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36704",
+                "FaultCode": "55573",
+                "FaultName": "55573 - DW-Autodoor is not working",
+                "FaultLabel": "Autodoor is not working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37355",
+                "FaultCode": "54881",
+                "FaultName": "54881 - WM-Not working/ no power",
+                "FaultLabel": "Not working/ no power",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36731",
+                "FaultCode": "55600",
+                "FaultName": "55600 - DW-Foem left inside the dishwasher after program finish",
+                "FaultLabel": "Foem left inside the dishwasher after program finish",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36763",
+                "FaultCode": "54994",
+                "FaultName": "54994 - DW-Stall/Stop/Stuck in program",
+                "FaultLabel": "Stall/Stop/Stuck in program",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36666",
+                "FaultCode": "55536",
+                "FaultName": "55536 - Dryer-Cabinet damaged",
+                "FaultLabel": "Cabinet damaged",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37323",
+                "FaultCode": "55301",
+                "FaultName": "55301 - WM-Detergent & water intake problem",
+                "FaultLabel": "Detergent & water intake problem",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36699",
+                "FaultCode": "55568",
+                "FaultName": "55568 - DW - Panel label not legible",
+                "FaultLabel": "Panel label not legible",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37350",
+                "FaultCode": "54876",
+                "FaultName": "54876 - WM-Not intaking water",
+                "FaultLabel": "Not intaking water",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36726",
+                "FaultCode": "55595",
+                "FaultName": "55595 - DW-Electrical leakage/Fire/Burning/Smoke/Hazardous failure",
+                "FaultLabel": "Electrical leakage/Fire/Burning/Smoke/Hazardous failure",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36758",
+                "FaultCode": "54989",
+                "FaultName": "54989 - DW-Salt indicator does not work",
+                "FaultLabel": "Salt indicator does not work",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36661",
+                "FaultCode": "55531",
+                "FaultName": "55531 - Dryer - Water tank shows empty filter must be cleaned",
+                "FaultLabel": "Water tank shows empty filter must be cleaned",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37318",
+                "FaultCode": "55296",
+                "FaultName": "55296 - WM-Buttons not responding/working",
+                "FaultLabel": "Buttons not responding/working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36693",
+                "FaultCode": "55563",
+                "FaultName": "55563 - Dryer-Water leakage",
+                "FaultLabel": "Water leakage",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37345",
+                "FaultCode": "54871",
+                "FaultName": "54871 - WM-Missing accessory",
+                "FaultLabel": "Missing accessory",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36721",
+                "FaultCode": "55590",
+                "FaultName": "55590 - DW-Does not heat",
+                "FaultLabel": "Does not heat",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36753",
+                "FaultCode": "54984",
+                "FaultName": "54984 - DW-Rinse indicator does not goes off",
+                "FaultLabel": "Rinse indicator does not goes off",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36656",
+                "FaultCode": "55526",
+                "FaultName": "55526 - Dryer - Electrical leakage/Fire/Burning/Smoke/Hazardous failure",
+                "FaultLabel": "Electrical leakage/Fire/Burning/Smoke/Hazardous failure",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37313",
+                "FaultCode": "55291",
+                "FaultName": "55291 - WM-Boiling water/overheating",
+                "FaultLabel": "Boiling water/overheating",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36688",
+                "FaultCode": "55558",
+                "FaultName": "55558 - Dryer-Smells bad",
+                "FaultLabel": "Smells bad",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37372",
+                "FaultCode": "54898",
+                "FaultName": "54898 - WM-Water leakage from door",
+                "FaultLabel": "Water leakage from door",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36748",
+                "FaultCode": "54979",
+                "FaultName": "54979 - DW-Program finish before estimated time",
+                "FaultLabel": "Program finish before estimated time",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37308",
+                "FaultCode": "54902",
+                "FaultName": "54902 - WM - Washer drier not drying",
+                "FaultLabel": "Washer drier not drying",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36683",
+                "FaultCode": "55553",
+                "FaultName": "55553 - Dryer-Product Installation Request",
+                "FaultLabel": "Product Installation Request",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37340",
+                "FaultCode": "55318",
+                "FaultName": "55318 - WM-Gathering water, but then it is drained without washing",
+                "FaultLabel": "Gathering water, but then it is drained without washing",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36716",
+                "FaultCode": "55585",
+                "FaultName": "55585 - DW-Detergent intake problem",
+                "FaultLabel": "Detergent intake problem",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37367",
+                "FaultCode": "54893",
+                "FaultName": "54893 - WM-Teared/damaged gasket",
+                "FaultLabel": "Teared/damaged gasket",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36743",
+                "FaultCode": "54974",
+                "FaultName": "54974 - DW-Noise while drains/ pump out",
+                "FaultLabel": "Noise while drains/ pump out",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36775",
+                "FaultCode": "55006",
+                "FaultName": "55006 - DW-Water left in dishwasher/No drain",
+                "FaultLabel": "Water left in dishwasher/No drain",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36678",
+                "FaultCode": "55548",
+                "FaultName": "55548 - Dryer-Noisy working",
+                "FaultLabel": "Noisy working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37335",
+                "FaultCode": "55313",
+                "FaultName": "55313 - WM-Electrical leakage/Fire/Burning/Smoke/Hazardous failure",
+                "FaultLabel": "Electrical leakage/Fire/Burning/Smoke/Hazardous failure",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36711",
+                "FaultCode": "55580",
+                "FaultName": "55580 - DW-Damage on top plate",
+                "FaultLabel": "Damage on top plate",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37362",
+                "FaultCode": "54888",
+                "FaultName": "54888 - WM-Rusted",
+                "FaultLabel": "Rusted",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36738",
+                "FaultCode": "55607",
+                "FaultName": "55607 - DW-Lower spray arm/impller does not work",
+                "FaultLabel": "Lower spray arm/impller does not work",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36770",
+                "FaultCode": "55001",
+                "FaultName": "55001 - DW-Upper basket/tray does not move",
+                "FaultLabel": "Upper basket/tray does not move",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36673",
+                "FaultCode": "55543",
+                "FaultName": "55543 - Dryer-Lamb not light up",
+                "FaultLabel": "Lamb not light up",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37330",
+                "FaultCode": "55308",
+                "FaultName": "55308 - WM-Door alignment is not good",
+                "FaultLabel": "Door alignment is not good",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36706",
+                "FaultCode": "55575",
+                "FaultName": "55575 - DW-Breaking crockery/dishes/glass",
+                "FaultLabel": "Breaking crockery/dishes/glass",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37357",
+                "FaultCode": "54883",
+                "FaultName": "54883 - WM-Prewash led always light up/blinking",
+                "FaultLabel": "Prewash led always light up/blinking",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36733",
+                "FaultCode": "55602",
+                "FaultName": "55602 - DW-How to reset",
+                "FaultLabel": "How to reset",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36765",
+                "FaultCode": "54996",
+                "FaultName": "54996 - DW-Steam leakage from door panel",
+                "FaultLabel": "Steam leakage from door panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36668",
+                "FaultCode": "55538",
+                "FaultName": "55538 - Dryer-Creasing clothes",
+                "FaultLabel": "Creasing clothes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37325",
+                "FaultCode": "55303",
+                "FaultName": "55303 - WM-Does not pump out water",
+                "FaultLabel": "Does not pump out water",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36701",
+                "FaultCode": "55570",
+                "FaultName": "55570 - DW - Water hardness can not be adjusted",
+                "FaultLabel": "Water hardness can not be adjusted",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37352",
+                "FaultCode": "54878",
+                "FaultName": "54878 - WM-Not present light indication on the control panel",
+                "FaultLabel": "Not present light indication on the control panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36728",
+                "FaultCode": "55597",
+                "FaultName": "55597 - DW-Faulty upper basket/ tray wheel",
+                "FaultLabel": "Faulty upper basket/ tray wheel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36760",
+                "FaultCode": "54991",
+                "FaultName": "54991 - DW-Salt reservoir lid does not close",
+                "FaultLabel": "Salt reservoir lid does not close",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36663",
+                "FaultCode": "55533",
+                "FaultName": "55533 - Dryer-Audio warning cancel",
+                "FaultLabel": "Audio warning cancel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37320",
+                "FaultCode": "55298",
+                "FaultName": "55298 - WM-Defected control panel",
+                "FaultLabel": "Defected control panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36696",
+                "FaultCode": "55565",
+                "FaultName": "55565 - DW - Drain hose faulty",
+                "FaultLabel": "Drain hose faulty",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37347",
+                "FaultCode": "54873",
+                "FaultName": "54873 - WM-Not drying",
+                "FaultLabel": "Not drying",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36723",
+                "FaultCode": "55592",
+                "FaultName": "55592 - DW-Door alignment is not good",
+                "FaultLabel": "Door alignment is not good",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36755",
+                "FaultCode": "54986",
+                "FaultName": "54986 - DW-Rust on dishes",
+                "FaultLabel": "Rust on dishes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36658",
+                "FaultCode": "55528",
+                "FaultName": "55528 - Dryer - Led/Lights flashing/blinking",
+                "FaultLabel": "Led/Lights flashing/blinking",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37315",
+                "FaultCode": "55293",
+                "FaultName": "55293 - WM-Broken door handle",
+                "FaultLabel": "Broken door handle",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36690",
+                "FaultCode": "55560",
+                "FaultName": "55560 - Dryer-Stucked programme / program does not finish",
+                "FaultLabel": "Stucked programme / program does not finish",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37374",
+                "FaultCode": "54900",
+                "FaultName": "54900 - WM-Water overflow",
+                "FaultLabel": "Water overflow",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36750",
+                "FaultCode": "54981",
+                "FaultName": "54981 - DW-Program running longer than standard time",
+                "FaultLabel": "Program running longer than standard time",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37310",
+                "FaultCode": "55288",
+                "FaultName": "55288 - WM-Always running/not stop",
+                "FaultLabel": "Always running/not stop",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36685",
+                "FaultCode": "55555",
+                "FaultName": "55555 - Dryer-Quality / Performance is not good",
+                "FaultLabel": "Quality / Performance is not good",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37342",
+                "FaultCode": "55320",
+                "FaultName": "55320 - WM-Lcd display is defect",
+                "FaultLabel": "Lcd display is defect",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36718",
+                "FaultCode": "55587",
+                "FaultName": "55587 - DW-Dishes are not dry at the end of cycle",
+                "FaultLabel": "Dishes are not dry at the end of cycle",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37369",
+                "FaultCode": "54895",
+                "FaultName": "54895 - WM-Transport damaged",
+                "FaultLabel": "Transport damaged",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36745",
+                "FaultCode": "54976",
+                "FaultName": "54976 - DW-Not cleaning the dishes",
+                "FaultLabel": "Not cleaning the dishes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37305",
+                "FaultCode": "55284",
+                "FaultName": "55284 - WM - Drain hose damaged",
+                "FaultLabel": "Drain hose damaged",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36680",
+                "FaultCode": "55550",
+                "FaultName": "55550 - Dryer-Not drying",
+                "FaultLabel": "Not drying",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37337",
+                "FaultCode": "55315",
+                "FaultName": "55315 - WM-Feet level adjustment",
+                "FaultLabel": "Feet level adjustment",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36713",
+                "FaultCode": "55582",
+                "FaultName": "55582 - DW-Detergent dispenser lid does not close",
+                "FaultLabel": "Detergent dispenser lid does not close",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37364",
+                "FaultCode": "54890",
+                "FaultName": "54890 - WM-Smells bad",
+                "FaultLabel": "Smells bad",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36740",
+                "FaultCode": "54971",
+                "FaultName": "54971 - DW-Making noise when the appliance is swithced off",
+                "FaultLabel": "Making noise when the appliance is swithced off",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36772",
+                "FaultCode": "55003",
+                "FaultName": "55003 - DW-Upper impeller /spray arm does not rotate",
+                "FaultLabel": "Upper impeller /spray arm does not rotate",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36675",
+                "FaultCode": "55545",
+                "FaultName": "55545 - Dryer-Make clothes smaller",
+                "FaultLabel": "Make clothes smaller",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37332",
+                "FaultCode": "55310",
+                "FaultName": "55310 - WM-Door not opening/ always locked",
+                "FaultLabel": "Door not opening/ always locked",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36708",
+                "FaultCode": "55577",
+                "FaultName": "55577 - DW-Continous water intake",
+                "FaultLabel": "Continous water intake",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37359",
+                "FaultCode": "54885",
+                "FaultName": "54885 - WM-Program selection knob not responding",
+                "FaultLabel": "Program selection knob not responding",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36735",
+                "FaultCode": "55604",
+                "FaultName": "55604 - DW-Lime traces remain on dishes",
+                "FaultLabel": "Lime traces remain on dishes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36767",
+                "FaultCode": "54998",
+                "FaultName": "54998 - DW-Store Display Request",
+                "FaultLabel": "Store Display Request",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36670",
+                "FaultCode": "55540",
+                "FaultName": "55540 - Dryer-Failure of program execution",
+                "FaultLabel": "Failure of program execution",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37327",
+                "FaultCode": "55305",
+                "FaultName": "55305 - WM-Does not take away laundry detergent from the first compartment (prewash)",
+                "FaultLabel": "Does not take away laundry detergent from the first compartment (prewash)",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36703",
+                "FaultCode": "55572",
+                "FaultName": "55572 - DW-Appliance does not work",
+                "FaultLabel": "Appliance does not work",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37354",
+                "FaultCode": "54880",
+                "FaultName": "54880 - WM-Not running prewash cycle",
+                "FaultLabel": "Not running prewash cycle",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36730",
+                "FaultCode": "55599",
+                "FaultName": "55599 - DW-Filter is clogged error code",
+                "FaultLabel": "Filter is clogged error code",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36762",
+                "FaultCode": "54993",
+                "FaultName": "54993 - DW-Smells bad",
+                "FaultLabel": "Smells bad",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36665",
+                "FaultCode": "55535",
+                "FaultName": "55535 - Dryer-Buttons / knob not responding",
+                "FaultLabel": "Buttons / knob not responding",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37322",
+                "FaultCode": "55300",
+                "FaultName": "55300 - WM-Defected/broken kickplate",
+                "FaultLabel": "Defected/broken kickplate",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36698",
+                "FaultCode": "55567",
+                "FaultName": "55567 - DW - Inlet hose faulty",
+                "FaultLabel": "Inlet hose faulty",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37349",
+                "FaultCode": "54875",
+                "FaultName": "54875 - WM-Not heating water",
+                "FaultLabel": "Not heating water",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36725",
+                "FaultCode": "55594",
+                "FaultName": "55594 - DW-Electrical fuse cut",
+                "FaultLabel": "Electrical fuse cut",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36757",
+                "FaultCode": "54988",
+                "FaultName": "54988 - DW-Rust/corrosion on panel",
+                "FaultLabel": "Rust/corrosion on panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36660",
+                "FaultCode": "55530",
+                "FaultName": "55530 - Dryer - Stall/Stop/Stuck in program",
+                "FaultLabel": "Stall/Stop/Stuck in program",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37317",
+                "FaultCode": "55295",
+                "FaultName": "55295 - WM-Broken/damaged door",
+                "FaultLabel": "Broken/damaged door",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36692",
+                "FaultCode": "55562",
+                "FaultName": "55562 - Dryer-Tripping the electric",
+                "FaultLabel": "Tripping the electric",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36720",
+                "FaultCode": "55589",
+                "FaultName": "55589 - DW-Does not fill water",
+                "FaultLabel": "Does not fill water",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36752",
+                "FaultCode": "54983",
+                "FaultName": "54983 - DW-Rinse aid dispenser lid is broken",
+                "FaultLabel": "Rinse aid dispenser lid is broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36655",
+                "FaultCode": "55525",
+                "FaultName": "55525 - Dryer - Does not heat",
+                "FaultLabel": "Does not heat",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37312",
+                "FaultCode": "55290",
+                "FaultName": "55290 - WM-Appliance water intaking when power is off",
+                "FaultLabel": "Appliance water intaking when power is off",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36687",
+                "FaultCode": "55557",
+                "FaultName": "55557 - Dryer-Short circuit / burn",
+                "FaultLabel": "Short circuit / burn",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37344",
+                "FaultCode": "54870",
+                "FaultName": "54870 - WM-Long time to get water",
+                "FaultLabel": "Long time to get water",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37371",
+                "FaultCode": "54897",
+                "FaultName": "54897 - WM-Water leakage from detergent dispenser",
+                "FaultLabel": "Water leakage from detergent dispenser",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36747",
+                "FaultCode": "54978",
+                "FaultName": "54978 - DW-Product Installation Request",
+                "FaultLabel": "Product Installation Request",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37307",
+                "FaultCode": "55286",
+                "FaultName": "55286 - WM - Inlet hose damaged",
+                "FaultLabel": "Inlet hose damaged",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36682",
+                "FaultCode": "55552",
+                "FaultName": "55552 - Dryer-Not working",
+                "FaultLabel": "Not working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37339",
+                "FaultCode": "55317",
+                "FaultName": "55317 - WM-Foreign object",
+                "FaultLabel": "Foreign object",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36715",
+                "FaultCode": "55584",
+                "FaultName": "55584 - DW-Detergent dispenser lid stucks",
+                "FaultLabel": "Detergent dispenser lid stucks",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37366",
+                "FaultCode": "54892",
+                "FaultName": "54892 - WM-Stucked program",
+                "FaultLabel": "Stucked program",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36742",
+                "FaultCode": "54973",
+                "FaultName": "54973 - DW-No water indicator/light is on",
+                "FaultLabel": "No water indicator/light is on",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36774",
+                "FaultCode": "55005",
+                "FaultName": "55005 - DW-Water leakage",
+                "FaultLabel": "Water leakage",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36677",
+                "FaultCode": "55547",
+                "FaultName": "55547 - Dryer-No control panel display",
+                "FaultLabel": "No control panel display",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37334",
+                "FaultCode": "55312",
+                "FaultName": "55312 - WM-Drum rotating slowly/ not performing spinning",
+                "FaultLabel": "Drum rotating slowly/ not performing spinning",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36710",
+                "FaultCode": "55579",
+                "FaultName": "55579 - DW-Damage on side panel",
+                "FaultLabel": "Damage on side panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37361",
+                "FaultCode": "54887",
+                "FaultName": "54887 - WM-Quality / Performance is not good",
+                "FaultLabel": "Quality / Performance is not good",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36737",
+                "FaultCode": "55606",
+                "FaultName": "55606 - DW-Lower basket/tray is faulty",
+                "FaultLabel": "Lower basket/tray is faulty",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36769",
+                "FaultCode": "55000",
+                "FaultName": "55000 - DW-Transport damaged",
+                "FaultLabel": "Transport damaged",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36672",
+                "FaultCode": "55542",
+                "FaultName": "55542 - Dryer-Homewhiz connection problem",
+                "FaultLabel": "Homewhiz connection problem",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37329",
+                "FaultCode": "55307",
+                "FaultName": "55307 - WM-Does not take the laundry detergent from the second compartment (main wash)",
+                "FaultLabel": "Does not take the laundry detergent from the second compartment (main wash)",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36705",
+                "FaultCode": "55574",
+                "FaultName": "55574 - DW-Bottom floor light is not working",
+                "FaultLabel": "Bottom floor light is not working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37356",
+                "FaultCode": "54882",
+                "FaultName": "54882 - WM-Performs a spin cycle, but leaves the laundry wet",
+                "FaultLabel": "Performs a spin cycle, but leaves the laundry wet",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36732",
+                "FaultCode": "55601",
+                "FaultName": "55601 - DW-Homewhiz connection problem",
+                "FaultLabel": "Homewhiz connection problem",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36764",
+                "FaultCode": "54995",
+                "FaultName": "54995 - DW-Start/Pause button does not work",
+                "FaultLabel": "Start/Pause button does not work",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36667",
+                "FaultCode": "55537",
+                "FaultName": "55537 - Dryer-Causing faded color on clothes",
+                "FaultLabel": "Causing faded color on clothes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37324",
+                "FaultCode": "55302",
+                "FaultName": "55302 - WM-Detergent dispenser is broken",
+                "FaultLabel": "Detergent dispenser is broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36700",
+                "FaultCode": "55569",
+                "FaultName": "55569 - DW - rusty basket",
+                "FaultLabel": "rusty basket",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37351",
+                "FaultCode": "54877",
+                "FaultName": "54877 - WM-Not performing last spinning",
+                "FaultLabel": "Not performing last spinning",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36727",
+                "FaultCode": "55596",
+                "FaultName": "55596 - DW-Faulty lower basket/ tray wheel",
+                "FaultLabel": "Faulty lower basket/ tray wheel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36759",
+                "FaultCode": "54990",
+                "FaultName": "54990 - DW-Salt indicator/light is on",
+                "FaultLabel": "Salt indicator/light is on",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36662",
+                "FaultCode": "55532",
+                "FaultName": "55532 - Dryer- Evaporator filter congest early",
+                "FaultLabel": "Evaporator filter congest early",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37319",
+                "FaultCode": "55297",
+                "FaultName": "55297 - WM-Damaged cabinet/product",
+                "FaultLabel": "Damaged cabinet/product",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36695",
+                "FaultCode": "55564",
+                "FaultName": "55564 - DW - Broken Handle",
+                "FaultLabel": "Broken Handle",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37346",
+                "FaultCode": "54872",
+                "FaultName": "54872 - WM-Noisy working",
+                "FaultLabel": "Noisy working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36722",
+                "FaultCode": "55591",
+                "FaultName": "55591 - DW-Door /Lid does not close",
+                "FaultLabel": "Door /Lid does not close",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36754",
+                "FaultCode": "54985",
+                "FaultName": "54985 - DW-Running continously",
+                "FaultLabel": "Running continously",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36657",
+                "FaultCode": "55527",
+                "FaultName": "55527 - Dryer - Feet level adjustment",
+                "FaultLabel": "Feet level adjustment",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37314",
+                "FaultCode": "55292",
+                "FaultName": "55292 - WM-Broken door glass",
+                "FaultLabel": "Broken door glass",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36689",
+                "FaultCode": "55559",
+                "FaultName": "55559 - Dryer-Store Display Request",
+                "FaultLabel": "Store Display Request",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37373",
+                "FaultCode": "54899",
+                "FaultName": "54899 - WM-Water leakage underneath machine",
+                "FaultLabel": "Water leakage underneath machine",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36749",
+                "FaultCode": "54980",
+                "FaultName": "54980 - DW-Program finish indicator/light does not work",
+                "FaultLabel": "Program finish indicator/light does not work",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37309",
+                "FaultCode": "55287",
+                "FaultName": "55287 - WM-Always intaking water",
+                "FaultLabel": "Always intaking water",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36684",
+                "FaultCode": "55554",
+                "FaultName": "55554 - Dryer-Program long lasting",
+                "FaultLabel": "Program long lasting",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37341",
+                "FaultCode": "55319",
+                "FaultName": "55319 - WM-Homewhiz connection problem",
+                "FaultLabel": "Homewhiz connection problem",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36717",
+                "FaultCode": "55586",
+                "FaultName": "55586 - DW-Detergent residue left on dishes",
+                "FaultLabel": "Detergent residue left on dishes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37368",
+                "FaultCode": "54894",
+                "FaultName": "54894 - WM-Tearing clothes",
+                "FaultLabel": "Tearing clothes",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36744",
+                "FaultCode": "54975",
+                "FaultName": "54975 - DW-Noisy working",
+                "FaultLabel": "Noisy working",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37304",
+                "FaultCode": "55283",
+                "FaultName": "55283 - WM - Detergent residue on the laundry",
+                "FaultLabel": "Detergent residue on the laundry",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36679",
+                "FaultCode": "55549",
+                "FaultName": "55549 - Dryer-Not closing door",
+                "FaultLabel": "Not closing door",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37336",
+                "FaultCode": "55314",
+                "FaultName": "55314 - WM-Error code/ warning",
+                "FaultLabel": "Error code/ warning",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36712",
+                "FaultCode": "55581",
+                "FaultName": "55581 - DW-Detergent dispenser is broken",
+                "FaultLabel": "Detergent dispenser is broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37363",
+                "FaultCode": "54889",
+                "FaultName": "54889 - WM-Skipping to spinning cycle",
+                "FaultLabel": "Skipping to spinning cycle",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36739",
+                "FaultCode": "55608",
+                "FaultName": "55608 - DW-Main plug burns",
+                "FaultLabel": "Main plug burns",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36771",
+                "FaultCode": "55002",
+                "FaultName": "55002 - DW-Upper basket/tray faulty",
+                "FaultLabel": "Upper basket/tray faulty",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36674",
+                "FaultCode": "55544",
+                "FaultName": "55544 - Dryer-Maintenance",
+                "FaultLabel": "Maintenance",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37331",
+                "FaultCode": "55309",
+                "FaultName": "55309 - WM-Door not closing",
+                "FaultLabel": "Door not closing",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36707",
+                "FaultCode": "55576",
+                "FaultName": "55576 - DW-Broken adjustable feet",
+                "FaultLabel": "Broken adjustable feet",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37358",
+                "FaultCode": "54884",
+                "FaultName": "54884 - WM-Product Installation Request",
+                "FaultLabel": "Product Installation Request",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36734",
+                "FaultCode": "55603",
+                "FaultName": "55603 - DW-Inner illumination/light does not work",
+                "FaultLabel": "Inner illumination/light does not work",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36766",
+                "FaultCode": "54997",
+                "FaultName": "54997 - DW-Steam leakage from side panel",
+                "FaultLabel": "Steam leakage from side panel",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36669",
+                "FaultCode": "55539",
+                "FaultName": "55539 - Dryer-Drum not rotating",
+                "FaultLabel": "Drum not rotating",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37326",
+                "FaultCode": "55304",
+                "FaultName": "55304 - WM-Does not start spin cycle / no spin cycle",
+                "FaultLabel": "Does not start spin cycle / no spin cycle",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36702",
+                "FaultCode": "55571",
+                "FaultName": "55571 - DW-A bluish/rainbow appearance on glass",
+                "FaultLabel": "A bluish/rainbow appearance on glass",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37353",
+                "FaultCode": "54879",
+                "FaultName": "54879 - WM-Not rinsing",
+                "FaultLabel": "Not rinsing",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36729",
+                "FaultCode": "55598",
+                "FaultName": "55598 - DW-Filter is clogged",
+                "FaultLabel": "Filter is clogged",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36761",
+                "FaultCode": "54992",
+                "FaultName": "54992 - DW-Scratch on dishes/glass",
+                "FaultLabel": "Scratch on dishes/glass",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36664",
+                "FaultCode": "55534",
+                "FaultName": "55534 - Dryer-Button broken",
+                "FaultLabel": "Button broken",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37321",
+                "FaultCode": "55299",
+                "FaultName": "55299 - WM-Defected power button",
+                "FaultLabel": "Defected power button",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36697",
+                "FaultCode": "55566",
+                "FaultName": "55566 - DW - Error code",
+                "FaultLabel": "Error code",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37348",
+                "FaultCode": "54874",
+                "FaultName": "54874 - WM-Not finishing program in time/ program takes too long time",
+                "FaultLabel": "Not finishing program in time/ program takes too long time",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36724",
+                "FaultCode": "55593",
+                "FaultName": "55593 - DW-Door gasket is loosen",
+                "FaultLabel": "Door gasket is loosen",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36756",
+                "FaultCode": "54987",
+                "FaultName": "54987 - DW-Rust on door hinge",
+                "FaultLabel": "Rust on door hinge",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36659",
+                "FaultCode": "55529",
+                "FaultName": "55529 - Dryer - Overheating",
+                "FaultLabel": "Overheating",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "37316",
+                "FaultCode": "55294",
+                "FaultName": "55294 - WM-Broken hinge",
+                "FaultLabel": "Broken hinge",
+                "Priority": "999"
+            },
+            {
+                "FaultID": "36691",
+                "FaultCode": "55561",
+                "FaultName": "55561 - Dryer-Transport damaged",
+                "FaultLabel": "Transport damaged",
+                "Priority": "999"
+            }
+        ]
+    },
+    "OEMApplianceData": [
+        {
+            "FieldIdentifier": "UniqueApplianceID",
+            "FieldLabel": "Model Number",
+            "FieldType": "String",
+            "FieldRegex": null,
+            "FieldLookupRegex": null,
+            "FieldValues": [
+                
+            ],
+            "DataCategory": "OEMAppliances",
+            "DataType": "ModelNumber",
+            "UseGetData": true,
+            "DisplayPriority": 0
+        },
+        {
+            "FieldIdentifier": "SerialNumber",
+            "FieldLabel": "Serial Number",
+            "FieldType": "String",
+            "FieldRegex": "^(0?[1-9]|[1-9][0-9])(\\d{6})(0?[1-9]|1[012])(01|02)$",
+            "FieldLookupRegex": null,
+            "FieldValues": [
+                
+            ],
+            "DataCategory": null,
+            "DataType": null,
+            "UseGetData": false,
+            "DisplayPriority": 0
+        }
+    ],
+    "ClaimTypes": [
+        {
+            "ClaimTypeID": "3",
+            "ClaimTypeName": "Breakdown",
+            "ClaimTypeLabel": "Breakdown",
+            "ClaimTypeCode": "BD",
+            "ClaimTypeAvailable": true,
+            "IWEnabled": false,
+            "PaymentRequired": false,
+            "PaymentData": false
+        },
+        {
+            "ClaimTypeID": "4",
+            "ClaimTypeName": "Damage Caused by Accident",
+            "ClaimTypeLabel": "Damage Caused by Accident",
+            "ClaimTypeCode": "AD",
+            "ClaimTypeAvailable": true,
+            "IWEnabled": false,
+            "PaymentRequired": true,
+            "PaymentData": {
+                "Type": "CALLOUT",
+                "Label": "Call out charge",
+                "Amount": "30.00"
+            }
+        }
+    ],
+    "IWCallbackRequired": false,
+    "DisplayApplianceUseable": true
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=UpdateTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=UpdateTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "UniqueApplianceID": "7794"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:33 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=dsc0tcolg40dsttgfhqsf9o0v5; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: a9115d97-e6c9-4686-8f7c-8b1f30b0d16b
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "UT000",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "CreatedDate": "2024-05-29 10:44:12",
+    "UpdatedDate": "2024-05-29 10:44:33",
+    "PlanNumber": "6QT9000784",
+    "BookingOEM": "Beko",
+    "Manufacturer": "Beko",
+    "ProductType": "WASHING MACHINE",
+    "UniqueApplianceID": "7794",
+    "ModelNumber": "BEKO DD WME8227B",
+    "SerialNumber": "",
+    "ClaimTypeID": null,
+    "FaultCategoryID": null,
+    "FaultID": null,
+    "PostalCode": "SK6 5AS",
+    "AppointmentSlotIdentifier": null,
+    "AppointmentNotes": null,
+    "ReportedFault": null,
+    "CustomOEMModelCode": null,
+    "ApplianceUseable": null
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=UpdateTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=UpdateTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ClaimTypeID": "3",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "ApplianceUseable": "Yes"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:35 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=luu6ha8udgutd5ivgucf2fjol0; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 636a1268-e71c-4ca0-afae-457b1de6e2cd
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "UT000",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "CreatedDate": "2024-05-29 10:44:12",
+    "UpdatedDate": "2024-05-29 10:44:35",
+    "PlanNumber": "6QT9000784",
+    "BookingOEM": "Beko",
+    "Manufacturer": "Beko",
+    "ProductType": "WASHING MACHINE",
+    "UniqueApplianceID": "7794",
+    "ModelNumber": "BEKO DD WME8227B",
+    "SerialNumber": "",
+    "ClaimTypeID": "3",
+    "FaultCategoryID": null,
+    "FaultID": null,
+    "PostalCode": "SK6 5AS",
+    "AppointmentSlotIdentifier": null,
+    "AppointmentNotes": null,
+    "ReportedFault": null,
+    "CustomOEMModelCode": null,
+    "ApplianceUseable": "Yes"
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=UpdateTransaction
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=UpdateTransaction
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "FaultCategoryID": "726",
+    "FaultID": "36719",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "ApplianceUseable": "Yes"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:36 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=e5kvumor8qegf29iiljd6vq412; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: d56fed71-6a97-4dfe-b4ef-98d7b629adb4
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "UT000",
+    "StatusDebugging": [
+        
+    ],
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "CreatedDate": "2024-05-29 10:44:12",
+    "UpdatedDate": "2024-05-29 10:44:36",
+    "PlanNumber": "6QT9000784",
+    "BookingOEM": "Beko",
+    "Manufacturer": "Beko",
+    "ProductType": "WASHING MACHINE",
+    "UniqueApplianceID": "7794",
+    "ModelNumber": "BEKO DD WME8227B",
+    "SerialNumber": "",
+    "ClaimTypeID": "3",
+    "FaultCategoryID": "726",
+    "FaultID": "36719",
+    "PostalCode": "SK6 5AS",
+    "AppointmentSlotIdentifier": null,
+    "AppointmentNotes": null,
+    "ReportedFault": null,
+    "CustomOEMModelCode": null,
+    "ApplianceUseable": "Yes"
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=PutNewClaim
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutNewClaim
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "CustomersTownCity": "Stockport",
+    "CustomerLastName": "MATIONTEST",
+    "CustomersLocalArea": null,
+    "CustomerFirstName": "DGXAPIAUTO",
+    "CustomersPostCode": "SK6 5AS",
+    "CustomersHouseStreetName": "2 Holly Vale",
+    "ClaimMobile": "07802299909",
+    "CustomerTitle": "MR",
+    "ChannelCode": "DGX",
+    "ClaimEmail": "manish.kumarjain@domesticandgeneral.com",
+    "CountryCode": "GB",
+    "GUID": "D57FFB7C-6EC7-49EB-B9E5-B35CAA3C22FA",
+    "ClaimLandline": "01200002546"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:43 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=1ve049g4m1cmvrok9outn98265; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 91731c5b-6e13-488b-88d9-651d2ed2554f
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "NC000",
+    "StatusDebugging": [
+        
+    ],
+    "ClaimID": "11131784"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=GetQuestion
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetQuestion
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "11131784",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "QuestionID": null
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:44 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=f5kofbuoampcm2tvmtes67j4s2; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 9123655e-bbf4-4ab7-b5c7-b879d815639d
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GQ000",
+    "StatusDebugging": [
+        
+    ],
+    "QuestionID": "343",
+    "QuestionLabel": "Reject claim?",
+    "QuestionHelp": "",
+    "AnswerType": "RADIO_BUTTONS",
+    "AnswerData": [
+        {
+            "AnswerID": "908",
+            "AnswerLabel": "Yes",
+            "AnswerHelp": "",
+            "AnswerType": "DROPDOWN",
+            "AnswerValues": [
+                "Test Answer"
+            ]
+        },
+        {
+            "AnswerID": "909",
+            "AnswerLabel": "No",
+            "AnswerHelp": ""
+        },
+        {
+            "AnswerID": "1462",
+            "AnswerLabel": "Accessory capture QA setup",
+            "AnswerHelp": ""
+        }
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=PutAnswer
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutAnswer
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "11131784",
+    "QuestionID": "343",
+    "AnswerID": "909",
+    "AnswerValue": "Test",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:45 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=8iq1sa1tgjeq48m8tv0gtpbh67; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: a2498efd-0cca-4778-bdda-6251db69aa74
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PA000",
+    "StatusDebugging": [
+        
+    ],
+    "NextQuestionID": "43",
+    "ClaimState": "In Progress"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=GetQuestion
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetQuestion
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "11131784",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB",
+    "QuestionID": "43"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:46 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=m2ggdtvc3lddnpi7i3rv4fcao4; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: f850fa7e-c332-4e12-8f32-190868c26520
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GQ000",
+    "StatusDebugging": [
+        
+    ],
+    "QuestionID": "43",
+    "QuestionLabel": "Please ask the customer for a detailed description of the fault. \n",
+    "QuestionHelp": "Please capture any error codes or messages displayed on the product.",
+    "AnswerType": "RESPONSE_FIELD",
+    "AnswerData": [
+        {
+            "AnswerID": "100",
+            "AnswerLabel": "Display Response Field Only",
+            "AnswerHelp": "",
+            "AnswerHint": "Please enter as much detail about the problem being reported.",
+            "AnswerMinimumCharacters": "3",
+            "AnswerMaximumCharacters": null
+        }
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=PutAnswer
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutAnswer
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "11131784",
+    "QuestionID": "43",
+    "AnswerID": "100",
+    "AnswerValue": "Test",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:49 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=l47rkul39r4rol6qldn3cm2hh0; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: e3bfb43d-26bd-41db-bf5b-2a4809023741
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PA002",
+    "StatusDebugging": [
+        
+    ],
+    "NextQuestionID": null,
+    "ClaimState": "Accepted",
+    "ClaimStateMessage": "ACCEPTED"
+}
+Request method:	GET
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=GetServiceOption
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=GetServiceOption
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "CustomersTownCity": "Stockport",
+    "CustomerLastName": "MATIONTEST",
+    "CustomersLocalArea": "",
+    "CustomerFirstName": "DGXAPIAUTO",
+    "CustomersPostCode": "SK6 5AS",
+    "CustomersHouseStreetName": "2 Holly Vale",
+    "ClaimMobile": "07802299909",
+    "CustomerTitle": "MR",
+    "ChannelCode": "DGX",
+    "ClaimEmail": "manish.kumarjain@domesticandgeneral.com",
+    "CountryCode": "GB",
+    "ClaimLandline": "01200002546",
+    "ClaimID": "11131784"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:50 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=q2v0d4lrlir1oo9cl1dl2rjir0; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: e125d0f2-3d2c-4736-b8c9-65d107b82206
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "GS000",
+    "StatusDebugging": [
+        
+    ],
+    "ServiceOptions": [
+        {
+            "ServiceOptionID": "6",
+            "ServiceOptionLabel": "HOME VISIT TEST",
+            "ServiceOptionMessage": "HOME VISIT TEST 123",
+            "ServiceOptionType": "Home Repair",
+            "ServiceOptionCost": "0.00",
+            "ServiceOptionRequiredFields": [
+                
+            ],
+            "DisplayCalendar": true,
+            "BlockBookingWithoutAppt": true,
+            "RestrictBookingWithoutAppt": false,
+            "CurrentlySelected": false
+        },
+        {
+            "ServiceOptionID": "12",
+            "ServiceOptionLabel": "Central Repair (Courier Collection - Anytime)",
+            "ServiceOptionMessage": "The product must be collected for repair by a specialist centralised service provider.The customer can arrange for a convenient date for the courier to call.\n\nIt is the customer's responsibility to ensure the product is securely packaged and labelled.\n",
+            "ServiceOptionType": "Courier",
+            "ServiceOptionCost": "0.00",
+            "ServiceOptionRequiredFields": [
+                "COLLECTION_ADDRESS",
+                "DELIVERY_RETURN_ADDRESS"
+            ],
+            "DisplayCalendar": false,
+            "BlockBookingWithoutAppt": true,
+            "RestrictBookingWithoutAppt": false,
+            "CurrentlySelected": false
+        },
+        {
+            "ServiceOptionID": "44",
+            "ServiceOptionLabel": "Maintenance Visit",
+            "ServiceOptionMessage": "Maintenance Visit",
+            "ServiceOptionType": "Home Repair",
+            "ServiceOptionCost": "0.00",
+            "ServiceOptionRequiredFields": [
+                
+            ],
+            "DisplayCalendar": true,
+            "BlockBookingWithoutAppt": true,
+            "RestrictBookingWithoutAppt": false,
+            "CurrentlySelected": false
+        }
+    ],
+    "PaymentRequired": false,
+    "PaymentData": [
+        
+    ]
+}
+Request method:	PUT
+Request URI:	https://www.skylinecms.co.uk/domgensit/RestAPI/BookClaim/?m=PutServiceOption
+Proxy:			<none>
+Request params:	<none>
+Query params:	m=PutServiceOption
+Form params:	<none>
+Path params:	<none>
+Headers:		SynergyToken=7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "ClaimID": "11131784",
+    "ServiceOptionID": "6",
+    "ServiceOptionRequiredFields": [
+        
+    ],
+    "AvailabilityStartDate": "",
+    "AvailabilityEndDate": "",
+    "ChannelCode": "DGX",
+    "CountryCode": "GB"
+}
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 29 May 2024 09:44:52 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: domgensit=6adq8acg906qcl7l72cspr7s34; path=/; secure; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+X-ORB-TRANSACTIONID: 04ed9f7b-845d-4e65-aa3c-0a0ddf807e50
+Content-Encoding: gzip
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+Referrer-Policy: no-referrer
+Referrer-Policy: same-origin
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+{
+    "Status": "OK",
+    "StatusCode": "PS002",
+    "StatusDebugging": [
+        
+    ],
+    "ExtraAvailability": false,
+    "AvailabilityRequestDays": 14,
+    "AvailabilityMaximumDays": 14,
+    "AvailabilityStartDate": "2024-05-29",
+    "AvailabilityEndDate": "2024-06-11",
+    "ManualReferralAllowed": false,
+    "ManualReferralServiceOptionID": null,
+    "PaymentRequired": false,
+    "PaymentData": [
+        
+    ]
 }

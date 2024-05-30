@@ -7,6 +7,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
+import org.apache.commons.collections.bag.SynchronizedSortedBag;
 import org.junit.Assert;
 import java.io.IOException;
 import java.util.List;
@@ -22,13 +23,34 @@ public class electroluxStepDefinition extends Utils {
     Response stResponse;
     apiBuilder apiBuild = new apiBuilder();
     static String GUID,UniqueApplianceID, ModelNo, FaultCategory, FaultID, ClaimType,NewClaimID,ServiceOptionId,
-            psDateSelected,psSlotSelected,openClaimNumber,openClaimStatus,newDateToRebook,newSlotsIdentifier;
+            psDateSelected,psSlotSelected,openClaimNumber,openClaimStatusHistory,newDateToRebook,newSlotsIdentifier,
+            openClaimStatus;
     static String AnswerID,nextQuestionID,claimState,answerType,questionID1,answerID1;
     static String QuestionID="";
+    public String postCode;
+
+//    public electroluxStepDefinition() {
+////        this.postCode = postCode;
+//    }
+//
+//    public String getPostCode() {
+//        return postCode;
+//    }
+//
+//    public void setPostCode(String postCode) {
+//        this.postCode = postCode;
+//    }
+
+
 
     @Given("StartTransaction Payload with {string} {string} {string}")
     public void start_transaction_payload_with(String PlanNo, String OEM, String productType) throws IOException {
-        if(openClaimStatus.equalsIgnoreCase("Repair In Progress") && openClaimNumber != null)
+        if(openClaimStatus == null && openClaimNumber == null)
+        {
+            stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
+                    .body(apiBuild.startTransactionPayload(PlanNo, OEM, productType));
+        }
+        else if(openClaimStatusHistory.equalsIgnoreCase("Repair In Progress") || openClaimNumber != null || openClaimStatus.equalsIgnoreCase("Accepted"))
         {
             cancellation_payload_with_and_open(PlanNo,openClaimNumber);
             user_calls_api_with_put_method("Cancellation","POST");
@@ -37,15 +59,10 @@ public class electroluxStepDefinition extends Utils {
             stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
                     .body(apiBuild.startTransactionPayload(PlanNo, OEM, productType));
         }
-        else {
-            stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
-                    .body(apiBuild.startTransactionPayload(PlanNo, OEM, productType));
-        }
     }
 
     @When("User calls {string} API with {string} method")
     public void user_calls_api_with_put_method(String resourcesURL, String apiMethod) {
-
 
         //constructor will be called with value of resource which you pass from Enum class
         if (apiMethod.equalsIgnoreCase("PUT")) {
@@ -79,6 +96,25 @@ public class electroluxStepDefinition extends Utils {
         Assert.assertEquals(getJsonPath(stResponse, status), expectedValue);
     }
 
+    @And("I get the Post Code of the {string}")
+    public void i_get_the_post_code_of_the(String planNo) {
+
+        String planNumber = getJsonPath(stResponse,"PlanNumber");
+        if(planNumber.equalsIgnoreCase(planNo))
+        {
+            postCode = getJsonPath(stResponse,"PostalCode");
+            System.out.println("Post code is :" +  postCode);
+        }
+        else
+        {
+            System.out.println("Plan no. is not correct");
+        }
+
+
+
+
+    }
+
     @Then("I verify {string} created after triggered the Start Transaction API")
     public void i_verify_guid_created_after_triggered_the_start_transaction_api(String guid) {
         GUID = getJsonPath(stResponse,guid);
@@ -91,19 +127,37 @@ public class electroluxStepDefinition extends Utils {
                 .body(apiBuild.getMandatoryDataPayload(GUID));
     }
 
-    @Then("I get UniqueApplianceID, ModelNo, FaultCategory, FaultID, ClaimType")
-    public void i_get_unique_appliance_id_model_no_fault_category_fault_id_claim_type() {
-        UniqueApplianceID = getJsonPath(stResponse,"UniqueApplianceID");
-        ModelNo = getJsonPath(stResponse,"ModelNumber");
-        FaultCategory = getJsonPath(stResponse, "FaultData[0].FaultCategoryID");
-        FaultID = getJsonPath(stResponse, "FaultData[0].PossibleAnswers[0].FaultID");
-        ClaimType = getJsonPath(stResponse, "ClaimTypes[0].ClaimTypeID");
-        System.out.println("Unique Appliance ID is : "  + UniqueApplianceID);
-        System.out.println("Model Number is : "  + ModelNo);
-        System.out.println("Fault Category ID is : "  + FaultCategory);
-        System.out.println("Fault ID is : "  + FaultID);
-        System.out.println("Claim Type value is : "  + ClaimType);
+    @Then("I get UniqueApplianceID, ModelNo, FaultCategory, FaultID, ClaimType for {string}")
+    public void i_get_unique_appliance_id_model_no_fault_category_fault_id_claim_type(String oem) {
 
+        switch(oem){
+
+            case "ELECTROLUX":
+                UniqueApplianceID = getJsonPath(stResponse, "UniqueApplianceID");
+                ModelNo = getJsonPath(stResponse, "ModelNumber");
+                FaultCategory = getJsonPath(stResponse, "FaultData[0].FaultCategoryID");
+                FaultID = getJsonPath(stResponse, "FaultData[0].PossibleAnswers[0].FaultID");
+                ClaimType = getJsonPath(stResponse, "ClaimTypes[0].ClaimTypeID");
+                System.out.println("Unique Appliance ID is : " + UniqueApplianceID);
+                System.out.println("Model Number is : " + ModelNo);
+                System.out.println("Fault Category ID is : " + FaultCategory);
+                System.out.println("Fault ID is : " + FaultID);
+                System.out.println("Claim Type value is : " + ClaimType);
+                break;
+
+            case "BEKO":
+                UniqueApplianceID = getJsonPath(stResponse, "UniqueApplianceID");
+                ModelNo = getJsonPath(stResponse, "ModelNumber");
+                FaultCategory = getJsonPath(stResponse, "FaultData.FaultCategoryID");
+                FaultID = getJsonPath(stResponse, "FaultData.PossibleAnswers[0].FaultID");
+                ClaimType = getJsonPath(stResponse, "ClaimTypes[0].ClaimTypeID");
+                System.out.println("Unique Appliance ID is : " + UniqueApplianceID);
+                System.out.println("Model Number is : " + ModelNo);
+                System.out.println("Fault Category ID is : " + FaultCategory);
+                System.out.println("Fault ID is : " + FaultID);
+                System.out.println("Claim Type value is : " + ClaimType);
+                break;
+        }
     }
 
     @Given("GetData Payload with {string}, {string}")
@@ -121,7 +175,7 @@ public class electroluxStepDefinition extends Utils {
             Resources endpointResources = Resources.valueOf(resourcesURL);
             stResponse = stRequestSpec.when().log().all().get(endpointResources.getResourcesURL())
                     .then().log().all().extract().response();
-            verifyStatusCodeinResponseBody(getJsonPath(stResponse,"StatusCode"),"GD000");
+            Assert.assertEquals("GD000",getJsonPath(stResponse,"StatusCode"));
             UniqueApplianceID = getJsonPath(stResponse,"DataResult[0].DataIdentifier");
         }
         else
@@ -316,39 +370,61 @@ public class electroluxStepDefinition extends Utils {
 
     @Given("I get date and slot from the response for the {string}")
     public void i_get_date_and_slot_from_the_response(String oem) {
-
-        if(oem.equalsIgnoreCase("ELECTROLUX")) {
-            int maximumDaysAvailable = Integer.parseInt(getJsonPath(stResponse, "AvailabilityMaximumDays"));
-            if (maximumDaysAvailable == 14) {
-                System.out.println("Maximum Days Available should be : " + maximumDaysAvailable);
-            } else {
-                System.out.println("We are not getting the 14 days calendar from OEM");
+        switch(oem) {
+            case "ELECTROLUX":
+            if (oem.equalsIgnoreCase("ELECTROLUX")) {
+                int maximumDaysAvailable = Integer.parseInt(getJsonPath(stResponse, "AvailabilityMaximumDays"));
+                if (maximumDaysAvailable == 14) {
+                    System.out.println("Maximum Days Available should be : " + maximumDaysAvailable);
+                } else {
+                    System.out.println("We are not getting the 14 days calendar from OEM");
+                }
+                System.out.println(getJsonPath(stResponse, "AvailabilityStartDate"));
+                System.out.println(getJsonPath(stResponse, "AvailabilityEndDate"));
+                int noOfAvailableDays = Integer.parseInt((getJsonPath(stResponse, "AvailabilityData.size()")));
+                System.out.println("Total No. of slots available: " + noOfAvailableDays);
+                psDateSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Date");
+                System.out.println("Date selected for Appointment Booked : " + psDateSelected);
+                psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots.Identifier");
+                System.out.println("Slot selected for Appointment Booked : " + psSlotSelected);
+                break;
             }
-            System.out.println(getJsonPath(stResponse, "AvailabilityStartDate"));
-            System.out.println(getJsonPath(stResponse, "AvailabilityEndDate"));
-            int noOfAvailableDays = Integer.parseInt((getJsonPath(stResponse, "AvailabilityData.size()")));
-            System.out.println("Total No. of slots available: " + noOfAvailableDays);
-            psDateSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Date");
-            System.out.println("Date selected for Appointment Booked : " + psDateSelected);
-            psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots.Identifier");
-            System.out.println("Slot selected for Appointment Booked : " + psSlotSelected);
-        }
-        else if(oem.equalsIgnoreCase("WHIRLPOOL"))
-        {
-            int maximumDaysAvailable = Integer.parseInt(getJsonPath(stResponse, "AvailabilityMaximumDays"));
-            if (maximumDaysAvailable == 7) {
-                System.out.println("Maximum Days Available should be : " + maximumDaysAvailable);
-            } else {
-                System.out.println("We are not getting the 7 days calendar from OEM");
+            case "WHIRLPOOL":
+            if (oem.equalsIgnoreCase("WHIRLPOOL")) {
+                int maximumDaysAvailable = Integer.parseInt(getJsonPath(stResponse, "AvailabilityMaximumDays"));
+                if (maximumDaysAvailable == 7) {
+                    System.out.println("Maximum Days Available should be : " + maximumDaysAvailable);
+                } else {
+                    System.out.println("We are not getting the 7 days calendar from OEM");
+                }
+                System.out.println(getJsonPath(stResponse, "AvailabilityStartDate"));
+                System.out.println(getJsonPath(stResponse, "AvailabilityEndDate"));
+                int noOfAvailableDays = Integer.parseInt((getJsonPath(stResponse, "AvailabilityData.size()")));
+                System.out.println("Total No. of slots available: " + noOfAvailableDays);
+                psDateSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Date");
+                System.out.println("Date selected for Appointment Booked : " + psDateSelected);
+                psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots[2].Identifier");
+                System.out.println("Slot selected for Appointment Booked : " + psSlotSelected);
+                break;
             }
-            System.out.println(getJsonPath(stResponse, "AvailabilityStartDate"));
-            System.out.println(getJsonPath(stResponse, "AvailabilityEndDate"));
-            int noOfAvailableDays = Integer.parseInt((getJsonPath(stResponse, "AvailabilityData.size()")));
-            System.out.println("Total No. of slots available: " + noOfAvailableDays);
-            psDateSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Date");
-            System.out.println("Date selected for Appointment Booked : " + psDateSelected);
-            psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots[2].Identifier");
-            System.out.println("Slot selected for Appointment Booked : " + psSlotSelected);
+            case "BEKO":
+                if (oem.equalsIgnoreCase("BEKO")) {
+                    int maximumDaysAvailable = Integer.parseInt(getJsonPath(stResponse, "AvailabilityMaximumDays"));
+                    if (maximumDaysAvailable == 7) {
+                        System.out.println("Maximum Days Available should be : " + maximumDaysAvailable);
+                    } else {
+                        System.out.println("We are not getting the 7 days calendar from OEM");
+                    }
+                    System.out.println(getJsonPath(stResponse, "AvailabilityStartDate"));
+                    System.out.println(getJsonPath(stResponse, "AvailabilityEndDate"));
+                    int noOfAvailableDays = Integer.parseInt((getJsonPath(stResponse, "AvailabilityData.size()")));
+                    System.out.println("Total No. of slots available: " + noOfAvailableDays);
+                    psDateSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Date");
+                    System.out.println("Date selected for Appointment Booked : " + psDateSelected);
+                    psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots[2].Identifier");
+                    System.out.println("Slot selected for Appointment Booked : " + psSlotSelected);
+                    break;
+                }
         }
     }
 
@@ -369,8 +445,10 @@ public class electroluxStepDefinition extends Utils {
     @Then("I verify the Open claim is present for {string}")
     public void i_verify_the_open_claim_is_present(String planNo) {
         openClaimNumber = getJsonPath(stResponse,"Response.PolicyData."+planNo+".ClaimNumber");
-        openClaimStatus = getJsonPath(stResponse,"Response.PolicyData."+planNo+".RepairHistory[0].RepairStatusHistory[0].Status");
+        openClaimStatusHistory = getJsonPath(stResponse,"Response.PolicyData."+planNo+".RepairHistory[0].RepairStatusHistory[0].Status");
+        openClaimStatus = getJsonPath(stResponse,"Response.PolicyData."+planNo+".ClaimStatus");
         System.out.println("Open Claim No. is : " + openClaimNumber);
+        System.out.println("Open Claim No. history Status is : " + openClaimStatusHistory);
         System.out.println("Open Claim No. Status is : " + openClaimStatus);
     }
 
@@ -383,7 +461,7 @@ public class electroluxStepDefinition extends Utils {
     @Given("GetNewAppointments Payload with {string}")
     public void get_new_appointments_payload_with(String claimNo) throws IOException {
         stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m","GetNewAppointments")
-                .queryParam("ClaimID",claimNo).queryParam("ChannelCode",getGlobalValues("channelCode"))
+                .queryParam("ClaimID",NewClaimID).queryParam("ChannelCode",getGlobalValues("channelCode"))
                 .queryParam("CountryCode",getGlobalValues("countryCode"))
                 .queryParam("AvailabilityStartDate","")
                 .queryParam("AvailabilityEndDate","");
@@ -396,6 +474,9 @@ public class electroluxStepDefinition extends Utils {
         int numberOfAvailabilityDays = jsonPath.getList("AvailabilityData").size();
         newDateToRebook = getJsonPath(stResponse,"AvailabilityData["+(numberOfAvailabilityDays-2)+"].Date");
         newSlotsIdentifier = getJsonPath(stResponse,"AvailabilityData["+(numberOfAvailabilityDays-2)+"].Slots.Identifier");
+        System.out.println("New date is :" + newDateToRebook);
+        System.out.println("New slotIdentifier is: " + newSlotsIdentifier);
+        System.out.println("Total Days Available are: " + numberOfAvailabilityDays);
         if(currentAppointmentDate.equalsIgnoreCase(newDateToRebook))
         {
             System.out.println("New date and current date both are same ");
@@ -410,15 +491,16 @@ public class electroluxStepDefinition extends Utils {
         }
 
         //To fetch & display all the dates in the response
-        for( int i=0;i<numberOfAvailabilityDays;i++)
-        {
-            String dataDate = getJsonPath(stResponse,"AvailabilityData["+i+"].Date");
-            System.out.println("Dates are: " + dataDate);
-        }
+//        for( int i=0;i<numberOfAvailabilityDays;i++)
+//        {
+//            String dataDate = getJsonPath(stResponse,"AvailabilityData["+i+"].Date");
+//            System.out.println("Dates are: " + dataDate);
+//        }
     }
 
     @Given("PutNewAppointment Payload with ClaimNo & SlotIdentifier")
-    public void putNewAppointmentPayloadClaimNoSlotIdentifier() throws IOException {
+    public void putNewAppointmentPayloadClaimNoSlotIdentifier() throws IOException, InterruptedException {
+        Thread.sleep(5000);
         stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m","PutNewAppointment")
                 .body(apiBuild.putNewAppointmentPayload(NewClaimID,newSlotsIdentifier));
     }
@@ -429,6 +511,100 @@ public class electroluxStepDefinition extends Utils {
         String pnaClaimNo = getJsonPath(stResponse,"ClaimID");
         Assert.assertTrue("Rebook an appointment is not done for the correct plan",
                 pnaPlanNo.equalsIgnoreCase(planNo) && pnaClaimNo.equalsIgnoreCase(NewClaimID));
+    }
+
+    @And("I verify the current appointment date and new date and slot for {string}")
+    public void verifyCurrentAppointmentDateAndNewDateSlot(String oem) {
+
+        switch (oem) {
+            case "ELECTROLUX":
+                String currentAppointmentDate = getJsonPath(stResponse, "CurrentAppointment.Date");
+                JsonPath jsElux = new JsonPath(stResponse.asString());
+                int eluxNumberOfAvailabilityDays = jsElux.getList("AvailabilityData").size();
+                newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (eluxNumberOfAvailabilityDays - 2) + "].Date");
+                newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (eluxNumberOfAvailabilityDays - 2) + "].Slots.Identifier");
+                if (currentAppointmentDate.equalsIgnoreCase(newDateToRebook)) {
+                    System.out.println("New date and current date both are same ");
+                    newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (eluxNumberOfAvailabilityDays - 3) + "].Date");
+                    newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (eluxNumberOfAvailabilityDays - 3) + "].Slots.Identifier");
+                    System.out.println("New date is: " + newDateToRebook);
+                    System.out.println("New Slot Identifier is: " + newSlotsIdentifier);
+                } else {
+                    System.out.println("New date and current date both are different and can rebook an appointment ");
+                }
+                break;
+                //To fetch & display all the dates in the response
+//            for (int i = 0; i < eluxNumberOfAvailabilityDays; i++) {
+//                String dataDate = getJsonPath(stResponse, "AvailabilityData[" + i + "].Date");
+//                System.out.println("Dates are: " + dataDate);
+
+            case "WHIRLPOOL":
+                String WHPLCurrentAppointmentDate = getJsonPath(stResponse, "CurrentAppointment.Date");
+                JsonPath jsWhpl = new JsonPath(stResponse.asString());
+                int whplNumberOfAvailabilityDays = jsWhpl.getList("AvailabilityData").size();
+                newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 2) + "].Date");
+                newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 2) + "].Slots["+(whplNumberOfAvailabilityDays - 2)+"].Identifier");
+                if (WHPLCurrentAppointmentDate.equalsIgnoreCase(newDateToRebook)) {
+                    System.out.println("New date and current date both are same ");
+                    newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 3) + "].Date");
+                    newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 3) + "].Slots["+(whplNumberOfAvailabilityDays - 3)+"].Identifier");
+                    System.out.println("New date is: " + newDateToRebook);
+                    System.out.println("New Slot Identifier is: " + newSlotsIdentifier);
+                } else {
+                    System.out.println("New date and current date both are different and can rebook an appointment ");
+                }
+                break;
+                //To fetch & display all the dates in the response
+//                for (int i = 0; i < whplNumberOfAvailabilityDays; i++) {
+//                    String dataDate = getJsonPath(stResponse, "AvailabilityData[" + i + "].Date");
+//                    System.out.println("Dates are: " + dataDate);
+//                }
+
+
+        }
+    }
+
+    @Given("GetRepairData Payload with {string}")
+    public void get_repair_data_payload_with(String claimNo) throws IOException {
+        stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m","GetRepairData")
+                .queryParam("ClaimID",claimNo).queryParam("ChannelCode",getGlobalValues("channelCode"))
+                .queryParam("CountryCode",getGlobalValues("countryCode"));
+    }
+
+    @Then("I verify the {string} {string} {string} {string} {string}")
+    public void i_verify_the(String PlanNo, String oem, String productType, String claimNo, String modelNo) {
+        String grPlanNo = getJsonPath(stResponse,"PlanNumber");
+        String grClaimNo = getJsonPath(stResponse,"ClaimID");
+        String grManufacturer = getJsonPath(stResponse,"Manufacturer");
+        String grModelNumber = getJsonPath(stResponse,"ModelNumber");
+        String grAppointmentDateSelected = getJsonPath(stResponse,"AppointmentDateSelected");
+        String grItemType = getJsonPath(stResponse,"ItemType");
+        String grRebookAllowed = getJsonPath(stResponse,"RebookAllowed");
+        String grCancellationAllowed = getJsonPath(stResponse,"CancellationAllowed");
+        String grBookingCancellationAllowed = getJsonPath(stResponse,"BookingCancellationAllowed");
+        String grAppointmentTrackingAllowed = getJsonPath(stResponse,"AppointmentTrackingAllowed");
+        System.out.println("Get Repair Plan Number is : " + grPlanNo);
+        System.out.println("Get Repair Claim Number is : " + grClaimNo);
+        System.out.println("Get Repair Manufacturer is : " + grManufacturer);
+        System.out.println("Get Repair Model No. is : " + grModelNumber);
+        System.out.println("Get Repair Appointment Date selected is : " + grAppointmentDateSelected);
+        System.out.println("Get Repair Product Type is : " + grItemType);
+        System.out.println("Get Repair Rebooked Allowed Indicator is : " + grRebookAllowed);
+        System.out.println("Get Repair Cancellation Allowed Indicator is : " + grCancellationAllowed);
+        System.out.println("Get Repair Booking Cancellation Allowed Indicator is: " + grBookingCancellationAllowed);
+        System.out.println("Get Repair Appointment Tracking Allowed Indicator is : " + grAppointmentTrackingAllowed);
+        if(PlanNo.equalsIgnoreCase(grPlanNo) && oem.equalsIgnoreCase(grManufacturer)
+                && claimNo.equalsIgnoreCase(grClaimNo))
+        {
+            System.out.println("Get Repair Data response is belongs to: " +PlanNo);
+        }
+        else
+        {
+            System.out.println("Get Repair Data response is not correct and doesn't belongs to: " + PlanNo);
+        }
+
+
+
     }
 
 

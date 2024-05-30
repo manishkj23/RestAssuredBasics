@@ -31,7 +31,7 @@ public class Utils {
         return baseReq;
     }
 
-    public static String getGlobalValues(String key) throws IOException {
+    public static String getGlobalValues(String key){
         Properties prop = new Properties();
         try {
             FileInputStream newFile = new FileInputStream("C:/Users/56183/Documents/Manish/Automation/RestAssuredApiBasic/src/test/resources/properties/config.properties");
@@ -39,6 +39,7 @@ public class Utils {
         }
         catch (IOException e) {
             e.printStackTrace();
+            System.err.println("Failed to load configuration file: " + e.getMessage());
         }
         return prop.getProperty(key);
     }
@@ -50,6 +51,18 @@ public class Utils {
 //        return js.get(key).toString();
         return js.getString(key);
 
+    }
+
+    public static String getProperty(String key, String env) throws IOException {
+        Properties prop = new Properties();
+        try {
+            FileInputStream newFile = new FileInputStream("C:/Users/56183/Documents/Manish/Automation/RestAssuredApiBasic/src/test/resources/properties/config.properties");
+            prop.load(newFile);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        return prop.getProperty(key,env);
     }
 
 
