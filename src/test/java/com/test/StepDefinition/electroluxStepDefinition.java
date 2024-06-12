@@ -421,7 +421,7 @@ public class electroluxStepDefinition extends Utils {
                     System.out.println("Total No. of slots available: " + noOfAvailableDays);
                     psDateSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Date");
                     System.out.println("Date selected for Appointment Booked : " + psDateSelected);
-                    psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots[2].Identifier");
+                    psSlotSelected = getJsonPath(stResponse, "AvailabilityData[" + (noOfAvailableDays - 1) + "].Slots.Identifier");
                     System.out.println("Slot selected for Appointment Booked : " + psSlotSelected);
                     break;
                 }
@@ -517,7 +517,7 @@ public class electroluxStepDefinition extends Utils {
     public void verifyCurrentAppointmentDateAndNewDateSlot(String oem) {
 
         switch (oem) {
-            case "ELECTROLUX":
+            case "ELECTROLUX", "BEKO":
                 String currentAppointmentDate = getJsonPath(stResponse, "CurrentAppointment.Date");
                 JsonPath jsElux = new JsonPath(stResponse.asString());
                 int eluxNumberOfAvailabilityDays = jsElux.getList("AvailabilityData").size();
@@ -533,7 +533,7 @@ public class electroluxStepDefinition extends Utils {
                     System.out.println("New date and current date both are different and can rebook an appointment ");
                 }
                 break;
-                //To fetch & display all the dates in the response
+            //To fetch & display all the dates in the response
 //            for (int i = 0; i < eluxNumberOfAvailabilityDays; i++) {
 //                String dataDate = getJsonPath(stResponse, "AvailabilityData[" + i + "].Date");
 //                System.out.println("Dates are: " + dataDate);
@@ -543,23 +543,39 @@ public class electroluxStepDefinition extends Utils {
                 JsonPath jsWhpl = new JsonPath(stResponse.asString());
                 int whplNumberOfAvailabilityDays = jsWhpl.getList("AvailabilityData").size();
                 newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 2) + "].Date");
-                newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 2) + "].Slots["+(whplNumberOfAvailabilityDays - 2)+"].Identifier");
+                newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 2) + "].Slots[" + (whplNumberOfAvailabilityDays - 2) + "].Identifier");
                 if (WHPLCurrentAppointmentDate.equalsIgnoreCase(newDateToRebook)) {
                     System.out.println("New date and current date both are same ");
                     newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 3) + "].Date");
-                    newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 3) + "].Slots["+(whplNumberOfAvailabilityDays - 3)+"].Identifier");
+                    newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (whplNumberOfAvailabilityDays - 3) + "].Slots[" + (whplNumberOfAvailabilityDays - 3) + "].Identifier");
                     System.out.println("New date is: " + newDateToRebook);
                     System.out.println("New Slot Identifier is: " + newSlotsIdentifier);
                 } else {
                     System.out.println("New date and current date both are different and can rebook an appointment ");
                 }
                 break;
-                //To fetch & display all the dates in the response
+            //To fetch & display all the dates in the response
 //                for (int i = 0; i < whplNumberOfAvailabilityDays; i++) {
 //                    String dataDate = getJsonPath(stResponse, "AvailabilityData[" + i + "].Date");
 //                    System.out.println("Dates are: " + dataDate);
 //                }
 
+//            case "BEKO":
+//                String bekoCurrentAppointmentDate = getJsonPath(stResponse, "CurrentAppointment.Date");
+//                JsonPath jsBeko = new JsonPath(stResponse.asString());
+//                int bekoNumberOfAvailabilityDays = jsBeko.getList("AvailabilityData").size();
+//                newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (bekoNumberOfAvailabilityDays - 2) + "].Date");
+//                newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (bekoNumberOfAvailabilityDays - 2) + "].Slots.Identifier");
+//                if (bekoCurrentAppointmentDate.equalsIgnoreCase(newDateToRebook)) {
+//                    System.out.println("New date and current date both are same ");
+//                    newDateToRebook = getJsonPath(stResponse, "AvailabilityData[" + (bekoNumberOfAvailabilityDays - 3) + "].Date");
+//                    newSlotsIdentifier = getJsonPath(stResponse, "AvailabilityData[" + (bekoNumberOfAvailabilityDays - 3) + "].Slots.Identifier");
+//                    System.out.println("New date is: " + newDateToRebook);
+//                    System.out.println("New Slot Identifier is: " + newSlotsIdentifier);
+//                } else {
+//                    System.out.println("New date and current date both are different and can rebook an appointment ");
+//                }
+//                break;
 
         }
     }

@@ -84,9 +84,9 @@ public class apiBuilder {
         pnc.setCustomerFirstName(firstName);
         pnc.setCustomerLastName(lastName);
         pnc.setCustomersHouseStreetName(Utils.getGlobalValues("customerAddr1"));
+        pnc.setCustomersLocalArea(Utils.getGlobalValues("customerAddr2"));
         pnc.setCustomersTownCity(Utils.getGlobalValues("customerAddr3"));
         pnc.setCustomersPostCode(Utils.getGlobalValues("customerPostCode"));
-//        pnc.setCustomersPostCode();
         pnc.setChannelCode(Utils.getGlobalValues("channelCode"));
         pnc.setCountryCode(Utils.getGlobalValues("countryCode"));
         return pnc;
@@ -185,6 +185,7 @@ public class apiBuilder {
         gso.setCustomerFirstName(firstName);
         gso.setCustomerLastName(lastName);
         gso.setCustomersHouseStreetName(Utils.getGlobalValues("customerAddr1"));
+        gso.setCustomersLocalArea(Utils.getGlobalValues("customerAddr2"));
         gso.setCustomersTownCity(Utils.getGlobalValues("customerAddr3"));
         gso.setCustomersPostCode(Utils.getGlobalValues("customerPostCode"));
 //        gso.setCustomersPostCode(stepDef.getPostCode());

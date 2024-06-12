@@ -5,13 +5,16 @@ C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\com
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\ResuableMethod.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\com\test\APIUtils\Utils.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\com\test\StepDefinition\electroluxStepDefinition.java
+C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\PojoConcept\PojoClasses\putNewClaimRequest.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\Electrolux\ElectroluxDGXAPI.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\RestAssuredBasic.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\CancelAnOpenClaim.java
+C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\PojoConcept\PojoClasses\CancellationRequest.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\PojoConcept\PojoClasses\GetRepairData.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\getMandatoryDataAPI.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\PutNewClaimAPI.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\QuestionAnswerAPI.java
+C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\PojoConcept\PojoClasses\GetServiceOptionRequest.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\GetServiceOptionAPI.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\Beko\BekoDGXAPI.java
 C:\Users\56183\Documents\Manish\Automation\RestAssuredApiBasic\src\test\java\ApiPayloads\useGetDataAPI.java

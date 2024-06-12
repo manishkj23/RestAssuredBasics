@@ -34,7 +34,7 @@ public class Utils {
     public static String getGlobalValues(String key){
         Properties prop = new Properties();
         try {
-            FileInputStream newFile = new FileInputStream("C:/Users/56183/Documents/Manish/Automation/RestAssuredApiBasic/src/test/resources/properties/config.properties");
+            FileInputStream newFile = new FileInputStream("D:/Automation/RestAssuredApiBasic/src/test/resources/properties/config.properties");
             prop.load(newFile);
         }
         catch (IOException e) {
