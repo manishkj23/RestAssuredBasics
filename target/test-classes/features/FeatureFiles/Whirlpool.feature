@@ -99,7 +99,8 @@ Feature: Claim creation via DGX API for different OEM's
 
     Examples:
       | PlanNo     | OEM       | ProductType     | searchModel |
-      | 3BA9042296 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |
+      | 3BA9044877 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |
+#      | 3BA9042296 | WHIRLPOOL | WASHING MACHINE | 3CEP2960DW  |
 
 #=========================================================
 

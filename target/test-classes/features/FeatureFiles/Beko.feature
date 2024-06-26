@@ -106,17 +106,6 @@ Feature: Claim creation via DGX API for BEKO OEM
 #      | 6QT9000784 | BEKO | WASHING MACHINE | BEKO DD WME8227B |
 #      | 6QT9000784 | BEKO | WASHING MACHINE | BEKO DD WME8227B |
 #      | 6QT9000784 | BEKO | WASHING MACHINE | BEKO DD WME8227B |
-#      | WRN0002718 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002718 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002718 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002718 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002718 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002718 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002354 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002339 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002236 | BEKO | WASHING MACHINE | BEKO        |
-#      | WRN0002119 | BEKO | WASHING MACHINE | EWG14       |
-#      | C1Z9064674 | ELECTROLUX | WASHING MACHINE | EWG14       |
 
 #=========================== Rebook an appointment with BEKO =====================
 
@@ -135,7 +124,7 @@ Feature: Claim creation via DGX API for BEKO OEM
     When User calls "StartTransaction" API with "PUT" method
     Then I verify API call is success with status code 200
     And "Status" in response body is "OK"
-    And "StatusCode" in response body is "ST000"
+    And "StatusCode" in response body is "ST001"
     Then I verify "GUID" created after triggered the Start Transaction API
 
     #GetMandatoryData
@@ -235,4 +224,4 @@ Feature: Claim creation via DGX API for BEKO OEM
 
     Examples:
       | PlanNo     | OEM  | ProductType     | searchModel    |
-      | 6QT9001611 | BEKO | WASHING MACHINE | BEKO DV 5531 G |
+      | 6QT9002930 | BEKO | WASHING MACHINE | BEKO DV 5531 G |

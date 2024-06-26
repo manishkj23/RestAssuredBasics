@@ -44,7 +44,7 @@ public class electroluxStepDefinition extends Utils {
 
 
     @Given("StartTransaction Payload with {string} {string} {string}")
-    public void start_transaction_payload_with(String PlanNo, String OEM, String productType) throws IOException {
+    public void start_transaction_payload_with(String PlanNo, String OEM, String productType) throws IOException, InterruptedException {
         if(openClaimStatus == null && openClaimNumber == null)
         {
             stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "StartTransaction")
@@ -62,7 +62,7 @@ public class electroluxStepDefinition extends Utils {
     }
 
     @When("User calls {string} API with {string} method")
-    public void user_calls_api_with_put_method(String resourcesURL, String apiMethod) {
+    public void user_calls_api_with_put_method(String resourcesURL, String apiMethod) throws InterruptedException {
 
         //constructor will be called with value of resource which you pass from Enum class
         if (apiMethod.equalsIgnoreCase("PUT")) {
@@ -70,6 +70,7 @@ public class electroluxStepDefinition extends Utils {
             System.out.println(endpointResources.getResourcesURL());
             stResponse = stRequestSpec.when().log().all().put(endpointResources.getResourcesURL())
             .then().log().all().extract().response();
+            Thread.sleep(3000);
 
         } else if (apiMethod.equalsIgnoreCase("GET")) {
             Resources endpointResources = Resources.valueOf(resourcesURL);
@@ -132,7 +133,7 @@ public class electroluxStepDefinition extends Utils {
 
         switch(oem){
 
-            case "ELECTROLUX":
+            case "ELECTROLUX","WHIRLPOOL":
                 UniqueApplianceID = getJsonPath(stResponse, "UniqueApplianceID");
                 ModelNo = getJsonPath(stResponse, "ModelNumber");
                 FaultCategory = getJsonPath(stResponse, "FaultData[0].FaultCategoryID");
@@ -247,7 +248,7 @@ public class electroluxStepDefinition extends Utils {
     }
 
     @Given("I complete the Question Answer Tree")
-    public void i_complete_the_question_answer_tree() throws IOException {
+    public void i_complete_the_question_answer_tree() throws IOException, InterruptedException {
 
         while (claimState.equalsIgnoreCase("In Progress"))
         {
@@ -612,7 +613,7 @@ public class electroluxStepDefinition extends Utils {
         if(PlanNo.equalsIgnoreCase(grPlanNo) && oem.equalsIgnoreCase(grManufacturer)
                 && claimNo.equalsIgnoreCase(grClaimNo))
         {
-            System.out.println("Get Repair Data response is belongs to: " +PlanNo);
+            System.out.println("Get Repair Data response belongs to same plans: " +PlanNo);
         }
         else
         {
