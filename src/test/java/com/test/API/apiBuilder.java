@@ -5,14 +5,13 @@ import PojoConcept.PojoClasses.GetServiceOptionRequest;
 import PojoConcept.PojoClasses.putNewClaimRequest;
 import PojoConcept.PojoClasses.startTransactionRequest;
 import com.test.APIUtils.Utils;
-import com.test.StepDefinition.electroluxStepDefinition;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class apiBuilder {
 
-//    electroluxStepDefinition stepDef = new electroluxStepDefinition();
+//    DgxApiStepDefinition stepDef = new DgxApiStepDefinition();
 
     public startTransactionRequest startTransactionPayload(String PlanNo, String OEM, String productType) throws IOException {
         startTransactionRequest stReq = new startTransactionRequest();

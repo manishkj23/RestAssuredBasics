@@ -9,6 +9,8 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.apache.commons.collections.bag.SynchronizedSortedBag;
 import org.junit.Assert;
+//import org.junit.runner.RunWith;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +18,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class electroluxStepDefinition extends Utils {
+public class DgxApiStepDefinition extends Utils {
 
     RequestSpecification stRequestSpec;
     ResponseSpecification stResponseSpec;
@@ -29,7 +31,7 @@ public class electroluxStepDefinition extends Utils {
     static String QuestionID="";
     public String postCode;
 
-//    public electroluxStepDefinition() {
+//    public DgxApiStepDefinition() {
 ////        this.postCode = postCode;
 //    }
 //
@@ -146,7 +148,7 @@ public class electroluxStepDefinition extends Utils {
                 System.out.println("Claim Type value is : " + ClaimType);
                 break;
 
-            case "BEKO":
+            case "BEKO","HOOVER":
                 UniqueApplianceID = getJsonPath(stResponse, "UniqueApplianceID");
                 ModelNo = getJsonPath(stResponse, "ModelNumber");
                 FaultCategory = getJsonPath(stResponse, "FaultData.FaultCategoryID");
@@ -232,7 +234,8 @@ public class electroluxStepDefinition extends Utils {
     @Then("I verify the questionID & answerID gets generated")
     public void i_verify_the_question_id_answer_id_gets_generated() {
         QuestionID = getJsonPath(stResponse,"QuestionID");
-        AnswerID = getJsonPath(stResponse,"AnswerData[1].AnswerID");
+//        AnswerID = getJsonPath(stResponse,"AnswerData[1].AnswerID");
+        AnswerID = getJsonPath(stResponse,"AnswerData[0].AnswerID");
     }
 
     @Given("PutAnswer Payload with {string} {string} {string}")
@@ -364,16 +367,17 @@ public class electroluxStepDefinition extends Utils {
     }
 
     @Given("PutServiceOption Payload with {string} {string}")
-    public void put_service_option_payload_with(String string, String string2) throws IOException {
+    public void put_service_option_payload_with(String string, String string2) throws IOException, InterruptedException {
         stRequestSpec = given().log().all().spec(requestSpecification()).queryParam("m", "PutServiceOption")
                 .body(apiBuild.putServiceOptionPayload(NewClaimID,ServiceOptionId));
+        Thread.sleep(10000);
     }
 
     @Given("I get date and slot from the response for the {string}")
     public void i_get_date_and_slot_from_the_response(String oem) {
         switch(oem) {
-            case "ELECTROLUX":
-            if (oem.equalsIgnoreCase("ELECTROLUX")) {
+            case "ELECTROLUX","HOOVER":
+            if (oem.equalsIgnoreCase("ELECTROLUX") || oem.equalsIgnoreCase("HOOVER")) {
                 int maximumDaysAvailable = Integer.parseInt(getJsonPath(stResponse, "AvailabilityMaximumDays"));
                 if (maximumDaysAvailable == 14) {
                     System.out.println("Maximum Days Available should be : " + maximumDaysAvailable);
@@ -619,9 +623,6 @@ public class electroluxStepDefinition extends Utils {
         {
             System.out.println("Get Repair Data response is not correct and doesn't belongs to: " + PlanNo);
         }
-
-
-
     }
 
 

@@ -100,8 +100,10 @@ Feature: Claim creation via DGX API for BEKO OEM
 
 
     Examples:
-      | PlanNo     | OEM  | ProductType     | searchModel    |
-      | 6QT9002104 | BEKO | WASHING MACHINE | BEKO DV 5531 G |
+      | PlanNo     | OEM  | ProductType     | searchModel  |
+      | 6QT9006285 | BEKO | WASHING MACHINE | BEKO WM 1060 |
+#      | 6QT9005691 | BEKO | WASHING MACHINE | BEKO WM 1060 |
+#      | 6QT9002104 | BEKO | WASHING MACHINE | BEKO DV 5531 G |
 #      | 6QT9001611 | BEKO | WASHING MACHINE | BEKO DD WME8227B |
 #      | 6QT9000784 | BEKO | WASHING MACHINE | BEKO DD WME8227B |
 #      | 6QT9000784 | BEKO | WASHING MACHINE | BEKO DD WME8227B |
@@ -224,4 +226,6 @@ Feature: Claim creation via DGX API for BEKO OEM
 
     Examples:
       | PlanNo     | OEM  | ProductType     | searchModel    |
-      | 6QT9002930 | BEKO | WASHING MACHINE | BEKO DV 5531 G |
+      | 6QT9006292 | BEKO | WASHING MACHINE | BEKO DV 5531 G |
+#      | 6QT9002930 | BEKO | WASHING MACHINE | BEKO DV 5531 G |
+    

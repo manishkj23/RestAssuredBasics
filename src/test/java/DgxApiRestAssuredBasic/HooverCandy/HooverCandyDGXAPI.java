@@ -1,4 +1,4 @@
-package ApiPayloads.HooverCandy;
+package DgxApiRestAssuredBasic.HooverCandy;
 
 import ApiPayloads.*;
 import io.restassured.RestAssured;

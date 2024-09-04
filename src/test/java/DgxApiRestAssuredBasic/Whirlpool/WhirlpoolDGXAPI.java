@@ -1,4 +1,4 @@
-package ApiPayloads.Electrolux;
+package DgxApiRestAssuredBasic.Whirlpool;
 
 import ApiPayloads.*;
 import io.restassured.RestAssured;
@@ -11,20 +11,20 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class ElectroluxDGXAPI {
-
+public class WhirlpoolDGXAPI {
     String nextQuestionID, claimState, answerType, answerID, newClaimID,questionID1,
             answerID1, statusCode, ServiceOptionId;
     String questionID = "";
-    String PlanNo = "C1Z9063567"; //3BA9041146 - A
-    String modelNumber = "EWG14";
-    String productType="WASHING MACHINE";
-    String channelCode = "DGX";
+    String PlanNo = "3BA9041146";
+    String modelNumber = "A";
+    String productType = "Washing Machine";
+    String channelCode= "DGX";
     String env="domgenprelive";
-    String oem="Electrolux";
+    String oem="Whirlpool";
 
+    //Another way to pass the request payload body from another class or package to the given()
     @Test
-    void claimCreationWithAppointmentBookedForElectroluxOem()
+    void startTransactionAPINewGuid()
     {
         RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://www.skylinecms.co.uk/")
                 .setContentType(ContentType.JSON)
@@ -63,7 +63,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type","application/json")
                 .header("SynergyToken","7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(startTransactionAPI.createNewGuid(PlanNo,productType,channelCode,oem))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).extract().response().asString();
         //to extract the value we have to store them in variable and to do that we have to type String = variableName before given()
         JsonPath js = new JsonPath(response); // to parse JSON response
@@ -83,7 +83,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type","application/json")
                 .header("SynergyToken","7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(getMandatoryDataAPI.getMandatoryDataAPI(guid,channelCode))
-                .when().log().all().get("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().get("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode",equalTo("GM000"))
                 .extract().response().asString();
         JsonPath js1 = new JsonPath(getMandatoryDataResponse);
@@ -109,7 +109,7 @@ public class ElectroluxDGXAPI {
                     .header("Content-Type", "application/json")
                     .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                     .body(useGetDataAPI.useGetDataByModel(guid,modelNumber))
-                    .when().log().all().get("/"+env+"/RestAPI/BookClaim/")
+                    .when().log().all().get("/domgenprelive/RestAPI/BookClaim/")
                     .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("GD000"))
                     .extract().response().asString();
             JsonPath js2 = new JsonPath(getDataModelResponse);
@@ -123,7 +123,7 @@ public class ElectroluxDGXAPI {
                     .header("Content-Type", "application/json")
                     .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                     .body(UpdateTransactionAPI.updateTransactionByUniqueApplianceId(guid,GDApplianceIDValue,channelCode))
-                    .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                    .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                     .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("UT000"))
                     .extract().response().asString();
             JsonPath js3 = new JsonPath(UpdateTransactionModelResponse);
@@ -149,7 +149,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(UpdateTransactionAPI.updateTransactionByClaimType(guid,ClaimTypeValue,channelCode))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("UT000"))
                 .extract().response().asString();
 
@@ -158,18 +158,18 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(UpdateTransactionAPI.updateTransactionByFaultCategoryAndFaultID(guid,GMFaultCategoryID,GMFaultID,channelCode))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("UT000"))
                 .extract().response().asString();
 
-//****************************************************************************************************//
+//********************************************  PutNewClaim API  ********************************************************//
 
         //Trigger PutNewClaim API to create and Accepted a claim
         String putNewClaimResponse = given().queryParam("m", "PutNewClaim")
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
-                .body(PutNewClaimAPI.createNewClaimForElectrolux(guid,channelCode))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .body(PutNewClaimAPI.createNewClaimForWhirlpool(guid,channelCode))
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("NC000"))
                 .extract().response().asString();
         JsonPath js3 = new JsonPath(putNewClaimResponse);
@@ -182,7 +182,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(QuestionAnswerAPI.getQuestionAPI(newClaimID,channelCode))
-                .when().log().all().get("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().get("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("GQ000"))
                 .extract().response().asString();
         JsonPath js4 = new JsonPath(getQuestionResponse);
@@ -193,7 +193,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(QuestionAnswerAPI.putAnswerAPI(newClaimID,questionID,answerID,channelCode))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("PA000"))
                 .extract().response().asString();
         JsonPath js5 = new JsonPath(putAnswerResponse);
@@ -211,7 +211,7 @@ public class ElectroluxDGXAPI {
                     .header("Content-Type", "application/json")
                     .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                     .body(QuestionAnswerAPI.getQuestionID(newClaimID,nextQuestionID,channelCode))
-                    .when().log().all().get("/"+env+"/RestAPI/BookClaim/")
+                    .when().log().all().get("/domgenprelive/RestAPI/BookClaim/")
                     .then().log().all().assertThat().statusCode(200).body("StatusCode", equalTo("GQ000"))
                     .extract().response().asString();
             JsonPath js6 = new JsonPath(GQResponse);
@@ -234,7 +234,7 @@ public class ElectroluxDGXAPI {
                         .header("Content-Type", "application/json")
                         .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                         .body(QuestionAnswerAPI.putAnswerRadioButton(newClaimID,questionID1,answerID1,channelCode))
-                        .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                        .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                         .then().log().all().assertThat().statusCode(200).extract().response().asString();
                 JsonPath js7 = new JsonPath(radioButtonPutAnswerResponse);
                 nextQuestionID = js7.getString("NextQuestionID");
@@ -244,8 +244,6 @@ public class ElectroluxDGXAPI {
                 {
                     System.out.println("PutAnswer API executed successfully: " + statusCode);
                 }
-
-
             }
             else if(answerType.equalsIgnoreCase("RESPONSE_FIELD"))
             {
@@ -253,7 +251,7 @@ public class ElectroluxDGXAPI {
                         .header("Content-Type", "application/json")
                         .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                         .body(QuestionAnswerAPI.putAnswerResponseField(newClaimID,questionID1,answerID1,channelCode))
-                        .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                        .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                         .then().log().all().assertThat().statusCode(200).extract().response().asString();
                 JsonPath js8 = new JsonPath(responseFieldPutAnswerResponse);
                 nextQuestionID = js8.getString("NextQuestionID");
@@ -270,7 +268,7 @@ public class ElectroluxDGXAPI {
                         .header("Content-Type", "application/json")
                         .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                         .body(QuestionAnswerAPI.putAnswerDatePicker(newClaimID,questionID1,answerID1,channelCode))
-                        .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                        .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                         .then().log().all().assertThat().statusCode(200).extract().response().asString();
                 JsonPath js9 = new JsonPath(responseFieldPutAnswerResponse);
                 nextQuestionID = js9.getString("NextQuestionID");
@@ -287,7 +285,7 @@ public class ElectroluxDGXAPI {
                         .header("Content-Type", "application/json")
                         .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                         .body(QuestionAnswerAPI.putAnswerDropdown(newClaimID,questionID1,answerID1,channelCode))
-                        .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                        .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                         .then().log().all().assertThat().statusCode(200).extract().response().asString();
                 JsonPath js10 = new JsonPath(responseFieldPutAnswerResponse);
                 nextQuestionID = js10.getString("NextQuestionID");
@@ -304,7 +302,7 @@ public class ElectroluxDGXAPI {
                         .header("Content-Type", "application/json")
                         .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                         .body(QuestionAnswerAPI.putAnswerList(newClaimID,questionID1,answerID1,channelCode))
-                        .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                        .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                         .then().log().all().assertThat().statusCode(200).extract().response().asString();
                 JsonPath js10 = new JsonPath(responseFieldPutAnswerResponse);
                 nextQuestionID = js10.getString("NextQuestionID");
@@ -326,8 +324,8 @@ public class ElectroluxDGXAPI {
         String getServiceOptionResponse = given().queryParam("m", "GetServiceOption")
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
-                .body(GetServiceOptionAPI.getServiceOptionElux(newClaimID,channelCode))
-                .when().log().all().get("/"+env+"/RestAPI/BookClaim/")
+                .body(GetServiceOptionAPI.getServiceOptionWhirlpool(newClaimID,channelCode))
+                .when().log().all().get("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode",equalTo("GS000")).extract().response().asString();
         JsonPath js11 = new JsonPath(getServiceOptionResponse);
         int serviceOptionCount = js11.getInt("ServiceOptions.size()");
@@ -348,7 +346,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(PutServiceOptionAPI.putServiceOption(newClaimID,ServiceOptionId,channelCode))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).extract().response().asString();
         JsonPath js12 = new JsonPath(putServiceOptionResponse);
         int maximumDaysAvailable = js12.getInt("AvailabilityMaximumDays");
@@ -373,7 +371,7 @@ public class ElectroluxDGXAPI {
                 .header("Content-Type", "application/json")
                 .header("SynergyToken", "7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
                 .body(PutRepairDataAPI.putRepairData(newClaimID,PlanNo,dateSelected,slotSelected,channelCode))
-                .when().log().all().put("/"+env+"/RestAPI/BookClaim/")
+                .when().log().all().put("/domgenprelive/RestAPI/BookClaim/")
                 .then().log().all().assertThat().statusCode(200).body("StatusCode",equalTo("RD000")).extract().response().asString();
         JsonPath js13 = new JsonPath(putRepairDataResponse);
 
@@ -407,6 +405,7 @@ public class ElectroluxDGXAPI {
             System.out.println("No Open Claim present for the Plan number : " + planNo);
         }
     }
+
 
 
 
