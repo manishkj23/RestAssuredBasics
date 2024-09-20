@@ -51,8 +51,6 @@ public class claimCreationByDgxApi {
         stReq.setCountryCode("GB");
 
         Response stResp = given().log().all().spec(baseReq).queryParam("m","StartTransaction")
-//                .header("SynergyToken","7a6e56ab9a69abbfb99e221d19731b2984fcef12cce95eb15cffe4338ecf5d29")
-//                .header("Content-Type","application/json")
                 .body(stReq)
                 .when().put("/domgensit/RestAPI/BookClaim/")
                 .then().log().all().spec(responseSpec).extract().response();
