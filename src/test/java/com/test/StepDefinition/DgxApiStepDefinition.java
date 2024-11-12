@@ -7,13 +7,9 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.apache.commons.collections.bag.SynchronizedSortedBag;
 import org.junit.Assert;
-//import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
