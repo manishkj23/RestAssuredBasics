@@ -12,7 +12,7 @@ public class apiBuilder {
 
 //    DgxApiStepDefinition stepDef = new DgxApiStepDefinition();
 
-    public startTransactionRequest startTransactionPayload(String PlanNo, String OEM, String productType) throws IOException {
+    public byte[] startTransactionPayload(String PlanNo, String OEM, String productType) throws IOException {
         startTransactionRequest stReq = new startTransactionRequest();
         stReq.setPlanNumber(PlanNo);
         stReq.setManufacturer(OEM);
@@ -72,7 +72,7 @@ public class apiBuilder {
                 "}";
     }
 
-    public putNewClaimRequest putNewClaimPayload(String guid, String firstName, String lastName) throws IOException {
+    public byte[] putNewClaimPayload(String guid, String firstName, String lastName) throws IOException {
         putNewClaimRequest pnc = new putNewClaimRequest();
         pnc.setGUID(guid);
         pnc.setCustomerTitle("MR");
@@ -173,7 +173,7 @@ public class apiBuilder {
                 "}";
     }
 
-    public GetServiceOptionRequest getServiceOptionPayload(String claimID, String firstName, String lastName) throws IOException {
+    public byte[] getServiceOptionPayload(String claimID, String firstName, String lastName) throws IOException {
         GetServiceOptionRequest gso = new GetServiceOptionRequest();
         gso.setClaimID(claimID);
         gso.setCustomerTitle("MR");
@@ -218,7 +218,7 @@ public class apiBuilder {
                 "}";
     }
 
-    public CancellationRequest cancellationPayload(String planNo, String claimNo) throws IOException {
+    public byte[] cancellationPayload(String planNo, String claimNo) throws IOException {
         CancellationRequest canReq = new CancellationRequest();
         canReq.setPlanNumber(planNo);
         canReq.setClaimID(claimNo);
