@@ -21,7 +21,7 @@ import java.io.IOException;
 
 import static io.restassured.RestAssured.given;
 
-public class claimCreationByDgxApi {
+public class claimCreationByDgxApi1 {
 
     String nextQuestionID, claimState, answerType, answerID, newClaimID,questionID1,
             answerID1, statusCode, ServiceOptionId;

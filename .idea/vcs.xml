@@ -4,5 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Orbit PIDs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/OrbitUI_BackUp/Orbit PIDs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/test/java/Orbit PIDs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/test/java/OrbitUI_BackUp/Orbit PIDs" vcs="Git" />
   </component>
 </project>
