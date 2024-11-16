@@ -1,0 +1,26 @@
+package BasicsProgramming;
+
+public class FetchLastCharacterFromEachStringInAnArray {
+
+	public static void main(String[] args) {
+
+
+		String[] stringArray = {"Hello", "World", "Java", "Programming"};
+        List<String> stringList = new ArrayList<>(Arrays.asList(stringArray));
+
+        Iterator<String> iterator = stringList.iterator();
+
+        System.out.println("Last characters of each string:");
+        while (iterator.hasNext()) {
+            String currentString = iterator.next();
+            if (!currentString.isEmpty()) {
+                char lastChar = currentString.charAt(currentString.length() - 1);
+                System.out.println(lastChar);
+            } else {
+                System.out.println("Empty string");
+            }
+        }
+        
+	}
+
+}

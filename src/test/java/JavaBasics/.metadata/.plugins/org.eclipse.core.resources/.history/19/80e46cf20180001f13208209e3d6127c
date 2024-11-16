@@ -1,0 +1,5 @@
+package StringsPrograms;
+
+public class CapitalizeEachWordOfASentence {
+
+}

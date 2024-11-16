@@ -1,0 +1,45 @@
+package BasicsProgramming;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class CompareTwoArrayListAndPrintDifferentValue {
+
+	public static void main(String[] args) {
+		
+		System.out.println("**************Common Value***********");
+
+		String arr1[]= {"java","interview","questions","for","experienced"};
+		String arr2[]= {"java","fresher","interview","questions"};
+		Set<String> res = new HashSet<>();
+		
+		for(int i=0;i<arr1.length;i++)
+		{
+			for(int j=0;j<arr2.length;j++)
+			{
+				if(arr1[i] == arr2[j])
+					res.add(arr1[i]);
+			}
+		}
+		for(String s : res)
+			System.out.println("Common Values are: " + s);
+		
+		
+		System.out.println("**************Common Value using Stream ***********");
+		
+		String[] a = {"java","python","hibernate", "spring"};
+		String[] b= {"core","java","spring","microservices"};
+
+		List<String> a1 = Arrays.asList(a);
+		List<String> b1 = Arrays.asList(b);
+
+		List<String> collect = a1.stream().filter(b1::contains).collect(Collectors.toList());
+
+		System.out.println(collect);
+
+	}
+
+}

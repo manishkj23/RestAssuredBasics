@@ -1,0 +1,24 @@
+package JavaProgramming;
+
+import java.util.HashMap;
+
+public class ReverseString {
+
+	public static void main(String[] args) {
+		
+		System.out.println('A'+ 'B');
+
+//		String text = "Happy Monday to everyone!";
+//		String ch;
+//		
+//		HashMap<Character,Integer> mp = new HashMap<Character, Integer>();
+//		
+//		for(int i=0;i<text.length();i++)
+//		{
+//			char c = rev.charAt(i);
+//		
+//		}
+//
+//		}
+	}
+

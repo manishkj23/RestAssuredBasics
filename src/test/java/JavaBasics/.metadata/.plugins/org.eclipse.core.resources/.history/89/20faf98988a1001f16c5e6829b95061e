@@ -1,0 +1,25 @@
+package BasicsProgramming;
+
+public class FindDigitsInArray {
+
+	public static void main(String[] args) {
+
+
+		Object[] array = {'A', 12, 'C', 2, 1, 'W', 'V', 12};
+
+        System.out.println("Digits in the array:");
+        for (Object element : array) {
+            if (element instanceof Integer) {
+                System.out.println(element);
+            }
+        }
+        
+        for (Object element1 : array) {
+            if (element instanceof String) {
+                System.out.println(element1);
+            }
+        }
+	
+	}
+
+}
