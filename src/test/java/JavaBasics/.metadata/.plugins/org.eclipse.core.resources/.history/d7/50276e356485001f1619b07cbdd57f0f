@@ -1,0 +1,90 @@
+package BasicsProgramming;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShiftArrayByOne {
+
+	public static void main(String[] args) {
+		
+		int[] array = {1, 4, 7, 3, 2, 5};
+        
+        System.out.println("Original array:");
+        printArray(array);
+        shiftArrayByOne(array);
+        
+        System.out.println("Array after shifting by one:");
+        printArray(array);
+        
+        
+      //Using Arraylist:
+        List<Integer> arrayList = new ArrayList<>();
+        arrayList.add(1);
+        arrayList.add(4);
+        arrayList.add(7);
+        arrayList.add(3);
+        arrayList.add(2);
+        arrayList.add(5);
+
+        System.out.println("Original ArrayList:");
+        printArrayList(arrayList);
+
+        shiftArrayListByOne(arrayList);
+
+        System.out.println("ArrayList after shifting by one:");
+        printArrayList(arrayList);
+        
+    }
+	
+	
+	
+	
+	
+	//Using ArrayList:
+
+    public static void shiftArrayByOne(int[] array) {
+        if (array == null || array.length <= 1) {
+            return; // No need to shift if array is null or has only one element
+        }
+
+        int lastElement = array[array.length - 1];
+
+        // Shift elements to the right by one position
+        for (int i = array.length - 1; i > 0; i--) {
+            array[i] = array[i - 1];
+        }
+
+        // Place the last element at the first position
+        array[0] = lastElement;
+    }
+
+    public static void printArray(int[] array) {
+        for (int element : array) {
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+    
+    
+}
+
+			public static void shiftArrayListByOne(List<Integer> arrayList) 
+			{
+					if (arrayList == null || arrayList.size() <= 1) 
+					{
+							return; // No need to shift if ArrayList is null or has only one element
+					}
+
+		// Remove the last element and insert it at the beginning
+					Integer lastElement = arrayList.remove(arrayList.size() - 1);
+						arrayList.add(0, lastElement);
+			}
+
+public static void printArrayList(List<Integer> arrayList) {
+    for (Integer element : arrayList) {
+        System.out.print(element + " ");
+    }
+    System.out.println();
+}
+
+}

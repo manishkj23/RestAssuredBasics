@@ -1,0 +1,30 @@
+package BasicsProgramming;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class CompareTwoArrayListAndPrintDifferentValue {
+
+	public static void main(String[] args) {
+
+		String arr1[]= {"java","interview","questions","for","experienced"};
+
+		String arr2[]= {"java","fresher","interview","questions"};
+		
+		Set<String> res = new HashSet<>();
+		
+		for(int i=0;i<arr1.length;i++)
+		{
+			for(int j=0;i<arr2.length;i++)
+			{
+				if(arr1[i] == arr1[j])
+					res.add(arr1[i]);
+				break;
+			}
+		}
+		for(String s : res)
+			System.out.println("Common Values are: " + s);
+
+	}
+
+}

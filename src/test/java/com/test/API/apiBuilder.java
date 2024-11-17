@@ -1,16 +1,18 @@
 package com.test.API;
 
+import PojoConcept.PojoClasses.CancellationRequest;
 import PojoConcept.PojoClasses.GetServiceOptionRequest;
 import PojoConcept.PojoClasses.putNewClaimRequest;
 import PojoConcept.PojoClasses.startTransactionRequest;
 import com.test.APIUtils.Utils;
-
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class apiBuilder {
 
-    public startTransactionRequest startTransactionPayload(String PlanNo, String OEM, String productType) throws IOException {
+//    DgxApiStepDefinition stepDef = new DgxApiStepDefinition();
+
+    public byte[] startTransactionPayload(String PlanNo, String OEM, String productType) throws IOException {
         startTransactionRequest stReq = new startTransactionRequest();
         stReq.setPlanNumber(PlanNo);
         stReq.setManufacturer(OEM);
@@ -70,7 +72,7 @@ public class apiBuilder {
                 "}";
     }
 
-    public putNewClaimRequest putNewClaimPayload(String guid, String firstName, String lastName) throws IOException {
+    public byte[] putNewClaimPayload(String guid, String firstName, String lastName) throws IOException {
         putNewClaimRequest pnc = new putNewClaimRequest();
         pnc.setGUID(guid);
         pnc.setCustomerTitle("MR");
@@ -80,6 +82,7 @@ public class apiBuilder {
         pnc.setCustomerFirstName(firstName);
         pnc.setCustomerLastName(lastName);
         pnc.setCustomersHouseStreetName(Utils.getGlobalValues("customerAddr1"));
+        pnc.setCustomersLocalArea(Utils.getGlobalValues("customerAddr2"));
         pnc.setCustomersTownCity(Utils.getGlobalValues("customerAddr3"));
         pnc.setCustomersPostCode(Utils.getGlobalValues("customerPostCode"));
         pnc.setChannelCode(Utils.getGlobalValues("channelCode"));
@@ -170,7 +173,7 @@ public class apiBuilder {
                 "}";
     }
 
-    public GetServiceOptionRequest getServiceOptionPayload(String claimID, String firstName, String lastName) throws IOException {
+    public byte[] getServiceOptionPayload(String claimID, String firstName, String lastName) throws IOException {
         GetServiceOptionRequest gso = new GetServiceOptionRequest();
         gso.setClaimID(claimID);
         gso.setCustomerTitle("MR");
@@ -180,10 +183,13 @@ public class apiBuilder {
         gso.setCustomerFirstName(firstName);
         gso.setCustomerLastName(lastName);
         gso.setCustomersHouseStreetName(Utils.getGlobalValues("customerAddr1"));
+        gso.setCustomersLocalArea(Utils.getGlobalValues("customerAddr2"));
         gso.setCustomersTownCity(Utils.getGlobalValues("customerAddr3"));
         gso.setCustomersPostCode(Utils.getGlobalValues("customerPostCode"));
+//        gso.setCustomersPostCode(stepDef.getPostCode());
         gso.setChannelCode(Utils.getGlobalValues("channelCode"));
         gso.setCountryCode(Utils.getGlobalValues("countryCode"));
+        gso.setCustomersLocalArea("");
         return gso;
     }
 
@@ -211,5 +217,26 @@ public class apiBuilder {
                 "    \"CountryCode\": \""+Utils.getGlobalValues("countryCode")+"\"\n" +
                 "}";
     }
+
+    public byte[] cancellationPayload(String planNo, String claimNo) throws IOException {
+        CancellationRequest canReq = new CancellationRequest();
+        canReq.setPlanNumber(planNo);
+        canReq.setClaimID(claimNo);
+        canReq.setChannelCode(Utils.getGlobalValues("channelCode"));
+        canReq.setCountryCode(Utils.getGlobalValues("countryCode"));
+        return canReq;
+    }
+
+    public String putNewAppointmentPayload(String claimID, String slotIdentifier ) throws IOException {
+        return "{\n" +
+                "    \"ClaimID\": \""+claimID+"\",\n" +
+                "    \"AppointmentSlotIdentifier\": \""+slotIdentifier+"\",\n" +
+                "    \"AppointmentNotes\": \"Rebook an appointment-Notes updated\",\n" +
+                "    \"ChannelCode\": \""+Utils.getGlobalValues("channelCode")+"\",\n" +
+                "    \"CountryCode\": \""+Utils.getGlobalValues("countryCode")+"\"\n" +
+                "}";
+    }
+
+
 
 }

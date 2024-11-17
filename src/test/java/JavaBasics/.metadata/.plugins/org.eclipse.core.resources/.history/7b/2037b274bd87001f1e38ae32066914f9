@@ -1,0 +1,26 @@
+package interview;
+
+public class RevString {
+
+	public static void main(String[] args) {
+		String str = "java selenium tutorial";
+		String rev="";
+		String arr[] = str.split(" ");
+			for (int i=0;i<arr.length;i++)
+				{
+
+					String ele = arr[i]; // java
+					
+						for(int j=ele.length()-1;j>=0;j--)
+						{
+							rev=rev+ele.charAt(j);
+						
+						}
+						System.out.println(rev);	
+				}
+			
+			
+			
+	}
+
+}

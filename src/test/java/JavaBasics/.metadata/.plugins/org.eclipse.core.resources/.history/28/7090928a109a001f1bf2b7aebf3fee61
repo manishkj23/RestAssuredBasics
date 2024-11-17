@@ -1,0 +1,10 @@
+package BasicsProgramming;
+
+public class GetTheHighestValueFromAnArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

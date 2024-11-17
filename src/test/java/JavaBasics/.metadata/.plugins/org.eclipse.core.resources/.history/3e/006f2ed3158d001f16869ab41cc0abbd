@@ -1,0 +1,51 @@
+package interview;
+
+public class FetchDigitFromString {
+
+	public static void main(String[] args) {
+
+		int total = 200;
+		String input = "Searched 100 Pages";
+        String digits = input.replaceAll("\\D+", "");
+        /*
+         Explanation:
+				input.replaceAll("\\D+", ""): This line uses a regular expression to replace all non-digit 
+				characters (\\D+) with an empty string, effectively extracting only the digits from the 
+				input string.
+         */
+        System.out.println("Extracted Digits: " + digits);
+        
+        if(total == (Integer.parseInt(digits)))
+        {
+        	System.out.println("total row matches");
+        }
+        else
+        {
+        	System.out.println("total row mismatches");
+        }
+        
+        
+      System.out.println("************** Using toCharArray ******************");  
+     
+      StringBuilder digits1 = new StringBuilder();
+
+      for (char c : input.toCharArray()) {
+          if (Character.isDigit(c)) {
+              digits1.append(c);
+          }
+      }
+
+      System.out.println("Extracted Digits: " + digits1.toString());
+      
+      if(digits1.equals(total) )
+      {
+      	System.out.println("total row matches via Stringbuider");
+      }
+      else
+      {
+      	System.out.println("total row mismatches via Stringbuider");
+      }
+      
+  }
+
+}

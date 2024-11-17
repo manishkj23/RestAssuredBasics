@@ -1,0 +1,26 @@
+package BasicsProgramming;
+
+import java.util.Arrays;
+
+public class SortIntegerInAnArray {
+
+	public static void main(String[] args) {
+		
+		System.out.println("************ 1st Approach ***************");
+
+		int[] digits = {5, 3, 8, 1, 2, 7, 4, 6, 9, 0};
+        // Sorting the array
+        Arrays.sort(digits);
+        // Printing the sorted array
+        System.out.println("Sorted Digits: " + Arrays.toString(digits));
+        
+        
+        System.out.println("************ 2nd Approach ***************");
+        
+        
+        
+        
+        
+        
+	}
+}

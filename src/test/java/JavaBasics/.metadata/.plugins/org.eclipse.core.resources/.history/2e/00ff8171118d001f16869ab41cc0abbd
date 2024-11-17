@@ -1,0 +1,13 @@
+package interview;
+
+public class FetchDigitFromString {
+
+	public static void main(String[] args) {
+
+		String input = "Searched 100 Pages";
+        String digits = input.replaceAll("\\D+", "");
+        System.out.println("Extracted Digits: " + digits);
+        
+	}
+
+}

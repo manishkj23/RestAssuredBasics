@@ -1,0 +1,37 @@
+package interview;
+
+public class FetchDigitFromString {
+
+	public static void main(String[] args) {
+
+		int total = 200;
+		String input = "Searched 100 Pages";
+        String digits = input.replaceAll("\\D+", "");
+        System.out.println("Extracted Digits: " + digits);
+        
+        if(total == (Integer.parseInt(digits)))
+        {
+        	System.out.println("total row matches");
+        }
+        else
+        {
+        	System.out.println("total row mismatches");
+        }
+        
+        
+      System.out.println("************** Using toCharArray ******************");  
+      String input1 = "Searched 100 Pages";
+      StringBuilder digits1 = new StringBuilder();
+
+      for (char c : input.toCharArray()) {
+          if (Character.isDigit(c)) {
+              digits1.append(c);
+          }
+      }
+
+      System.out.println("Extracted Digits: " + digits.toString());
+  }
+      
+	}
+
+}
